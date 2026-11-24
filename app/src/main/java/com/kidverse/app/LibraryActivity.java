@@ -65,9 +65,9 @@ public class LibraryActivity extends Activity {
         root.addView(tutor, new LinearLayout.LayoutParams(-1, -2));
         LinearLayout grades = new LinearLayout(this);
         grades.setOrientation(0);
-        String[] gradeNames = {"All", "Class 3", "Class 4", "Class 5"};
+        String[] gradeNames = {"All", "Class 1", "Class 2", "Class 3", "Class 4", "Class 5"};
         for (int i = 0; i < gradeNames.length; i++) {
-            final int selectedGrade = i == 0 ? 0 : i + 2;
+            final int selectedGrade = i;
             Button grade = new Button(this);
             grade.setText(hindi ? (i == 0 ? "सभी" : "कक्षा " + selectedGrade) : gradeNames[i]);
             grade.setAllCaps(false);
