@@ -11,7 +11,9 @@ The current content update expands the learning material and adds a repeatable s
 - A redesigned home dashboard with learning-world cards and a local star counter
 - Math Kingdom: ten progressive arithmetic and fractions challenges with worked hints and one-time rewards
 - Science Galaxy: five topic lessons plus a five-question quiz covering plants, Earth, magnets, water and mammals
-- Knowledge Library: searchable bilingual (English/Hindi) starter topics, simple/deeper explanations, random practice prompts, and a downloadable pack saved for offline use
+- Knowledge Library: 12 built-in bilingual chapters with three teaching sections each, worked examples, key vocabulary, hands-on activities and three explained check questions per lesson
+- Knowledge Library reader: searchable full lesson text, estimated reading time, English/Hindi switch, subject labels and a scrollable chapter view
+- Downloadable content: expandable offline lesson packs; refreshing a pack replaces older copies instead of leaving stale content
 - Story Forest: five original short stories with reading rewards
 - Robot City: a simple sequencing activity
 - Explorer Earth: short nature and environment lessons
