@@ -62,7 +62,13 @@ jobs:
           KEY_ALIAS: ${{ secrets.KIDVERSE_KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KIDVERSE_KEY_PASSWORD }}
         run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
+          [[ "$MAJOR" =~ ^[0-9]+$ && "$MINOR" =~ ^[0-9]+$ && "$PATCH" =~ ^[0-9]+$ ]]
+          VERSION_CODE=$((MAJOR * 10000 + MINOR * 100 + PATCH))
           gradle --no-daemon assembleRelease \
+            -PappVersionCode="$VERSION_CODE" \
+            -PappVersionName="$VERSION" \
             -Pandroid.injected.signing.store.file="$KEYSTORE_FILE" \
             -Pandroid.injected.signing.store.password="$KEYSTORE_PASSWORD" \
             -Pandroid.injected.signing.key.alias="$KEY_ALIAS" \
