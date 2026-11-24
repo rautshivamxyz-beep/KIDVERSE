@@ -26,7 +26,118 @@
       "question": "What is the change from liquid to gas called?",
       "questionHi": "द्रव से गैस बनने की प्रक्रिया क्या कहलाती है?",
       "answer": "Evaporation",
-      "answerHi": "वाष्पीकरण"
+      "answerHi": "वाष्पीकरण",
+      "level": "Beginner · Level 4",
+      "minutes": 8,
+      "intro": "Matter is anything that has mass and takes up space. A desk, a glass of water and the air in a balloon are all matter. Matter can be solid, liquid or gas. The tiny particles that make up matter are arranged and move differently in each state.",
+      "introHi": "जिसका द्रव्यमान होता है और जो जगह घेरता है, वह पदार्थ है। मेज़, पानी और गुब्बारे की हवा पदार्थ हैं। पदार्थ ठोस, द्रव या गैस हो सकता है। पदार्थ के सूक्ष्म कण हर अवस्था में अलग ढंग से व्यवस्थित और गतिशील होते हैं।",
+      "sections": [
+        {
+          "heading": "1. Solids, liquids and gases",
+          "headingHi": "1. ठोस, द्रव और गैस",
+          "body": "In a solid, particles stay close together and usually vibrate in fixed positions. A solid keeps its own shape and volume. In a liquid, particles stay close but can move past one another, so a liquid flows and takes the shape of its container. In a gas, particles are much farther apart and move freely, spreading to fill the container.",
+          "bodyHi": "ठोस में कण पास-पास रहते हैं और सामान्यतः अपनी जगह पर कंपन करते हैं। ठोस अपना आकार और आयतन बनाए रखता है। द्रव में कण पास रहते हैं लेकिन एक-दूसरे के पास से खिसक सकते हैं, इसलिए द्रव बहता है और बर्तन का आकार लेता है। गैस में कण दूर-दूर होते हैं और स्वतंत्र रूप से चलते हुए उपलब्ध जगह भरते हैं।",
+          "example": "An ice cube is solid, melted ice is liquid water, and water vapour is a gas.",
+          "exampleHi": "बर्फ़ का टुकड़ा ठोस है, पिघली बर्फ़ द्रव पानी है और जलवाष्प गैस है。"
+        },
+        {
+          "heading": "2. Heating and cooling change state",
+          "headingHi": "2. गर्म और ठंडा करने से अवस्था बदलती है",
+          "body": "Heating can make particles move more. Melting changes a solid into a liquid. Evaporation or boiling changes a liquid into a gas. Cooling removes energy. Condensation changes a gas into a liquid, and freezing changes a liquid into a solid. The substance itself is still the same material during a physical change.",
+          "bodyHi": "गर्म करने से कण अधिक गति कर सकते हैं। पिघलना ठोस को द्रव बनाता है। वाष्पीकरण या उबालना द्रव को गैस बनाता है। ठंडा करने पर ऊर्जा निकलती है। संघनन गैस को द्रव और जमना द्रव को ठोस बनाता है। भौतिक बदलाव के दौरान पदार्थ वही रहता है।",
+          "example": "Water in a freezer becomes ice. When the ice melts, it is water again.",
+          "exampleHi": "फ्रीज़र में पानी बर्फ़ बन जाता है। बर्फ़ पिघलने पर फिर पानी बनती है।"
+        },
+        {
+          "heading": "3. Evaporation happens below boiling point",
+          "headingHi": "3. वाष्पीकरण उबलने से पहले भी होता है",
+          "body": "Evaporation happens at the surface of a liquid and can occur at many temperatures. Boiling happens throughout the liquid when it reaches its boiling point under the given conditions. A puddle can slowly disappear on a warm day even though it never boils.",
+          "bodyHi": "वाष्पीकरण द्रव की सतह पर होता है और कई तापमानों पर हो सकता है। दिए गए दबाव में क्वथनांक पहुँचने पर द्रव के पूरे भाग में उबाल आता है। गर्म दिन में पानी का गड्ढा बिना उबले धीरे-धीरे सूख सकता है।",
+          "example": "Wet clothes dry as water evaporates from the fabric into the air.",
+          "exampleHi": "गीले कपड़े इसलिए सूखते हैं क्योंकि उनका पानी वाष्पित होकर हवा में चला जाता है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Matter",
+          "wordHi": "पदार्थ",
+          "meaning": "Anything that has mass and occupies space.",
+          "meaningHi": "वह सब जिसका द्रव्यमान होता है और जो जगह घेरता है।"
+        },
+        {
+          "word": "Melting",
+          "wordHi": "पिघलना",
+          "meaning": "The change from solid to liquid.",
+          "meaningHi": "ठोस से द्रव बनने की प्रक्रिया।"
+        },
+        {
+          "word": "Evaporation",
+          "wordHi": "वाष्पीकरण",
+          "meaning": "The change from liquid to gas at the surface.",
+          "meaningHi": "द्रव की सतह से गैस बनने की प्रक्रिया।"
+        },
+        {
+          "word": "Condensation",
+          "wordHi": "संघनन",
+          "meaning": "The change from gas to liquid.",
+          "meaningHi": "गैस से द्रव बनने की प्रक्रिया।"
+        }
+      ],
+      "activity": "Place a few drops of water on two plates, one in a warm safe place and one in a cool place. With an adult, observe which dries first. Do not heat water or use a stove for this activity.",
+      "activityHi": "दो प्लेटों पर पानी की कुछ बूंदें रखो। एक को सुरक्षित गर्म जगह और दूसरी को ठंडी जगह पर रखो। किसी बड़े के साथ देखो कौन पहले सूखती है। इस गतिविधि के लिए पानी गर्म मत करो और चूल्हा उपयोग मत करो।",
+      "practice": [
+        {
+          "question": "Which state has a fixed shape and fixed volume?",
+          "questionHi": "किस अवस्था का आकार और आयतन निश्चित होता है?",
+          "options": [
+            "Solid",
+            "Liquid",
+            "Gas"
+          ],
+          "optionsHi": [
+            "ठोस",
+            "द्रव",
+            "गैस"
+          ],
+          "correct": 0,
+          "explanation": "A solid keeps its own shape and volume.",
+          "explanationHi": "ठोस अपना आकार और आयतन बनाए रखता है।"
+        },
+        {
+          "question": "What is the change from liquid to gas called?",
+          "questionHi": "द्रव से गैस बनने की प्रक्रिया क्या कहलाती है?",
+          "options": [
+            "Freezing",
+            "Evaporation",
+            "Condensation"
+          ],
+          "optionsHi": [
+            "जमना",
+            "वाष्पीकरण",
+            "संघनन"
+          ],
+          "correct": 1,
+          "explanation": "Evaporation changes liquid into gas at the surface.",
+          "explanationHi": "वाष्पीकरण द्रव की सतह से गैस बनने की प्रक्रिया है।"
+        },
+        {
+          "question": "Does evaporation only happen when water boils?",
+          "questionHi": "क्या वाष्पीकरण केवल पानी उबलने पर होता है?",
+          "options": [
+            "Yes",
+            "No, it can happen below boiling point",
+            "Only in a freezer"
+          ],
+          "optionsHi": [
+            "हाँ",
+            "नहीं, यह क्वथनांक से नीचे भी हो सकता है",
+            "केवल फ्रीज़र में"
+          ],
+          "correct": 1,
+          "explanation": "Evaporation can happen at many temperatures; boiling is a different process.",
+          "explanationHi": "वाष्पीकरण कई तापमानों पर हो सकता है; उबालना अलग प्रक्रिया है।"
+        }
+      ]
     },
     {
       "id": "math_decimals",
