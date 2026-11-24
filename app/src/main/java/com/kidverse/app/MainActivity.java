@@ -1,40 +1,635 @@
 package com.kidverse.app;
 
-import android.app.*;
-import android.os.Bundle;
-import android.graphics.*;
-import android.view.*;
-import android.widget.*;
-import android.content.*;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
-import java.util.*;
+import android.os.Bundle;
+import android.text.InputType;
+import android.view.Gravity;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
+import android.widget.TextView;
+import android.widget.Toast;
+import java.io.File;
+import java.io.FileOutputStream;
 
 public class MainActivity extends Activity {
-    LinearLayout root, body, nav; TextView pointsView; int points; android.content.SharedPreferences prefs;
-    int question=0; int correct=0; int storyIndex=0;
-    final String[] qs={"7 + 5 = ?","14 - 6 = ?","3 × 4 = ?","Half of 18 is?","25 + 15 = ?"};
-    final String[][] opts={{"10","12","13"},{"7","8","9"},{"10","12","14"},{"8","9","10"},{"35","40","45"}};
-    final int[] ans={1,1,1,1,1};
-    final String[] stories={"Mira and the Moon Garden\n\nMira loved looking at the night sky. One evening, she planted tiny seeds beside her window. Every night she watered them and watched the moon. Soon, bright silver flowers opened. Mira learned that patience helps little things grow.","The Helpful Robot\n\nRobo was a small robot who lived in a sunny town. One day, he saw a bird with a tangled kite string. Robo gently helped the bird, then recycled the string. Everyone learned that being kind also means caring for nature."};
-    @Override public void onCreate(Bundle b){super.onCreate(b); prefs=getSharedPreferences("kidverse",0); points=prefs.getInt("points",0); showHome();}
-    int dp(float v){return (int)(v*getResources().getDisplayMetrics().density+.5f);}
-    GradientDrawable bg(int color,int radius){GradientDrawable d=new GradientDrawable();d.setColor(color);d.setCornerRadius(dp(radius));return d;}
-    TextView text(String s,int size,int color){TextView t=new TextView(this);t.setText(s);t.setTextSize(size);t.setTextColor(color);t.setGravity(Gravity.CENTER_VERTICAL);return t;}
-    void base(String title){root=new LinearLayout(this);root.setOrientation(1);root.setBackgroundColor(0xFFF6F5FC);setContentView(root); LinearLayout top=new LinearLayout(this);top.setPadding(dp(18),dp(16),dp(18),dp(12));top.setGravity(Gravity.CENTER_VERTICAL);top.setBackgroundColor(0xFFF6F5FC);TextView brand=text("✦ KIDVERSE",22,0xFF29234F);brand.setTypeface(null,1);top.addView(brand,new LinearLayout.LayoutParams(0,dp(42),1));pointsView=text("⭐ "+points,16,0xFF6B55C8);top.addView(pointsView);root.addView(top); TextView h=text(title,24,0xFF28234C);h.setTypeface(null,1);h.setPadding(dp(20),dp(8),dp(20),dp(12));root.addView(h);ScrollView sc=new ScrollView(this);body=new LinearLayout(this);body.setOrientation(1);body.setPadding(dp(16),dp(4),dp(16),dp(20));sc.addView(body);root.addView(sc,new LinearLayout.LayoutParams(-1,0,1));nav=new LinearLayout(this);nav.setPadding(dp(6),dp(8),dp(6),dp(8));nav.setBackgroundColor(0xFFFFFFFF);String[] tabs={"Home","Learn","Create","Parent"};for(String tab:tabs){TextView b=text(tab,13,0xFF625B80);b.setGravity(Gravity.CENTER);b.setPadding(dp(4),dp(10),dp(4),dp(10));nav.addView(b,new LinearLayout.LayoutParams(0,dp(44),1));b.setOnClickListener(v->{if(tab.equals("Home"))showHome();else if(tab.equals("Learn"))showLearn();else if(tab.equals("Create"))showCreate();else showParentGate();});}root.addView(nav);}
-    void card(String title,String desc,int color,Runnable action){LinearLayout c=new LinearLayout(this);c.setOrientation(1);c.setPadding(dp(16),dp(14),dp(16),dp(14));c.setBackground(bg(color,20));LinearLayout.LayoutParams lp=new LinearLayout.LayoutParams(-1,-2);lp.bottomMargin=dp(12);body.addView(c,lp);TextView a=text(title,19,0xFF28234C);a.setTypeface(null,1);c.addView(a);TextView d=text(desc,14,0xFF514D68);d.setPadding(0,dp(5),0,dp(8));c.addView(d);Button b=new Button(this);b.setText("PLAY / OPEN");b.setTextSize(12);c.addView(b);b.setOnClickListener(v->action.run());c.setOnClickListener(v->action.run());}
-    void addPoints(int n){points+=n;prefs.edit().putInt("points",points).apply();}
-    void showHome(){base("Your adventure starts here!");card("🏰 Build-a-World","Earn stars as you learn. Your island grows with every mission.",0xFFE9E4FF,()->showWorld());card("🔢 Math Kingdom","Quick number puzzles for clever explorers.",0xFFFFEBCB,()->showMath());card("🔬 Science Galaxy","Discover plants, space and amazing facts.",0xFFDDF4FF,()->showScience());card("📖 Story Forest","Read a story and answer a question.",0xFFE5F5DD,()->showStory());card("🎨 Creator Studio","Draw anything you can imagine.",0xFFFFE3EF,()->showCreate());card("🤖 Robot City","Learn the order of instructions.",0xFFE8E7FF,()->showCoding());}
-    void showLearn(){base("Choose a learning world");card("🔢 Math Kingdom","Addition, subtraction, multiplication and fractions.",0xFFFFEBCB,()->showMath());card("🔬 Science Galaxy","Simple science facts and mini quizzes.",0xFFDDF4FF,()->showScience());card("📖 Story Forest","Short original stories and reading practice.",0xFFE5F5DD,()->showStory());card("🤖 Robot City","Sequence the steps to guide a robot.",0xFFE8E7FF,()->showCoding());card("🌍 Explorer Earth","Explore nature and our planet.",0xFFE1F3E9,()->showExplorer());}
-    void actionButton(String label,Runnable r){Button b=new Button(this);b.setText(label);LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,-2);p.bottomMargin=dp(8);body.addView(b,p);b.setOnClickListener(v->r.run());}
-    void showMath(){base("Math Kingdom · Puzzle");if(question>=qs.length)question=0;TextView q=text("Puzzle "+(question+1)+" of "+qs.length+"\n\n"+qs[question],24,0xFF302957);q.setGravity(Gravity.CENTER);q.setPadding(0,dp(28),0,dp(24));body.addView(q);for(int i=0;i<3;i++){final int pick=i;actionButton(opts[question][i],()->{if(pick==ans[question]){addPoints(10);new AlertDialog.Builder(this).setTitle("Great work! ⭐").setMessage("You earned 10 stars.").setPositiveButton("Next",(d,w)->{question++;showMath();}).show();}else new AlertDialog.Builder(this).setTitle("Good try!").setMessage("Not quite. Try another answer!").setPositiveButton("Try again",null).show();});}actionButton("Back to Home",()->showHome());}
-    void showScience(){base("Science Galaxy");card("🌱 Plants need sunlight","Plants use sunlight, water and air to make their food. This process is called photosynthesis.",0xFFDDF4FF,()->scienceQuiz());card("🪐 Our Solar System","The Sun is a star. Earth is one of the planets that travels around it.",0xFFE9E4FF,()->scienceQuiz());card("💧 Water cycle","Water evaporates, forms clouds and falls back as rain.",0xFFE0F3F4,()->scienceQuiz());actionButton("Quick science question",()->scienceQuiz());}
-    void scienceQuiz(){new AlertDialog.Builder(this).setTitle("Science check").setMessage("What do plants use from the Sun?").setPositiveButton("Sunlight",(d,w)->{addPoints(10);showScience();}).setNegativeButton("Sand",(d,w)->Toast.makeText(this,"Try again!",Toast.LENGTH_SHORT).show()).show();}
-    void showStory(){base("Story Forest");TextView t=text(stories[storyIndex%stories.length],18,0xFF302957);t.setPadding(dp(8),dp(12),dp(8),dp(20));body.addView(t);actionButton("I finished reading · Earn 5 stars",()->{addPoints(5);storyIndex++;showStory();});actionButton("Next story",()->{storyIndex++;showStory();});}
-    void showCoding(){base("Robot City · Sequence");TextView t=text("Help Robo reach the flower. Which instruction order makes sense?",18,0xFF302957);t.setPadding(dp(4),dp(12),dp(4),dp(18));body.addView(t);actionButton("1. Move forward  2. Turn right  3. Pick flower",()->{addPoints(10);new AlertDialog.Builder(this).setMessage("You planned a sequence! +10 stars").setPositiveButton("Nice!",(d,w)->showHome()).show();});actionButton("1. Pick flower  2. Move forward",()->Toast.makeText(this,"Think about reaching the flower first!",Toast.LENGTH_SHORT).show());}
-    void showExplorer(){base("Explorer Earth");card("🌳 Forests","Forests are homes for many plants and animals. We can protect them by keeping them clean.",0xFFE1F3E9,()->{addPoints(5);Toast.makeText(this,"Explorer star +5",Toast.LENGTH_SHORT).show();});card("🌊 Oceans","Oceans cover most of Earth. Sea animals need clean water to live.",0xFFDDF4FF,()->{addPoints(5);Toast.makeText(this,"Explorer star +5",Toast.LENGTH_SHORT).show();});}
-    void showWorld(){base("Your growing island");TextView t=text("⭐ Total stars: "+points+"\n\n🏡 Cozy home: "+(points>=10?"UNLOCKED":"Earn 10 stars")+"\n🌳 Garden: "+(points>=30?"UNLOCKED":"Earn 30 stars")+"\n🤖 Robot buddy: "+(points>=60?"UNLOCKED":"Earn 60 stars")+"\n🏝️ New island: "+(points>=100?"UNLOCKED":"Earn 100 stars"),20,0xFF302957);t.setPadding(dp(12),dp(20),dp(12),dp(20));body.addView(t);actionButton("Go learn to earn stars",()->showLearn());}
-    void showCreate(){base("Creator Studio");TextView info=text("Draw with your finger! Your picture stays on this device.",15,0xFF514D68);body.addView(info);DrawingPad pad=new DrawingPad(this);LinearLayout.LayoutParams p=new LinearLayout.LayoutParams(-1,dp(330));p.topMargin=dp(12);body.addView(pad,p);actionButton("Clear drawing",pad::clear);}
-    class DrawingPad extends View{Paint paint=new Paint(3);Path path=new Path();Bitmap bitmap;Canvas canvas;int color=0xFF6558D3;DrawingPad(Context c){super(c);setBackground(bg(0xFFFFFFFF,18));paint.setColor(color);paint.setStrokeWidth(dp(5));paint.setStyle(Paint.Style.STROKE);paint.setStrokeCap(Paint.Cap.ROUND);}protected void onSizeChanged(int w,int h,int ow,int oh){bitmap=Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888);canvas=new Canvas(bitmap);canvas.drawColor(0xFFFFFFFF);}protected void onDraw(Canvas c){if(bitmap!=null)c.drawBitmap(bitmap,0,0,null);c.drawPath(path,paint);}public boolean onTouchEvent(android.view.MotionEvent e){float x=e.getX(),y=e.getY();if(e.getAction()==0){path.moveTo(x,y);return true;}if(e.getAction()==1){canvas.drawPath(path,paint);path.reset();invalidate();return true;}path.lineTo(x,y);invalidate();return true;}void clear(){if(canvas!=null)canvas.drawColor(0xFFFFFFFF);path.reset();invalidate();}}
-    void showParentGate(){base("Parent Zone");TextView t=text("A grown-up area. Please ask a parent or guardian to solve this check.",17,0xFF302957);t.setPadding(dp(8),dp(20),dp(8),dp(20));body.addView(t);actionButton("Continue to parent check",()->{final EditText input=new EditText(this);input.setInputType(2);new AlertDialog.Builder(this).setTitle("Parent check").setMessage("What is 8 + 5?").setView(input).setPositiveButton("Continue",(d,w)->{if(input.getText().toString().trim().equals("13"))showParent();else Toast.makeText(this,"Please ask an adult to help.",Toast.LENGTH_LONG).show();}).setNegativeButton("Cancel",null).show();});}
-    void showParent(){base("Parent Zone");TextView t=text("Learning stars: "+points+"\n\nProgress is stored only on this device.\n\nThis MVP has no accounts, ads, analytics, location access or internet permission.",18,0xFF302957);t.setPadding(dp(8),dp(16),dp(8),dp(20));body.addView(t);actionButton("Reset local progress",()->new AlertDialog.Builder(this).setTitle("Reset progress?").setMessage("This clears the stars on this device.").setPositiveButton("Reset",(d,w)->{points=0;prefs.edit().putInt("points",0).apply();showParent();}).setNegativeButton("Cancel",null).show());}
+    private static final int INK = 0xFF202044;
+    private static final int MUTED = 0xFF77758F;
+    private static final int PURPLE = 0xFF6256D9;
+    private static final int BG = 0xFFF7F6FC;
+    private static final int WHITE = 0xFFFFFFFF;
+
+    private LinearLayout root;
+    private LinearLayout content;
+    private SharedPreferences prefs;
+    private int stars;
+    private int mathIndex = 0;
+    private int storyIndex = 0;
+    private String activeTab = "Home";
+    private DrawingCanvas drawingCanvas;
+
+    private final String[] mathQuestions = {
+        "7 + 5 = ?", "14 - 6 = ?", "3 × 4 = ?", "Half of 18 is?", "25 + 15 = ?"
+    };
+    private final String[][] mathOptions = {
+        {"10", "12", "13"}, {"7", "8", "9"}, {"10", "12", "14"},
+        {"8", "9", "10"}, {"35", "40", "45"}
+    };
+    private final int[] mathAnswers = {1, 1, 1, 1, 1};
+    private final String[] mathHints = {
+        "Count on from 7: 8, 9, 10, 11, 12.",
+        "Take 6 away from 14. You have 8 left.",
+        "3 groups of 4 make 12.",
+        "Half means split into two equal groups. 9 + 9 = 18.",
+        "25 + 15 = 25 + 10 + 5 = 40."
+    };
+    private final String[] storyTitles = {"Mira and the Moon Garden", "The Helpful Robot"};
+    private final String[] storyTexts = {
+        "Mira loved looking at the night sky. One evening, she planted tiny seeds beside her window. Every night she watered them and watched the moon. Soon, bright silver flowers opened. Mira learned that patience helps little things grow.",
+        "Robo was a small robot who lived in a sunny town. One day, he saw a bird with a tangled kite string. Robo gently helped the bird, then recycled the string. Everyone learned that being kind also means caring for nature."
+    };
+
+    @Override public void onCreate(Bundle state) {
+        super.onCreate(state);
+        prefs = getSharedPreferences("kidverse_progress", MODE_PRIVATE);
+        stars = prefs.getInt("stars", 0);
+        Window window = getWindow();
+        window.setStatusBarColor(BG);
+        window.setNavigationBarColor(WHITE);
+        window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        showHome();
+    }
+
+    private int dp(float value) {
+        return (int) (value * getResources().getDisplayMetrics().density + 0.5f);
+    }
+
+    private GradientDrawable shape(int color, int radius) {
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setColor(color);
+        drawable.setCornerRadius(dp(radius));
+        return drawable;
+    }
+
+    private GradientDrawable gradient(int first, int second, int radius) {
+        GradientDrawable drawable = new GradientDrawable(
+            GradientDrawable.Orientation.TL_BR, new int[]{first, second});
+        drawable.setCornerRadius(dp(radius));
+        return drawable;
+    }
+
+    private TextView label(String value, int size, int color, boolean bold) {
+        TextView view = new TextView(this);
+        view.setText(value);
+        view.setTextSize(size);
+        view.setTextColor(color);
+        view.setGravity(Gravity.CENTER_VERTICAL);
+        view.setFontFeatureSettings("kern");
+        view.setTypeface(Typeface.create("sans-serif-rounded", bold ? Typeface.BOLD : Typeface.NORMAL));
+        view.setIncludeFontPadding(true);
+        return view;
+    }
+
+    private void space(int height) {
+        View spacer = new View(this);
+        content.addView(spacer, new LinearLayout.LayoutParams(1, dp(height)));
+    }
+
+    private void screen(String tab) {
+        activeTab = tab;
+        root = new LinearLayout(this);
+        root.setOrientation(LinearLayout.VERTICAL);
+        root.setBackgroundColor(BG);
+        setContentView(root);
+
+        LinearLayout top = new LinearLayout(this);
+        top.setOrientation(LinearLayout.HORIZONTAL);
+        top.setGravity(Gravity.CENTER_VERTICAL);
+        top.setPadding(dp(20), dp(12), dp(20), dp(12));
+
+        TextView brand = label("✦  KIDVERSE", 20, INK, true);
+        top.addView(brand, new LinearLayout.LayoutParams(0, dp(42), 1));
+
+        TextView starPill = label("⭐  " + stars, 14, 0xFF5948B5, true);
+        starPill.setGravity(Gravity.CENTER);
+        starPill.setPadding(dp(14), 0, dp(14), 0);
+        starPill.setBackground(shape(0xFFECE9FF, 22));
+        top.addView(starPill, new LinearLayout.LayoutParams(-2, dp(38)));
+        root.addView(top, new LinearLayout.LayoutParams(-1, -2));
+
+        ScrollView scroll = new ScrollView(this);
+        scroll.setClipToPadding(false);
+        scroll.setFillViewport(true);
+        content = new LinearLayout(this);
+        content.setOrientation(LinearLayout.VERTICAL);
+        content.setPadding(dp(18), dp(8), dp(18), dp(24));
+        scroll.addView(content, new ScrollView.LayoutParams(-1, -2));
+        root.addView(scroll, new LinearLayout.LayoutParams(-1, 0, 1));
+
+        addBottomNavigation();
+    }
+
+    private void addBottomNavigation() {
+        LinearLayout bar = new LinearLayout(this);
+        bar.setOrientation(LinearLayout.HORIZONTAL);
+        bar.setGravity(Gravity.CENTER);
+        bar.setPadding(dp(8), dp(7), dp(8), dp(8));
+        bar.setBackgroundColor(WHITE);
+        String[] names = {"Home", "Learn", "Create", "Parent"};
+        String[] icons = {"⌂", "✦", "✎", "☻"};
+        for (int i = 0; i < names.length; i++) {
+            final String name = names[i];
+            boolean selected = name.equals(activeTab);
+            LinearLayout item = new LinearLayout(this);
+            item.setOrientation(LinearLayout.VERTICAL);
+            item.setGravity(Gravity.CENTER);
+            item.setPadding(0, dp(5), 0, dp(3));
+            TextView icon = label(icons[i], 20, selected ? PURPLE : 0xFF9996AA, true);
+            icon.setGravity(Gravity.CENTER);
+            TextView title = label(name, 11, selected ? PURPLE : MUTED, selected);
+            title.setGravity(Gravity.CENTER);
+            item.addView(icon, new LinearLayout.LayoutParams(-1, dp(25)));
+            item.addView(title, new LinearLayout.LayoutParams(-1, dp(18)));
+            if (selected) item.setBackground(shape(0xFFF0EEFF, 14));
+            bar.addView(item, new LinearLayout.LayoutParams(0, dp(52), 1));
+            item.setOnClickListener(v -> openTab(name));
+        }
+        root.addView(bar, new LinearLayout.LayoutParams(-1, -2));
+    }
+
+    private void openTab(String tab) {
+        if ("Home".equals(tab)) showHome();
+        else if ("Learn".equals(tab)) showLearn();
+        else if ("Create".equals(tab)) showCreate();
+        else showParentGate();
+    }
+
+    private void intro(String title, String subtitle) {
+        TextView heading = label(title, 26, INK, true);
+        content.addView(heading);
+        TextView sub = label(subtitle, 14, MUTED, false);
+        sub.setPadding(0, dp(4), 0, dp(8));
+        content.addView(sub);
+    }
+
+    private void smallHeading(String value) {
+        TextView heading = label(value, 17, INK, true);
+        heading.setPadding(dp(2), dp(2), 0, dp(10));
+        content.addView(heading);
+    }
+
+    private void action(String title, String subtitle, String icon, int color,
+                        String buttonText, Runnable click) {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(LinearLayout.VERTICAL);
+        card.setPadding(dp(16), dp(15), dp(16), dp(15));
+        card.setBackground(shape(color, 22));
+        card.setElevation(dp(1));
+        LinearLayout.LayoutParams cardParams = new LinearLayout.LayoutParams(-1, -2);
+        cardParams.bottomMargin = dp(12);
+        content.addView(card, cardParams);
+
+        LinearLayout top = new LinearLayout(this);
+        top.setGravity(Gravity.CENTER_VERTICAL);
+        TextView emoji = label(icon, 27, INK, false);
+        emoji.setGravity(Gravity.CENTER);
+        emoji.setBackground(shape(0x55FFFFFF, 16));
+        top.addView(emoji, new LinearLayout.LayoutParams(dp(52), dp(52)));
+        LinearLayout words = new LinearLayout(this);
+        words.setOrientation(LinearLayout.VERTICAL);
+        words.setPadding(dp(12), 0, 0, 0);
+        TextView name = label(title, 17, INK, true);
+        TextView desc = label(subtitle, 13, 0xFF5F5B75, false);
+        desc.setPadding(0, dp(3), 0, 0);
+        words.addView(name);
+        words.addView(desc);
+        top.addView(words, new LinearLayout.LayoutParams(0, -2, 1));
+        card.addView(top);
+
+        TextView open = label(buttonText + "  →", 13, PURPLE, true);
+        open.setPadding(dp(2), dp(12), 0, 0);
+        card.addView(open);
+        card.setOnClickListener(v -> click.run());
+        open.setOnClickListener(v -> click.run());
+    }
+
+    private TextView button(String value, boolean primary, Runnable click) {
+        TextView view = label(value, 14, primary ? WHITE : PURPLE, true);
+        view.setGravity(Gravity.CENTER);
+        view.setPadding(dp(15), dp(12), dp(15), dp(12));
+        view.setBackground(shape(primary ? PURPLE : 0xFFECE9FF, 15));
+        view.setClickable(true);
+        view.setFocusable(true);
+        view.setOnClickListener(v -> click.run());
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2);
+        params.bottomMargin = dp(9);
+        content.addView(view, params);
+        return view;
+    }
+
+    private void infoCard(String title, String detail, int color) {
+        LinearLayout box = new LinearLayout(this);
+        box.setOrientation(LinearLayout.VERTICAL);
+        box.setPadding(dp(15), dp(13), dp(15), dp(13));
+        box.setBackground(shape(color, 18));
+        LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(-1, -2);
+        p.bottomMargin = dp(10);
+        content.addView(box, p);
+        box.addView(label(title, 16, INK, true));
+        TextView d = label(detail, 13, 0xFF5F5B75, false);
+        d.setPadding(0, dp(5), 0, 0);
+        box.addView(d);
+    }
+
+    private void statRow() {
+        LinearLayout row = new LinearLayout(this);
+        row.setOrientation(LinearLayout.HORIZONTAL);
+        String[][] stats = {
+            {"⭐", String.valueOf(stars), "Stars"},
+            {"🎯", String.valueOf(prefs.getInt("completed", 0)), "Activities"}
+        };
+        for (String[] stat : stats) {
+            LinearLayout box = new LinearLayout(this);
+            box.setOrientation(LinearLayout.VERTICAL);
+            box.setGravity(Gravity.CENTER);
+            box.setPadding(dp(10), dp(10), dp(10), dp(10));
+            box.setBackground(shape(WHITE, 17));
+            TextView main = label(stat[0] + "  " + stat[1], 18, INK, true);
+            main.setGravity(Gravity.CENTER);
+            TextView caption = label(stat[2], 12, MUTED, false);
+            caption.setGravity(Gravity.CENTER);
+            box.addView(main);
+            box.addView(caption);
+            LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(0, dp(72), 1);
+            p.setMargins(0, 0, dp(9), 0);
+            row.addView(box, p);
+        }
+        content.addView(row);
+    }
+
+    private void rewardOnce(String key, int amount) {
+        if (!prefs.getBoolean("reward_" + key, false)) {
+            stars += amount;
+            prefs.edit().putBoolean("reward_" + key, true)
+                .putInt("stars", stars)
+                .putInt("completed", prefs.getInt("completed", 0) + 1).apply();
+        }
+    }
+
+    private void showHome() {
+        screen("Home");
+        intro("Hello, Explorer! 👋", "A little learning. A lot of wonder.");
+        LinearLayout hero = new LinearLayout(this);
+        hero.setOrientation(LinearLayout.VERTICAL);
+        hero.setPadding(dp(19), dp(18), dp(19), dp(18));
+        hero.setBackground(gradient(0xFF6558D8, 0xFF8C73E9, 24));
+        LinearLayout.LayoutParams hp = new LinearLayout.LayoutParams(-1, -2);
+        hp.bottomMargin = dp(14);
+        content.addView(hero, hp);
+        TextView heroTag = label("YOUR LEARNING ADVENTURE", 10, 0xFFEAE7FF, true);
+        hero.addView(heroTag);
+        TextView heroTitle = label("Dream big.\nDiscover more.", 27, WHITE, true);
+        heroTitle.setPadding(0, dp(7), 0, dp(5));
+        hero.addView(heroTitle);
+        hero.addView(label("Play fun missions and grow your world with every new skill.", 13, 0xFFF2F0FF, false));
+        TextView heroButton = label("Explore the worlds  →", 13, INK, true);
+        heroButton.setGravity(Gravity.CENTER);
+        heroButton.setPadding(dp(14), dp(11), dp(14), dp(11));
+        heroButton.setBackground(shape(WHITE, 14));
+        LinearLayout.LayoutParams bp = new LinearLayout.LayoutParams(-2, -2);
+        bp.topMargin = dp(15);
+        hero.addView(heroButton, bp);
+        heroButton.setOnClickListener(v -> showLearn());
+
+        statRow();
+        space(18);
+        smallHeading("Pick your next adventure");
+        action("Math Kingdom", "Number puzzles and brain boosts", "🔢", 0xFFFFEBCB,
+            "Play maths", this::showMath);
+        action("Science Galaxy", "Discover how our world works", "🔬", 0xFFDFF3FF,
+            "Explore science", this::showScience);
+        action("Story Forest", "Read a tale and imagine more", "📚", 0xFFE8F4DE,
+            "Read stories", this::showStory);
+        action("Robot City", "Think, plan and guide a robot", "🤖", 0xFFE8E5FF,
+            "Build a sequence", this::showRobot);
+        action("Creator Studio", "Draw something wonderful", "🎨", 0xFFFFE6F0,
+            "Start creating", this::showCreate);
+        space(4);
+        smallHeading("Your growing world");
+        action("Build-a-World", "Use your stars to unlock island rewards", "🏝️", 0xFFE2F2E9,
+            "See my island", this::showWorld);
+    }
+
+    private void showLearn() {
+        screen("Learn");
+        intro("Learning worlds", "Choose a world. Try a mission. Earn stars.");
+        action("Math Kingdom", "Addition, subtraction, multiplication and fractions", "🔢", 0xFFFFEBCB, "Start learning", this::showMath);
+        action("Science Galaxy", "Plants, space, weather and our amazing planet", "🔬", 0xFFDFF3FF, "Explore science", this::showScience);
+        action("Story Forest", "Original stories that grow reading confidence", "📚", 0xFFE8F4DE, "Open stories", this::showStory);
+        action("Robot City", "Practice logic by arranging instructions", "🤖", 0xFFE8E5FF, "Guide Robo", this::showRobot);
+        action("Explorer Earth", "Learn about forests, oceans and the environment", "🌍", 0xFFE2F2E9, "Explore Earth", this::showEarth);
+    }
+
+    private void showMath() {
+        screen("Learn");
+        intro("Math Kingdom 🔢", "Solve the puzzle and collect your stars.");
+        if (mathIndex >= mathQuestions.length) mathIndex = 0;
+        TextView progress = label("CHALLENGE  " + (mathIndex + 1) + " OF " + mathQuestions.length, 11, PURPLE, true);
+        content.addView(progress);
+        ProgressBar bar = new ProgressBar(this, null, android.R.attr.progressBarStyleHorizontal);
+        bar.setMax(mathQuestions.length);
+        bar.setProgress(mathIndex);
+        bar.setProgressTintList(android.content.res.ColorStateList.valueOf(PURPLE));
+        bar.setProgressBackgroundTintList(android.content.res.ColorStateList.valueOf(0xFFE6E3F2));
+        LinearLayout.LayoutParams pp = new LinearLayout.LayoutParams(-1, dp(7));
+        pp.topMargin = dp(8);
+        pp.bottomMargin = dp(22);
+        content.addView(bar, pp);
+        infoCard(mathQuestions[mathIndex], "Choose the correct answer.", 0xFFFFEBCB);
+        final int current = mathIndex;
+        boolean already = prefs.getBoolean("reward_math_" + current, false);
+        if (already) {
+            infoCard("Puzzle completed ✓", "You have already earned the star reward for this puzzle.", 0xFFE8F4DE);
+        } else {
+            for (int i = 0; i < 3; i++) {
+                final int pick = i;
+                button(mathOptions[current][i], false, () -> {
+                    if (pick == mathAnswers[current]) {
+                        rewardOnce("math_" + current, 5);
+                        new AlertDialog.Builder(this).setTitle("Brilliant thinking! ⭐")
+                            .setMessage("That's right! " + mathHints[current] + "\n\nYou earned 5 stars.")
+                            .setPositiveButton("Continue", (d, w) -> showMath()).show();
+                    } else {
+                        new AlertDialog.Builder(this).setTitle("Good try!")
+                            .setMessage("Have another go. Hint: " + mathHints[current])
+                            .setPositiveButton("Try again", null).show();
+                    }
+                });
+            }
+        }
+        button(current == mathQuestions.length - 1 ? "Finish maths" : "Next puzzle  →", true, () -> {
+            mathIndex++;
+            if (mathIndex >= mathQuestions.length) {
+                mathIndex = 0;
+                new AlertDialog.Builder(this).setTitle("Math mission complete!")
+                    .setMessage("You reached the end of this maths set. Keep practicing to master every puzzle.")
+                    .setPositiveButton("Great!", (d, w) -> showLearn()).show();
+            } else showMath();
+        });
+        button("Back to learning worlds", false, this::showLearn);
+    }
+
+    private void showScience() {
+        screen("Learn");
+        intro("Science Galaxy 🔬", "Big discoveries begin with small questions.");
+        infoCard("🌱 Plants and sunlight", "Plants use sunlight, water and air to make their own food. This is called photosynthesis.", 0xFFDFF3FF);
+        infoCard("🪐 Our Solar System", "The Sun is a star. Earth is one of the planets that travels around it.", 0xFFECE9FF);
+        infoCard("💧 The water cycle", "Water evaporates, forms clouds and falls back to Earth as rain.", 0xFFE2F2E9);
+        infoCard("🦋 Living things", "Living things grow and need energy. Many plants and animals depend on each other.", 0xFFFFEBCB);
+        smallHeading("Quick science check");
+        infoCard("What do plants use from the Sun?", "Choose one answer.", WHITE);
+        button("Sunlight", false, () -> scienceAnswer(true));
+        button("Moonlight", false, () -> scienceAnswer(false));
+        button("Sand", false, () -> scienceAnswer(false));
+    }
+
+    private void scienceAnswer(boolean correct) {
+        if (correct) {
+            rewardOnce("science_quiz", 10);
+            new AlertDialog.Builder(this).setTitle("That's correct! 🌟")
+                .setMessage("Plants use energy from sunlight to make food. You earned 10 stars.")
+                .setPositiveButton("Continue", (d, w) -> showScience()).show();
+        } else {
+            Toast.makeText(this, "Not quite. Remember: plants need sunlight.", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void showStory() {
+        screen("Learn");
+        intro("Story Forest 📚", "Find a quiet spot and let your imagination grow.");
+        TextView number = label("STORY " + (storyIndex + 1) + " OF " + storyTitles.length, 11, PURPLE, true);
+        content.addView(number);
+        infoCard(storyTitles[storyIndex], storyTexts[storyIndex], 0xFFE8F4DE);
+        button("I finished reading  ·  +5 stars", true, () -> {
+            rewardOnce("story_" + storyIndex, 5);
+            if (storyIndex < storyTitles.length - 1) {
+                storyIndex++;
+                showStory();
+            } else {
+                new AlertDialog.Builder(this).setTitle("Story explorer! 📚")
+                    .setMessage("You have read both stories. Wonderful work!")
+                    .setPositiveButton("Done", (d, w) -> { storyIndex = 0; showLearn(); }).show();
+            }
+        });
+        button("Back to learning worlds", false, this::showLearn);
+    }
+
+    private void showRobot() {
+        screen("Learn");
+        intro("Robot City 🤖", "A robot follows instructions one step at a time.");
+        infoCard("Your mission", "Robo is standing beside a path. First move to the flower, then pick it up. Which instruction order makes sense?", 0xFFE8E5FF);
+        button("1. Move forward   2. Pick flower", false, () -> {
+            rewardOnce("robot_sequence", 10);
+            new AlertDialog.Builder(this).setTitle("Mission complete! 🤖")
+                .setMessage("You placed the instructions in a useful order. Robo found the flower. +10 stars!")
+                .setPositiveButton("Nice!", (d, w) -> showLearn()).show();
+        });
+        button("1. Pick flower   2. Move forward", false, () ->
+            new AlertDialog.Builder(this).setTitle("Try the order again")
+                .setMessage("Robo needs to reach the flower before picking it up.")
+                .setPositiveButton("Try again", null).show());
+        button("Back to learning worlds", true, this::showLearn);
+    }
+
+    private void showEarth() {
+        screen("Learn");
+        intro("Explorer Earth 🌍", "Our planet is an amazing place. Let's look after it.");
+        infoCard("🌳 Forests", "Forests are homes for many plants and animals. Keeping forests healthy protects wildlife and helps our planet.", 0xFFE2F2E9);
+        infoCard("🌊 Oceans", "Oceans cover most of Earth. Sea animals need clean water and safe places to live.", 0xFFDFF3FF);
+        infoCard("♻️ Reduce and reuse", "Use only what you need, reuse things when you can, and put waste in the right bin.", 0xFFFFEBCB);
+        button("I explored Earth  ·  +5 stars", true, () -> {
+            rewardOnce("earth_visit", 5);
+            Toast.makeText(this, "Explorer star saved!", Toast.LENGTH_SHORT).show();
+            showLearn();
+        });
+    }
+
+    private void showWorld() {
+        screen("Home");
+        intro("Your growing island 🏝️", "Every new skill helps your island grow.");
+        int[] goals = {10, 30, 60, 100};
+        String[] names = {"Cozy home", "Flower garden", "Robot buddy", "New island"};
+        String[] icons = {"🏡", "🌷", "🤖", "🏝️"};
+        for (int i = 0; i < goals.length; i++) {
+            boolean unlocked = stars >= goals[i];
+            int remaining = Math.max(0, goals[i] - stars);
+            infoCard(icons[i] + "  " + names[i] + (unlocked ? "  ✓ UNLOCKED" : ""),
+                unlocked ? "This reward is yours. Keep exploring!" : "Collect " + remaining + " more stars to unlock it. (" + stars + "/" + goals[i] + ")", 
+                unlocked ? 0xFFE2F2E9 : WHITE);
+        }
+        button("Find another mission", true, this::showLearn);
+    }
+
+    private void showCreate() {
+        screen("Create");
+        intro("Creator Studio 🎨", "Your ideas belong on the page. Draw anything!");
+        drawingCanvas = new DrawingCanvas(this);
+        drawingCanvas.setBackground(shape(WHITE, 18));
+        LinearLayout.LayoutParams canvasParams = new LinearLayout.LayoutParams(-1, dp(330));
+        canvasParams.bottomMargin = dp(12);
+        content.addView(drawingCanvas, canvasParams);
+
+        LinearLayout palette = new LinearLayout(this);
+        palette.setGravity(Gravity.CENTER);
+        int[] colors = {0xFF6256D9, 0xFFFF6B80, 0xFF27A88A, 0xFFFFB547, 0xFF26324A, 0xFF2788D8};
+        for (int color : colors) {
+            View swatch = new View(this);
+            swatch.setBackground(shape(color, 20));
+            LinearLayout.LayoutParams sp = new LinearLayout.LayoutParams(dp(34), dp(34));
+            sp.setMargins(dp(5), dp(3), dp(5), dp(12));
+            palette.addView(swatch, sp);
+            swatch.setOnClickListener(v -> drawingCanvas.setColor(color));
+        }
+        content.addView(palette);
+        button("Save my drawing", true, this::saveDrawing);
+        button("Clear canvas", false, () -> drawingCanvas.clear());
+        button("Back home", false, this::showHome);
+    }
+
+    private void saveDrawing() {
+        if (drawingCanvas == null || drawingCanvas.getWidth() <= 0) return;
+        try {
+            Bitmap bitmap = Bitmap.createBitmap(drawingCanvas.getWidth(), drawingCanvas.getHeight(), Bitmap.Config.ARGB_8888);
+            Canvas canvas = new Canvas(bitmap);
+            drawingCanvas.draw(canvas);
+            File file = new File(getFilesDir(), "kidverse-drawing.png");
+            FileOutputStream stream = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream);
+            stream.close();
+            bitmap.recycle();
+            Toast.makeText(this, "Drawing saved on this device!", Toast.LENGTH_LONG).show();
+        } catch (Exception error) {
+            Toast.makeText(this, "Could not save the drawing. Please try again.", Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private class DrawingCanvas extends View {
+        private final Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        private final Path path = new Path();
+        private Bitmap layer;
+        private Canvas layerCanvas;
+        private int color = PURPLE;
+        private float lastX, lastY;
+
+        DrawingCanvas(Context context) {
+            super(context);
+            paint.setColor(color);
+            paint.setStrokeWidth(dp(5));
+            paint.setStyle(Paint.Style.STROKE);
+            paint.setStrokeCap(Paint.Cap.ROUND);
+            paint.setStrokeJoin(Paint.Join.ROUND);
+        }
+
+        @Override protected void onSizeChanged(int w, int h, int oldW, int oldH) {
+            if (w <= 0 || h <= 0) return;
+            layer = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888);
+            layerCanvas = new Canvas(layer);
+            layerCanvas.drawColor(WHITE);
+        }
+
+        @Override protected void onDraw(Canvas canvas) {
+            super.onDraw(canvas);
+            if (layer != null) canvas.drawBitmap(layer, 0, 0, null);
+            canvas.drawPath(path, paint);
+        }
+
+        @Override public boolean onTouchEvent(MotionEvent event) {
+            float x = event.getX(), y = event.getY();
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                path.moveTo(x, y);
+                lastX = x; lastY = y;
+                invalidate();
+                return true;
+            } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                path.quadTo(lastX, lastY, (x + lastX) / 2f, (y + lastY) / 2f);
+                lastX = x; lastY = y;
+                invalidate();
+                return true;
+            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                path.lineTo(x, y);
+                if (layerCanvas != null) layerCanvas.drawPath(path, paint);
+                path.reset();
+                invalidate();
+                return true;
+            }
+            return true;
+        }
+
+        void setColor(int value) {
+            color = value;
+            paint.setColor(value);
+        }
+
+        void clear() {
+            if (layerCanvas != null) layerCanvas.drawColor(WHITE);
+            path.reset();
+            invalidate();
+        }
+    }
+
+    private void showParentGate() {
+        screen("Parent");
+        intro("Parent zone 🔒", "This area is intended for a parent or guardian.");
+        infoCard("Adult check", "Please ask a grown-up to answer the question before opening progress settings.", 0xFFECE9FF);
+        button("Continue to parent check", true, () -> {
+            EditText answer = new EditText(this);
+            answer.setInputType(InputType.TYPE_CLASS_NUMBER);
+            answer.setSingleLine(true);
+            new AlertDialog.Builder(this).setTitle("Parent check")
+                .setMessage("What is 7 × 3?")
+                .setView(answer)
+                .setPositiveButton("Continue", (dialog, which) -> {
+                    if ("21".equals(answer.getText().toString().trim())) showParent();
+                    else Toast.makeText(this, "Please ask a parent or guardian to help.", Toast.LENGTH_LONG).show();
+                })
+                .setNegativeButton("Cancel", null).show();
+        });
+    }
+
+    private void showParent() {
+        screen("Parent");
+        intro("Parent dashboard", "A quick look at learning on this device.");
+        statRow();
+        space(12);
+        infoCard("Privacy", "KIDVERSE stores progress and drawings locally on this device. This MVP does not request internet, location, account or advertising permissions.", 0xFFE2F2E9);
+        infoCard("Completed activities", String.valueOf(prefs.getInt("completed", 0)) + " reward milestones recorded.", WHITE);
+        button("Reset all progress", false, () -> new AlertDialog.Builder(this)
+            .setTitle("Reset KIDVERSE progress?")
+            .setMessage("This removes stars and activity rewards from this device. This cannot be undone.")
+            .setNegativeButton("Cancel", null)
+            .setPositiveButton("Reset", (d, w) -> {
+                prefs.edit().clear().apply();
+                stars = 0;
+                mathIndex = 0;
+                storyIndex = 0;
+                showParent();
+            }).show());
+        button("Back home", true, this::showHome);
+    }
 }
