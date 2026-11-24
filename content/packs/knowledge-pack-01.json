@@ -388,7 +388,118 @@
       "question": "What must a circuit be for current to flow?",
       "questionHi": "धारा बहने के लिए परिपथ कैसा होना चाहिए?",
       "answer": "Closed and complete",
-      "answerHi": "बंद और पूरा"
+      "answerHi": "बंद और पूरा",
+      "level": "Explorer · Level 5",
+      "minutes": 9,
+      "intro": "Electricity powers lamps, fans, toys and many other devices. In a simple circuit, electric current can flow only when there is a complete path. A cell or battery supplies energy to the circuit.",
+      "introHi": "बिजली बल्ब, पंखे, खिलौने और कई उपकरण चलाती है। सरल विद्युत परिपथ में धारा तभी बहती है जब पूरा रास्ता बना हो। सेल या बैटरी परिपथ को ऊर्जा देती है।",
+      "sections": [
+        {
+          "heading": "1. Parts of a simple circuit",
+          "headingHi": "1. सरल परिपथ के भाग",
+          "body": "A basic circuit can contain a cell, connecting wires, a switch and a bulb. The cell provides energy. Wires connect the parts. The bulb changes electrical energy into light and heat. The switch controls whether the path is open or closed.",
+          "bodyHi": "एक सरल परिपथ में सेल, जोड़ने वाले तार, स्विच और बल्ब हो सकते हैं। सेल ऊर्जा देता है। तार भागों को जोड़ते हैं। बल्ब विद्युत ऊर्जा को प्रकाश और ऊष्मा में बदलता है। स्विच रास्ते को खुला या बंद करता है।",
+          "example": "When a switch is closed, the circuit path is complete and the bulb can glow. When the switch is open, the path is broken.",
+          "exampleHi": "स्विच बंद होने पर परिपथ का रास्ता पूरा होता है और बल्ब जल सकता है। स्विच खुला होने पर रास्ता टूट जाता है।"
+        },
+        {
+          "heading": "2. Conductors and insulators",
+          "headingHi": "2. चालक और कुचालक",
+          "body": "A conductor allows electric current to pass through it easily. Many metals, such as copper, are good conductors and are used inside wires. An insulator resists current flow. Plastic and rubber are used around wires to help protect people from contact with conducting metal.",
+          "bodyHi": "चालक पदार्थ से विद्युत धारा आसानी से गुजरती है। ताँबे जैसी कई धातुएँ अच्छी चालक हैं और तारों के अंदर उपयोग होती हैं। कुचालक धारा के प्रवाह का विरोध करता है। प्लास्टिक और रबर तारों के बाहर सुरक्षा के लिए लगाए जाते हैं ताकि व्यक्ति चालक धातु के संपर्क में न आए।",
+          "example": "A copper wire can carry current; its plastic covering helps keep the current away from your fingers.",
+          "exampleHi": "ताँबे का तार धारा ले जा सकता है; उसका प्लास्टिक आवरण धारा को उँगलियों से दूर रखने में मदद करता है।"
+        },
+        {
+          "heading": "3. Electrical safety is essential",
+          "headingHi": "3. बिजली की सुरक्षा बहुत ज़रूरी है",
+          "body": "Never experiment with wall sockets, mains electricity, damaged cables or wet electrical devices. Do not put objects into sockets. Only use low-voltage classroom cells and simple kits with adult supervision. If you see a damaged wire, stay away and tell an adult.",
+          "bodyHi": "दीवार के सॉकेट, घरेलू बिजली, टूटे तार या गीले बिजली के उपकरणों से प्रयोग कभी मत करो। सॉकेट में वस्तु मत डालो। केवल कम वोल्टेज वाले शैक्षिक सेल और सरल किट का उपयोग किसी बड़े की निगरानी में करो। टूटा तार दिखे तो दूर रहो और बड़े को बताओ।",
+          "example": "A battery-powered classroom circuit is designed for learning; household mains electricity is much more dangerous.",
+          "exampleHi": "बैटरी वाला कक्षा-परिपथ सीखने के लिए बनाया जाता है; घर की मेन बिजली कहीं अधिक खतरनाक है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Circuit",
+          "wordHi": "परिपथ",
+          "meaning": "A complete path through which current can flow.",
+          "meaningHi": "पूरा रास्ता जिससे विद्युत धारा बह सकती है।"
+        },
+        {
+          "word": "Switch",
+          "wordHi": "स्विच",
+          "meaning": "A device that opens or closes a circuit.",
+          "meaningHi": "परिपथ को खोलने या बंद करने वाला उपकरण।"
+        },
+        {
+          "word": "Conductor",
+          "wordHi": "चालक",
+          "meaning": "A material that allows current to pass easily.",
+          "meaningHi": "वह पदार्थ जिससे धारा आसानी से गुजरती है।"
+        },
+        {
+          "word": "Insulator",
+          "wordHi": "कुचालक",
+          "meaning": "A material that resists the flow of current.",
+          "meaningHi": "वह पदार्थ जो धारा के प्रवाह का विरोध करता है।"
+        }
+      ],
+      "activity": "With an adult and a classroom low-voltage circuit kit, connect a cell, wires, a switch and a small bulb. Draw the circuit and show what changes when the switch opens.",
+      "activityHi": "किसी बड़े की मदद से कम वोल्टेज वाली शैक्षिक किट में सेल, तार, स्विच और छोटा बल्ब जोड़ो। परिपथ बनाकर दिखाओ कि स्विच खुलने पर क्या बदलता है।",
+      "practice": [
+        {
+          "question": "What must a circuit be for current to flow continuously?",
+          "questionHi": "धारा लगातार बहने के लिए परिपथ कैसा होना चाहिए?",
+          "options": [
+            "Open and broken",
+            "Closed and complete",
+            "Made only of plastic"
+          ],
+          "optionsHi": [
+            "खुला और टूटा हुआ",
+            "बंद और पूरा",
+            "केवल प्लास्टिक का बना"
+          ],
+          "correct": 1,
+          "explanation": "A complete closed path allows current to flow around the circuit.",
+          "explanationHi": "पूरा बंद रास्ता धारा को परिपथ में बहने देता है।"
+        },
+        {
+          "question": "Which material is usually a good conductor?",
+          "questionHi": "कौन-सा पदार्थ सामान्यतः अच्छा चालक है?",
+          "options": [
+            "Copper",
+            "Rubber",
+            "Dry wood"
+          ],
+          "optionsHi": [
+            "ताँबा",
+            "रबर",
+            "सूखी लकड़ी"
+          ],
+          "correct": 0,
+          "explanation": "Copper is a metal and conducts electricity well.",
+          "explanationHi": "ताँबा धातु है और बिजली का अच्छा चालक है。"
+        },
+        {
+          "question": "What should you do if you see a damaged electrical wire?",
+          "questionHi": "टूटा हुआ बिजली का तार दिखे तो क्या करना चाहिए?",
+          "options": [
+            "Touch it to test it",
+            "Pour water on it",
+            "Stay away and tell an adult"
+          ],
+          "optionsHi": [
+            "जाँचने के लिए छूना",
+            "उस पर पानी डालना",
+            "दूर रहकर बड़े को बताना"
+          ],
+          "correct": 2,
+          "explanation": "Damaged wires can cause electric shock or fire. Keep away and tell an adult.",
+          "explanationHi": "टूटे तार से बिजली का झटका या आग लग सकती है। दूर रहो और बड़े को बताओ।"
+        }
+      ]
     },
     {
       "id": "biology_digest",
