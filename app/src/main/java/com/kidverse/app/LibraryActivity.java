@@ -21,6 +21,7 @@ public class LibraryActivity extends Activity {
     private LinearLayout list;
     private EditText search;
     private boolean hindi = false;
+    private int gradeFilter = 0;
     private int ink = 0xFF202044, purple = 0xFF6256D9, muted = 0xFF77758F;
 
     @Override public void onCreate(Bundle state) {
@@ -58,6 +59,22 @@ public class LibraryActivity extends Activity {
         controls.addView(language, new LinearLayout.LayoutParams(0, -2, 1));
         controls.addView(download, new LinearLayout.LayoutParams(0, -2, 1));
         root.addView(controls);
+        Button tutor = new Button(this);
+        tutor.setText(hindi ? "🧠 ऑफलाइन स्मार्ट ट्यूटर · API नहीं" : "🧠 Offline Smart Tutor · No API");
+        tutor.setOnClickListener(v -> openOfflineTutor());
+        root.addView(tutor, new LinearLayout.LayoutParams(-1, -2));
+        LinearLayout grades = new LinearLayout(this);
+        grades.setOrientation(0);
+        String[] gradeNames = {"All", "Class 3", "Class 4", "Class 5"};
+        for (int i = 0; i < gradeNames.length; i++) {
+            final int selectedGrade = i == 0 ? 0 : i + 2;
+            Button grade = new Button(this);
+            grade.setText(hindi ? (i == 0 ? "सभी" : "कक्षा " + selectedGrade) : gradeNames[i]);
+            grade.setAllCaps(false);
+            grade.setOnClickListener(v -> { gradeFilter = selectedGrade; render(search.getText().toString()); });
+            grades.addView(grade, new LinearLayout.LayoutParams(0, -2, 1));
+        }
+        root.addView(grades, new LinearLayout.LayoutParams(-1, -2));
         search = new EditText(this);
         search.setSingleLine(true); search.setTextSize(15); search.setHint(hindi ? "विषय खोजें..." : "Search any subject or topic...");
         search.setPadding(14, 8, 14, 8); search.setBackground(bg(Color.WHITE));
@@ -105,18 +122,43 @@ public class LibraryActivity extends Activity {
         if (list == null) return;
         list.removeAllViews();
         String q = query == null ? "" : query.trim().toLowerCase(Locale.ROOT);
+        ArrayList<JSONObject> ordered = new ArrayList<>(topics);
+        Collections.sort(ordered, (a, b) -> {
+            int ga = a.optInt("class", 99), gb = b.optInt("class", 99);
+            if (ga != gb) return ga - gb;
+            int sa = a.optString("subject").compareToIgnoreCase(b.optString("subject"));
+            if (sa != 0) return sa;
+            return a.optInt("chapterNo", 99) - b.optInt("chapterNo", 99);
+        });
         int shown = 0;
-        for (JSONObject item : topics) {
-            String title = item.optString(hindi ? "titleHi" : "title", item.optString("title"));
-            String subject = item.optString("subject");
+        int lastGrade = -1;
+        String lastSubject = "";
+        for (JSONObject item : ordered) {
+            int grade = item.optInt("class", 0);
+            if (gradeFilter != 0 && grade != gradeFilter) continue;
             String hay = item.toString().toLowerCase(Locale.ROOT);
             if (!hay.contains(q)) continue;
+            if (grade != lastGrade) {
+                TextView gradeHeading = text(hindi ? "कक्षा " + grade : "CLASS " + grade, 15, purple, true);
+                gradeHeading.setPadding(3, 13, 0, 6);
+                list.addView(gradeHeading);
+                lastGrade = grade;
+                lastSubject = "";
+            }
+            String subject = item.optString("subject", "Learning");
+            if (!subject.equals(lastSubject)) {
+                TextView subjectHeading = text(subject.toUpperCase(Locale.ROOT), 11, muted, true);
+                subjectHeading.setPadding(4, 6, 0, 5);
+                list.addView(subjectHeading);
+                lastSubject = subject;
+            }
+            String title = localized(item, "title", "titleHi");
             LinearLayout card = new LinearLayout(this);
             card.setOrientation(1); card.setPadding(15, 13, 15, 13); card.setBackground(bg(Color.WHITE));
             LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(-1, -2); p.bottomMargin = 9;
             list.addView(card, p);
-            card.addView(text(subject.toUpperCase(Locale.ROOT), 10, purple, true));
-            TextView name = text(title, 17, ink, true); name.setPadding(0, 4, 0, 3); card.addView(name);
+            TextView name = text((item.optInt("chapterNo", 0) > 0 ? (hindi ? "पाठ " : "Chapter ") + item.optInt("chapterNo") + " · " : "") + title, 17, ink, true);
+            name.setPadding(0, 4, 0, 3); card.addView(name);
             String teaser = localized(item, "intro", "introHi");
             if (teaser.isEmpty()) teaser = localized(item, "simple", "simpleHi");
             TextView preview = text(teaser, 13, 0xFF5F5B75, false);
@@ -124,16 +166,19 @@ public class LibraryActivity extends Activity {
             preview.setEllipsize(android.text.TextUtils.TruncateAt.END);
             preview.setPadding(0, 5, 0, 6);
             card.addView(preview);
-            String meta = item.optString("level", hindi ? "ज्ञान पाठ" : "Knowledge lesson") +
-                "  ·  " + item.optString("minutes", "5") + (hindi ? " मिनट" : " min");
+            String meta = (hindi ? "कक्षा " : "Class ") + grade + "  ·  " +
+                item.optString("minutes", "5") + (hindi ? " मिनट" : " min");
             card.addView(text(meta, 11, muted, false));
             card.addView(text(hindi ? "पूरा पाठ खोलें  →" : "Open full lesson  →", 12, purple, true));
             card.setOnClickListener(v -> openTopic(item));
             shown++;
         }
-        if (shown == 0) list.addView(text(hindi ? "कोई विषय नहीं मिला। दूसरा शब्द खोजें।" : "No topics found. Try another search.", 14, muted, false));
-        TextView count = text((hindi ? "कुल विषय: " : "Topics available: ") + topics.size(), 12, muted, false);
-        list.addView(count);
+        if (shown == 0) list.addView(text(hindi ? "इस कक्षा में विषय नहीं मिले।" : "No lessons found for this class and search.", 14, muted, false));
+        list.addView(text((hindi ? "दिखाए गए पाठ: " : "Lessons shown: ") + shown + " / " + topics.size(), 12, muted, false));
+        TextView note = text(hindi ? "पाठ्यक्रम क्रम: भारतीय स्कूलों की कक्षा-आधारित सीखने की प्रगति के अनुसार।" :
+            "Sequence: class-wise Indian school learning progression. Not an official NCERT textbook index.", 11, muted, false);
+        note.setPadding(2, 10, 2, 10);
+        list.addView(note);
     }
 
     private String localized(JSONObject item, String englishKey, String hindiKey) {
@@ -339,6 +384,122 @@ public class LibraryActivity extends Activity {
             .setMessage(question).setNegativeButton(hindi ? "बाद में" : "Later", null)
             .setPositiveButton(hindi ? "उत्तर दिखाएँ" : "Reveal answer", (d,w) ->
                 new AlertDialog.Builder(this).setTitle(hindi ? "उत्तर" : "Answer").setMessage(answer).setPositiveButton("OK", null).show()).show();
+    }
+
+    // Fully offline retrieval tutor: no API, account, network call or remote model.
+    // It finds relevant explanations already stored in the lesson library.
+    private void openOfflineTutor() {
+        LinearLayout page = new LinearLayout(this);
+        page.setOrientation(1);
+        page.setPadding(16, 14, 16, 12);
+        page.setBackgroundColor(0xFFF7F6FC);
+        setContentView(page);
+        LinearLayout header = new LinearLayout(this);
+        header.setGravity(Gravity.CENTER_VERTICAL);
+        Button back = new Button(this);
+        back.setText(hindi ? "← वापस" : "← Back");
+        back.setOnClickListener(v -> { build(); render(search == null ? "" : search.getText().toString()); });
+        header.addView(back);
+        TextView title = text(hindi ? "ऑफलाइन स्मार्ट ट्यूटर" : "Offline Smart Tutor", 20, ink, true);
+        title.setPadding(10, 0, 0, 0);
+        header.addView(title);
+        page.addView(header);
+        TextView disclaimer = text(hindi ?
+            "यह बिना API और इंटरनेट के आपकी पाठ्य-पुस्तक सामग्री से उत्तर खोजता है। यह ऑनलाइन जनरेटिव AI मॉडल नहीं है।" :
+            "No API or internet required. It searches and explains KIDVERSE's built-in lessons; it is not a cloud or generative AI model.", 12, muted, false);
+        disclaimer.setPadding(3, 8, 3, 10);
+        page.addView(disclaimer);
+        ScrollView scroll = new ScrollView(this);
+        LinearLayout conversation = new LinearLayout(this);
+        conversation.setOrientation(1);
+        scroll.addView(conversation);
+        page.addView(scroll, new LinearLayout.LayoutParams(-1, 0, 1));
+        addTutorBubble(conversation, hindi ?
+            "नमस्ते! मुझसे अपने पाठों के बारे में सवाल पूछो। उदाहरण: 'पौधे भोजन कैसे बनाते हैं?' या 'भिन्न क्या है?'" :
+            "Hi! Ask me about your lessons. Try: 'How do plants make food?' or 'What is a fraction?'");
+        LinearLayout composer = new LinearLayout(this);
+        composer.setGravity(Gravity.CENTER_VERTICAL);
+        EditText question = new EditText(this);
+        question.setSingleLine(true);
+        question.setTextSize(14);
+        question.setHint(hindi ? "अपना सवाल लिखें..." : "Ask a learning question...");
+        composer.addView(question, new LinearLayout.LayoutParams(0, -2, 1));
+        Button send = new Button(this);
+        send.setText(hindi ? "पूछें" : "Ask");
+        composer.addView(send);
+        page.addView(composer, new LinearLayout.LayoutParams(-1, -2));
+        send.setOnClickListener(v -> {
+            String asked = question.getText().toString().trim();
+            if (asked.isEmpty()) return;
+            addTutorBubble(conversation, (hindi ? "आप: " : "You: ") + asked);
+            addTutorBubble(conversation, answerOffline(asked));
+            question.setText("");
+            scroll.post(() -> scroll.fullScroll(ScrollView.FOCUS_DOWN));
+        });
+    }
+
+    private void addTutorBubble(LinearLayout parent, String message) {
+        TextView bubble = text(message, 14, ink, false);
+        bubble.setPadding(14, 12, 14, 12);
+        bubble.setBackground(bg(Color.WHITE));
+        LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(-1, -2);
+        p.bottomMargin = 9;
+        parent.addView(bubble, p);
+    }
+
+    private String answerOffline(String asked) {
+        String query = asked.toLowerCase(Locale.ROOT).replaceAll("[^\\p{L}\\p{N} ]", " ");
+        String[] words = query.split("\\s+");
+        Set<String> stop = new HashSet<>(Arrays.asList("what","is","are","the","a","an","how","why","when","where","can","you","tell","me","about","explain","please","मुझे","क्या","है","हैं","कैसे","क्यों","बताओ","समझाओ","के","का","की","में","को"));
+        ArrayList<String> keys = new ArrayList<>();
+        for (String word : words) if (word.length() > 1 && !stop.contains(word)) keys.add(word);
+        JSONObject bestTopic = null, bestSection = null, bestTerm = null;
+        int bestScore = 0;
+        for (JSONObject topic : topics) {
+            String title = localized(topic, "title", "titleHi").toLowerCase(Locale.ROOT);
+            String intro = localized(topic, "intro", "introHi").toLowerCase(Locale.ROOT);
+            int topicScore = scoreText(title + " " + intro + " " + topic.optString("subject").toLowerCase(Locale.ROOT), keys);
+            JSONArray sections = topic.optJSONArray("sections");
+            if (sections != null) for (int i = 0; i < sections.length(); i++) {
+                JSONObject section = sections.optJSONObject(i);
+                if (section == null) continue;
+                String content = localized(section, "heading", "headingHi") + " " + localized(section, "body", "bodyHi");
+                int score = topicScore + scoreText(content.toLowerCase(Locale.ROOT), keys) * 2;
+                if (score > bestScore) { bestScore = score; bestTopic = topic; bestSection = section; bestTerm = null; }
+            }
+            JSONArray terms = topic.optJSONArray("terms");
+            if (terms != null) for (int i = 0; i < terms.length(); i++) {
+                JSONObject term = terms.optJSONObject(i);
+                if (term == null) continue;
+                String content = localized(term, "word", "wordHi") + " " + localized(term, "meaning", "meaningHi");
+                int score = topicScore + scoreText(content.toLowerCase(Locale.ROOT), keys) * 3;
+                if (score > bestScore) { bestScore = score; bestTopic = topic; bestSection = null; bestTerm = term; }
+            }
+        }
+        if (bestTopic == null || bestScore < 2) return hindi ?
+            "मुझे इस सवाल के लिए सही पाठ नहीं मिला। कोई मुख्य शब्द लिखकर पूछो, जैसे गणित, पौधा, पानी, पृथ्वी या कंप्यूटर।" :
+            "I couldn't match that to a built-in lesson yet. Try a topic word such as fractions, plants, water, Earth, maps or coding.";
+        StringBuilder answer = new StringBuilder();
+        answer.append(hindi ? "पाठ: " : "Lesson: ").append(localized(bestTopic, "title", "titleHi")).append("\\n\\n");
+        if (bestTerm != null) {
+            answer.append(localized(bestTerm, "word", "wordHi")).append(": ")
+                .append(localized(bestTerm, "meaning", "meaningHi"));
+        } else if (bestSection != null) {
+            answer.append(localized(bestSection, "heading", "headingHi")).append("\\n")
+                .append(localized(bestSection, "body", "bodyHi"));
+            String example = localized(bestSection, "example", "exampleHi");
+            if (!example.isEmpty()) answer.append("\\n\\n").append(hindi ? "उदाहरण: " : "Example: ").append(example);
+        } else {
+            answer.append(localized(bestTopic, "intro", "introHi"));
+        }
+        answer.append("\\n\\n").append(hindi ? "और अभ्यास के लिए इस पाठ को खोलें।" : "Open this lesson for more examples and practice.");
+        return answer.toString();
+    }
+
+    private int scoreText(String text, ArrayList<String> keys) {
+        int score = 0;
+        for (String key : keys) if (text.contains(key)) score++;
+        return score;
     }
 
     private void downloadPack(Button button) {
