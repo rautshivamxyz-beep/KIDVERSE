@@ -486,7 +486,118 @@
       "question": "What forms when an opaque object blocks light?",
       "questionHi": "अपारदर्शी वस्तु प्रकाश रोकती है तो क्या बनता है?",
       "answer": "A shadow",
-      "answerHi": "छाया"
+      "answerHi": "छाया",
+      "level": "Beginner · Level 4",
+      "minutes": 8,
+      "intro": "We can see a book because light reaches our eyes from it. A lamp or the Sun makes its own light. The Moon and most objects do not make their own light; they reflect light from another source.",
+      "introHi": "हम किताब को देख पाते हैं क्योंकि उससे प्रकाश हमारी आँखों तक पहुँचता है। बल्ब और सूर्य अपना प्रकाश बनाते हैं। चंद्रमा और अधिकांश वस्तुएँ अपना प्रकाश नहीं बनातीं; वे किसी दूसरे स्रोत का प्रकाश परावर्तित करती हैं।",
+      "sections": [
+        {
+          "heading": "1. Light travels and is blocked",
+          "headingHi": "1. प्रकाश चलता है और रुक भी सकता है",
+          "body": "In a uniform transparent material, light travels in straight lines. An opaque object blocks light. When it blocks light from reaching a surface, a shadow forms. A shadow shows the outline of the object, but it may look larger or smaller depending on distances.",
+          "bodyHi": "एक समान पारदर्शी माध्यम में प्रकाश सीधी रेखा में चलता है। अपारदर्शी वस्तु प्रकाश रोकती है। जब वह प्रकाश को सतह तक पहुँचने से रोकती है तो छाया बनती है। छाया वस्तु की बाहरी रूपरेखा दिखाती है, लेकिन दूरी के अनुसार बड़ी या छोटी दिख सकती है।",
+          "example": "Hold your hand between a torch and a wall. Your hand blocks some light and makes a shadow.",
+          "exampleHi": "टॉर्च और दीवार के बीच हाथ रखो। हाथ कुछ प्रकाश रोकता है और छाया बनाता है।"
+        },
+        {
+          "heading": "2. Transparent, translucent and opaque",
+          "headingHi": "2. पारदर्शी, अर्धपारदर्शी और अपारदर्शी",
+          "body": "Transparent materials let most light pass through clearly, like clean window glass. Translucent materials let some light through but scatter it, like frosted glass. Opaque materials do not let light pass through, like wood or a book.",
+          "bodyHi": "पारदर्शी पदार्थ प्रकाश को साफ़-साफ़ गुजरने देते हैं, जैसे साफ़ काँच। अर्धपारदर्शी पदार्थ कुछ प्रकाश गुजरने देते हैं लेकिन उसे बिखेरते हैं, जैसे धुँधला काँच। अपारदर्शी पदार्थ प्रकाश को गुजरने नहीं देते, जैसे लकड़ी या किताब।",
+          "example": "You can usually see a clear shape through a transparent window, but not through a wooden door.",
+          "exampleHi": "पारदर्शी खिड़की से वस्तु का आकार साफ़ दिख सकता है, लेकिन लकड़ी के दरवाज़े से नहीं।"
+        },
+        {
+          "heading": "3. Reflection",
+          "headingHi": "3. परावर्तन",
+          "body": "Reflection happens when light bounces off a surface. A smooth mirror reflects light in an orderly way and can form a clear image. Rough surfaces scatter reflected light in many directions, so they do not make a sharp mirror image.",
+          "bodyHi": "जब प्रकाश किसी सतह से टकराकर लौटता है तो परावर्तन होता है। चिकना दर्पण प्रकाश को व्यवस्थित रूप से लौटाता है और स्पष्ट प्रतिबिंब बना सकता है। खुरदरी सतहें प्रकाश को कई दिशाओं में बिखेरती हैं, इसलिए साफ़ प्रतिबिंब नहीं बनता।",
+          "example": "A mirror shows your face clearly. A rough wall reflects light too, but does not show a sharp image.",
+          "exampleHi": "दर्पण तुम्हारा चेहरा साफ़ दिखाता है। खुरदरी दीवार भी प्रकाश लौटाती है, लेकिन साफ़ प्रतिबिंब नहीं दिखाती।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Opaque",
+          "wordHi": "अपारदर्शी",
+          "meaning": "Does not allow light to pass through.",
+          "meaningHi": "जिससे प्रकाश नहीं गुजरता।"
+        },
+        {
+          "word": "Translucent",
+          "wordHi": "अर्धपारदर्शी",
+          "meaning": "Allows some light through but scatters it.",
+          "meaningHi": "जिससे कुछ प्रकाश गुजरता है लेकिन बिखर जाता है।"
+        },
+        {
+          "word": "Reflection",
+          "wordHi": "परावर्तन",
+          "meaning": "Light bouncing off a surface.",
+          "meaningHi": "सतह से प्रकाश का लौटना।"
+        },
+        {
+          "word": "Shadow",
+          "wordHi": "छाया",
+          "meaning": "A dark region where an object blocks light.",
+          "meaningHi": "वह अंधेरा भाग जहाँ कोई वस्तु प्रकाश रोकती है।"
+        }
+      ],
+      "activity": "With an adult, shine a torch towards a wall and place a clear plastic sheet, tracing paper and a book in front of it one at a time. Compare how much light passes through.",
+      "activityHi": "किसी बड़े की मदद से टॉर्च की रोशनी दीवार पर डालो। उसके आगे पारदर्शी प्लास्टिक, ट्रेसिंग पेपर और किताब को बारी-बारी रखो। देखो कितनी रोशनी गुजरती है।",
+      "practice": [
+        {
+          "question": "What happens when an opaque object blocks light?",
+          "questionHi": "अपारदर्शी वस्तु प्रकाश रोकती है तो क्या बनता है?",
+          "options": [
+            "A shadow",
+            "A rainbow every time",
+            "A new light source"
+          ],
+          "optionsHi": [
+            "छाया",
+            "हर बार इंद्रधनुष",
+            "नया प्रकाश स्रोत"
+          ],
+          "correct": 0,
+          "explanation": "A shadow forms where an object prevents light reaching a surface.",
+          "explanationHi": "जहाँ वस्तु प्रकाश को सतह तक पहुँचने से रोकती है, वहाँ छाया बनती है।"
+        },
+        {
+          "question": "Which material lets light pass through clearly?",
+          "questionHi": "कौन-सा पदार्थ प्रकाश को साफ़ गुजरने देता है?",
+          "options": [
+            "Wood",
+            "Clear glass",
+            "Thick cardboard"
+          ],
+          "optionsHi": [
+            "लकड़ी",
+            "साफ़ काँच",
+            "मोटा गत्ता"
+          ],
+          "correct": 1,
+          "explanation": "Clear glass is transparent, so light passes through it clearly.",
+          "explanationHi": "साफ़ काँच पारदर्शी होता है, इसलिए प्रकाश उससे साफ़ गुजरता है।"
+        },
+        {
+          "question": "What is reflection?",
+          "questionHi": "परावर्तन क्या है?",
+          "options": [
+            "Light bouncing off a surface",
+            "Sound becoming louder",
+            "Water freezing"
+          ],
+          "optionsHi": [
+            "सतह से प्रकाश का लौटना",
+            "ध्वनि का तेज़ होना",
+            "पानी का जमना"
+          ],
+          "correct": 0,
+          "explanation": "Reflection is the bouncing back of light from a surface.",
+          "explanationHi": "परावर्तन किसी सतह से प्रकाश के लौटने को कहते हैं।"
+        }
+      ]
     },
     {
       "id": "earth_map",
