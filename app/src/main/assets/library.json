@@ -248,7 +248,112 @@
       "question": "What is the basic unit of life?",
       "questionHi": "जीवन की मूल इकाई क्या है?",
       "answer": "The cell",
-      "answerHi": "कोशिका"
+      "answerHi": "कोशिका",
+      "level": "Explorer · Level 4",
+      "minutes": 9,
+      "intro": "A leaf, your skin and a tiny pond organism are very different, but living things are built from tiny units called cells. A cell is the smallest structure that can carry out the basic activities of life.",
+      "introHi": "पत्ती, त्वचा और तालाब का सूक्ष्म जीव अलग दिखते हैं, लेकिन जीव कोशिकाओं नामक छोटी इकाइयों से बने होते हैं। कोशिका जीवन की मूल गतिविधियाँ कर सकने वाली सबसे छोटी संरचना है।",
+      "sections": [
+        {
+          "heading": "1. One cell or many?",
+          "headingHi": "1. एक कोशिका या अनेक?",
+          "body": "Some living things, such as many bacteria, consist of one cell. Animals and plants are multicellular. Their cells can have different jobs: muscle cells help movement, nerve cells carry messages and root-hair cells absorb water.",
+          "bodyHi": "कई बैक्टीरिया जैसे कुछ जीव एक कोशिका से बने होते हैं। जानवर और पौधे बहुकोशिकीय हैं। उनकी कोशिकाओं के अलग काम होते हैं: मांसपेशी कोशिकाएँ गति, तंत्रिका कोशिकाएँ संदेश और जड़-रोम कोशिकाएँ पानी सोखने में मदद करती हैं।",
+          "example": "Your body has many specialised cells that work together like a team.",
+          "exampleHi": "तुम्हारे शरीर में कई विशेष कोशिकाएँ टीम की तरह मिलकर काम करती हैं।"
+        },
+        {
+          "heading": "2. Parts inside a cell",
+          "headingHi": "2. कोशिका के अंदर के भाग",
+          "body": "The cell membrane forms the boundary and controls what enters and leaves. Cytoplasm is a jelly-like material where many cell activities happen. Most plant and animal cells have a nucleus, which stores genetic instructions and helps control cell activities.",
+          "bodyHi": "कोशिका झिल्ली सीमा बनाती है और अंदर-बाहर जाने वाली चीज़ों को नियंत्रित करती है। कोशिकाद्रव्य जेली जैसा पदार्थ है जहाँ कई गतिविधियाँ होती हैं। अधिकांश पौधों और जानवरों की कोशिकाओं में केंद्रक होता है, जिसमें आनुवंशिक निर्देश होते हैं।",
+          "example": "Think of the membrane as a gate, the nucleus as an instruction room and cytoplasm as the working space.",
+          "exampleHi": "झिल्ली को द्वार, केंद्रक को निर्देश कक्ष और कोशिकाद्रव्य को काम करने की जगह समझो।"
+        },
+        {
+          "heading": "3. What makes plant cells special?",
+          "headingHi": "3. पौधों की कोशिकाओं में खास क्या है?",
+          "body": "Plant cells have a strong cell wall outside the membrane. Many contain chloroplasts with chlorophyll to absorb light for photosynthesis. A large central vacuole stores cell sap and helps the cell stay firm. Most root cells do not contain chloroplasts.",
+          "bodyHi": "पौधों की कोशिकाओं में झिल्ली के बाहर मजबूत कोशिका भित्ति होती है। कई कोशिकाओं में हरितलवक और क्लोरोफिल होता है जो प्रकाश संश्लेषण के लिए प्रकाश सोखता है। बड़ी केंद्रीय रिक्तिका कोशिका रस जमा करती है। अधिकांश जड़ कोशिकाओं में हरितलवक नहीं होते।",
+          "example": "Many leaf cells contain chloroplasts, which help the plant capture light energy.",
+          "exampleHi": "पत्ती की कई कोशिकाओं में हरितलवक होते हैं जो पौधे को प्रकाश ऊर्जा लेने में मदद करते हैं。"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Cell membrane",
+          "wordHi": "कोशिका झिल्ली",
+          "meaning": "A boundary that controls movement in and out.",
+          "meaningHi": "वह सीमा जो पदार्थों के आने-जाने को नियंत्रित करती है।"
+        },
+        {
+          "word": "Nucleus",
+          "wordHi": "केंद्रक",
+          "meaning": "A cell part that contains genetic instructions.",
+          "meaningHi": "कोशिका का भाग जिसमें आनुवंशिक निर्देश होते हैं।"
+        },
+        {
+          "word": "Chloroplast",
+          "wordHi": "हरितलवक",
+          "meaning": "A plant-cell structure that captures light for photosynthesis.",
+          "meaningHi": "पौध कोशिका की संरचना जो प्रकाश संश्लेषण के लिए प्रकाश पकड़ती है।"
+        }
+      ],
+      "activity": "Draw a plant cell. Label the cell wall, membrane, cytoplasm, nucleus, chloroplasts and vacuole. Write one job beside each label.",
+      "activityHi": "एक पौध कोशिका बनाओ। कोशिका भित्ति, झिल्ली, कोशिकाद्रव्य, केंद्रक, हरितलवक और रिक्तिका के नाम लिखो। हर भाग का एक काम भी लिखो।",
+      "practice": [
+        {
+          "question": "What controls what enters and leaves a cell?",
+          "questionHi": "कोशिका में क्या अंदर-बाहर जाने को नियंत्रित करता है?",
+          "options": [
+            "Cell membrane",
+            "Chloroplast",
+            "Vacuole"
+          ],
+          "optionsHi": [
+            "कोशिका झिल्ली",
+            "हरितलवक",
+            "रिक्तिका"
+          ],
+          "correct": 0,
+          "explanation": "The cell membrane is the selective boundary around the cell.",
+          "explanationHi": "कोशिका झिल्ली कोशिका के चारों ओर चयनात्मक सीमा है।"
+        },
+        {
+          "question": "Which structure captures light for photosynthesis?",
+          "questionHi": "प्रकाश संश्लेषण के लिए प्रकाश कौन-सी संरचना पकड़ती है?",
+          "options": [
+            "Nucleus",
+            "Chloroplast",
+            "Cell wall"
+          ],
+          "optionsHi": [
+            "केंद्रक",
+            "हरितलवक",
+            "कोशिका भित्ति"
+          ],
+          "correct": 1,
+          "explanation": "Chloroplasts contain chlorophyll, which absorbs light energy.",
+          "explanationHi": "हरितलवक में क्लोरोफिल होता है जो प्रकाश ऊर्जा सोखता है।"
+        },
+        {
+          "question": "Which statement is correct?",
+          "questionHi": "कौन-सा कथन सही है?",
+          "options": [
+            "Every living thing has many cells",
+            "Some living things consist of one cell",
+            "Cells are found only in animals"
+          ],
+          "optionsHi": [
+            "हर जीव में अनेक कोशिकाएँ होती हैं",
+            "कुछ जीव एक कोशिका से बने होते हैं",
+            "कोशिकाएँ केवल जानवरों में होती हैं"
+          ],
+          "correct": 1,
+          "explanation": "Many bacteria and other organisms are single-celled.",
+          "explanationHi": "कई बैक्टीरिया और अन्य जीव एक कोशिकीय होते हैं。"
+        }
+      ]
     },
     {
       "id": "science_force",
