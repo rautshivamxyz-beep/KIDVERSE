@@ -745,12 +745,12 @@ public class MainActivity extends Activity {
             .setNegativeButton("Cancel", null)
             .setPositiveButton("Reset", (d, w) -> {
                 prefs.edit().clear().apply();
-                SharedPreferences skillPrefs = getSharedPreferences("kidverse_skills", MODE_PRIVATE);
-                SharedPreferences.Editor skillsEditor = skillPrefs.edit();
-                for (String key : skillPrefs.getAll().keySet()) {
-                    if (key.startsWith("done_")) skillsEditor.remove(key);
+                SharedPreferences resetSkillPrefs = getSharedPreferences("kidverse_skills", MODE_PRIVATE);
+                SharedPreferences.Editor resetSkillsEditor = resetSkillPrefs.edit();
+                for (String key : resetSkillPrefs.getAll().keySet()) {
+                    if (key.startsWith("done_")) resetSkillsEditor.remove(key);
                 }
-                skillsEditor.apply();
+                resetSkillsEditor.apply();
                 stars = 0;
                 mathIndex = 0;
                 storyIndex = 0;
