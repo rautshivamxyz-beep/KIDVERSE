@@ -498,7 +498,14 @@ public class LibraryActivity extends Activity {
 
     private int scoreText(String text, ArrayList<String> keys) {
         int score = 0;
-        for (String key : keys) if (text.contains(key)) score++;
+        for (String key : keys) {
+            boolean found = text.contains(key);
+            if (!found && key.length() > 3) {
+                if (key.endsWith("s")) found = text.contains(key.substring(0, key.length() - 1));
+                else found = text.contains(key + "s");
+            }
+            if (found) score++;
+        }
         return score;
     }
 
