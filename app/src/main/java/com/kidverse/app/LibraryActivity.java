@@ -367,7 +367,7 @@ public class LibraryActivity extends Activity {
                 String explanation = localized(q, "explanation", "explanationHi");
                 boolean right = selected == correct;
                 String message = (right ? (hindi ? "सही जवाब! 🌟" : "Correct! 🌟") :
-                    (hindi ? "सही उत्तर: " : "Correct answer: ") + answer) + "\\n\\n" + explanation;
+                    (hindi ? "सही उत्तर: " : "Correct answer: ") + answer) + "\n\n" + explanation;
                 new AlertDialog.Builder(this)
                     .setTitle(right ? (hindi ? "शाबाश!" : "Well done!") : (hindi ? "फिर प्रयास करें" : "Try again"))
                     .setMessage(message)
@@ -480,19 +480,19 @@ public class LibraryActivity extends Activity {
             "मुझे इस सवाल के लिए सही पाठ नहीं मिला। कोई मुख्य शब्द लिखकर पूछो, जैसे गणित, पौधा, पानी, पृथ्वी या कंप्यूटर।" :
             "I couldn't match that to a built-in lesson yet. Try a topic word such as fractions, plants, water, Earth, maps or coding.";
         StringBuilder answer = new StringBuilder();
-        answer.append(hindi ? "पाठ: " : "Lesson: ").append(localized(bestTopic, "title", "titleHi")).append("\\n\\n");
+        answer.append(hindi ? "पाठ: " : "Lesson: ").append(localized(bestTopic, "title", "titleHi")).append("\n\n");
         if (bestTerm != null) {
             answer.append(localized(bestTerm, "word", "wordHi")).append(": ")
                 .append(localized(bestTerm, "meaning", "meaningHi"));
         } else if (bestSection != null) {
-            answer.append(localized(bestSection, "heading", "headingHi")).append("\\n")
+            answer.append(localized(bestSection, "heading", "headingHi")).append("\n")
                 .append(localized(bestSection, "body", "bodyHi"));
             String example = localized(bestSection, "example", "exampleHi");
-            if (!example.isEmpty()) answer.append("\\n\\n").append(hindi ? "उदाहरण: " : "Example: ").append(example);
+            if (!example.isEmpty()) answer.append("\n\n").append(hindi ? "उदाहरण: " : "Example: ").append(example);
         } else {
             answer.append(localized(bestTopic, "intro", "introHi"));
         }
-        answer.append("\\n\\n").append(hindi ? "और अभ्यास के लिए इस पाठ को खोलें।" : "Open this lesson for more examples and practice.");
+        answer.append("\n\n").append(hindi ? "और अभ्यास के लिए इस पाठ को खोलें।" : "Open this lesson for more examples and practice.");
         return answer.toString();
     }
 
