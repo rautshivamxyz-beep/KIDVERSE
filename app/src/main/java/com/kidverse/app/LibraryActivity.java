@@ -123,17 +123,159 @@ public class LibraryActivity extends Activity {
         list.addView(count);
     }
 
+    private String localized(JSONObject item, String englishKey, String hindiKey) {
+        String value = item.optString(hindi ? hindiKey : englishKey, "");
+        if (value.isEmpty()) value = item.optString(englishKey, "");
+        return value;
+    }
+
+    private TextView lessonText(String value, int size, int color, boolean bold) {
+        TextView t = text(value, size, color, bold);
+        t.setLineSpacing(5f, 1.08f);
+        return t;
+    }
+
+    private void lessonBlock(LinearLayout parent, String heading, String body, String example) {
+        LinearLayout card = new LinearLayout(this);
+        card.setOrientation(1);
+        card.setPadding(16, 14, 16, 14);
+        card.setBackground(bg(Color.WHITE));
+        LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(-1, -2);
+        p.bottomMargin = 10;
+        parent.addView(card, p);
+        TextView h = lessonText(heading, 17, ink, true);
+        card.addView(h);
+        TextView b = lessonText(body, 15, 0xFF4F4D63, false);
+        b.setPadding(0, 8, 0, 0);
+        card.addView(b);
+        if (example != null && !example.trim().isEmpty()) {
+            TextView e = lessonText((hindi ? "उदाहरण: " : "Example: ") + example, 14, purple, false);
+            e.setPadding(0, 10, 0, 0);
+            card.addView(e);
+        }
+    }
+
     private void openTopic(JSONObject item) {
-        String title = item.optString(hindi ? "titleHi" : "title", item.optString("title"));
-        String simple = item.optString(hindi ? "simpleHi" : "simple", item.optString("simple"));
-        String deep = item.optString(hindi ? "deepHi" : "deep", item.optString("deep"));
-        String[] choices = hindi ? new String[]{"आसान व्याख्या पढ़ें", "और गहराई से समझें", "इस विषय पर अभ्यास करें"} :
-            new String[]{"Simple explanation", "Explain more deeply", "Practice this topic"};
-        new AlertDialog.Builder(this).setTitle(title).setItems(choices, (d, which) -> {
-            if (which == 0) new AlertDialog.Builder(this).setTitle(title).setMessage(simple).setPositiveButton("OK", null).show();
-            else if (which == 1) new AlertDialog.Builder(this).setTitle(title).setMessage(deep).setPositiveButton("Got it", null).show();
-            else practice(item);
-        }).setNegativeButton(hindi ? "बंद करें" : "Close", null).show();
+        LinearLayout page = new LinearLayout(this);
+        page.setOrientation(1);
+        page.setPadding(18, 12, 18, 10);
+        page.setBackgroundColor(0xFFF7F6FC);
+        setContentView(page);
+
+        LinearLayout top = new LinearLayout(this);
+        top.setGravity(Gravity.CENTER_VERTICAL);
+        Button back = new Button(this);
+        back.setText(hindi ? "← वापस" : "← Back");
+        back.setOnClickListener(v -> { build(); render(""); });
+        top.addView(back);
+        TextView label = lessonText(hindi ? "पाठ" : "LESSON", 11, purple, true);
+        label.setPadding(12, 0, 0, 0);
+        top.addView(label);
+        page.addView(top, new LinearLayout.LayoutParams(-1, -2));
+
+        ScrollView scroll = new ScrollView(this);
+        LinearLayout body = new LinearLayout(this);
+        body.setOrientation(1);
+        body.setPadding(0, 12, 0, 22);
+        scroll.addView(body);
+        page.addView(scroll, new LinearLayout.LayoutParams(-1, 0, 1));
+
+        String title = localized(item, "title", "titleHi");
+        String subject = item.optString("subject", "Learning");
+        body.addView(lessonText(subject.toUpperCase(Locale.ROOT) + "  ·  " +
+            item.optString("level", hindi ? "ज्ञान पाठ" : "Knowledge lesson") +
+            "  ·  " + item.optString("minutes", "6") + (hindi ? " मिनट" : " min"), 11, purple, true));
+        TextView heading = lessonText(title, 25, ink, true);
+        heading.setPadding(0, 7, 0, 10);
+        body.addView(heading);
+
+        String intro = localized(item, "intro", "introHi");
+        if (intro.isEmpty()) intro = localized(item, "simple", "simpleHi");
+        lessonBlock(body, hindi ? "इस पाठ में क्या सीखेंगे" : "What you will learn", intro, null);
+
+        JSONArray sections = item.optJSONArray("sections");
+        if (sections != null && sections.length() > 0) {
+            TextView sectionTitle = lessonText(hindi ? "समझें, चरण-दर-चरण" : "Learn step by step", 19, ink, true);
+            sectionTitle.setPadding(2, 5, 0, 10);
+            body.addView(sectionTitle);
+            for (int i = 0; i < sections.length(); i++) {
+                JSONObject section = sections.optJSONObject(i);
+                if (section == null) continue;
+                String sh = localized(section, "heading", "headingHi");
+                String sb = localized(section, "body", "bodyHi");
+                String se = localized(section, "example", "exampleHi");
+                lessonBlock(body, sh, sb, se);
+            }
+        } else {
+            lessonBlock(body, hindi ? "और जानें" : "Go deeper",
+                localized(item, "deep", "deepHi"), null);
+        }
+
+        JSONArray terms = item.optJSONArray("terms");
+        if (terms != null && terms.length() > 0) {
+            TextView termsTitle = lessonText(hindi ? "मुख्य शब्द" : "Key words", 19, ink, true);
+            termsTitle.setPadding(2, 8, 0, 10);
+            body.addView(termsTitle);
+            for (int i = 0; i < terms.length(); i++) {
+                JSONObject term = terms.optJSONObject(i);
+                if (term == null) continue;
+                String word = localized(term, "word", "wordHi");
+                String meaning = localized(term, "meaning", "meaningHi");
+                lessonBlock(body, word, meaning, null);
+            }
+        }
+
+        String activity = localized(item, "activity", "activityHi");
+        if (!activity.isEmpty()) {
+            lessonBlock(body, hindi ? "करके देखो" : "Try it yourself", activity, null);
+        }
+
+        JSONArray questions = item.optJSONArray("practice");
+        if (questions != null && questions.length() > 0) {
+            TextView quizTitle = lessonText(hindi ? "अपनी समझ जाँचें" : "Check your understanding", 20, ink, true);
+            quizTitle.setPadding(2, 10, 0, 10);
+            body.addView(quizTitle);
+            for (int i = 0; i < questions.length(); i++) {
+                final JSONObject q = questions.optJSONObject(i);
+                if (q == null) continue;
+                final JSONArray choices = q.optJSONArray(hindi ? "optionsHi" : "options");
+                final int correct = q.optInt("correct", -1);
+                String question = localized(q, "question", "questionHi");
+                lessonBlock(body, (hindi ? "प्रश्न " : "Question ") + (i + 1), question, null);
+                if (choices != null) {
+                    for (int j = 0; j < choices.length(); j++) {
+                        final int selected = j;
+                        String option = choices.optString(j);
+                        Button optionButton = new Button(this);
+                        optionButton.setText(option);
+                        optionButton.setAllCaps(false);
+                        LinearLayout.LayoutParams op = new LinearLayout.LayoutParams(-1, -2);
+                        op.bottomMargin = 5;
+                        body.addView(optionButton, op);
+                        optionButton.setOnClickListener(v -> {
+                            boolean right = selected == correct;
+                            String explanation = localized(q, "explanation", "explanationHi");
+                            String message = (right ? (hindi ? "सही जवाब! 🌟\n\n" : "Correct! 🌟\n\n") :
+                                (hindi ? "अच्छी कोशिश। फिर समझें:\n\n" : "Good try. Review this idea:\n\n")) + explanation;
+                            new AlertDialog.Builder(this)
+                                .setTitle(right ? (hindi ? "शाबाश!" : "Well done!") : (hindi ? "फिर प्रयास करें" : "Try again"))
+                                .setMessage(message)
+                                .setPositiveButton("OK", null).show();
+                        });
+                    }
+                }
+            }
+        } else {
+            Button practiceButton = new Button(this);
+            practiceButton.setText(hindi ? "इस विषय का अभ्यास करें" : "Practise this topic");
+            practiceButton.setOnClickListener(v -> practice(item));
+            body.addView(practiceButton);
+        }
+
+        Button backBottom = new Button(this);
+        backBottom.setText(hindi ? "पुस्तकालय में वापस जाएँ" : "Back to library");
+        backBottom.setOnClickListener(v -> { build(); render(""); });
+        body.addView(backBottom);
     }
 
     private void practiceRandom() {
