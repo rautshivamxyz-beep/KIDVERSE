@@ -57,3 +57,12 @@ No production signing key or passwords belong in this public repository.
 - Update APKs must be signed with the same permanent release key as the installed app. Never lose this key.
 - To publish a signed update, create GitHub Actions repository secrets named `KIDVERSE_KEYSTORE_BASE64`, `KIDVERSE_KEYSTORE_PASSWORD`, `KIDVERSE_KEY_ALIAS` and `KIDVERSE_KEY_PASSWORD`, then push a version tag such as `v0.2.1`. Keep the keystore and passwords private and under adult/owner control.
 - Debug APKs are for testing and are not interchangeable with the stable signed release channel. A production installation should start from the first signed release APK.
+
+
+## Indian school learning order
+
+The Knowledge Library is organised by Classes 1–5, with class filters and subject/chapter ordering. The current built-in starter curriculum contains 18 lessons: Class 1 (3), Class 2 (3), Class 3 (2), Class 4 (4), and Class 5 (6). Downloadable pack topics are also tagged by class and subject. This is an age-appropriate NCERT/CBSE-aligned learning progression, not an official reproduction of textbook chapter numbering or a board endorsement. Content coverage is still expanding; the lesson count is not a claim that every subject or chapter in Classes 1–5 is complete.
+
+## Offline Smart Tutor (no API)
+
+The tutor runs locally and retrieves explanations, examples and vocabulary from the installed lesson library. It does not call an AI API, require an account, or need internet access for answers. It is a lightweight keyword/retrieval-based study helper, not a generative large-language model; it may not understand every question and should not be presented as a general-purpose AI chatbot. Downloading new lesson packs still requires internet access.
