@@ -11,6 +11,7 @@ The current content update expands the learning material and adds a repeatable s
 - A redesigned home dashboard with learning-world cards and a local star counter
 - Math Kingdom: ten progressive arithmetic and fractions challenges with worked hints and one-time rewards
 - Science Galaxy: five topic lessons plus a five-question quiz covering plants, Earth, magnets, water and mammals
+- Knowledge Library: searchable bilingual (English/Hindi) starter topics, simple/deeper explanations, random practice prompts, and a downloadable pack saved for offline use
 - Story Forest: five original short stories with reading rewards
 - Robot City: a simple sequencing activity
 - Explorer Earth: short nature and environment lessons
@@ -20,7 +21,7 @@ The current content update expands the learning material and adds a repeatable s
 
 ## Privacy and storage
 
-The app has no internet permission, account system, advertising SDK, analytics SDK, location collection or public chat. Stars, activity completion and saved drawings remain in the app's private local storage on the device. Uninstalling the app or clearing its data removes that local progress.
+The app uses internet only for the optional knowledge-pack download and GitHub release checks. It has no account system, advertising SDK, analytics SDK, location collection or public chat. Stars, activity completion, drawings and downloaded learning packs remain in app-private local storage on the device. Uninstalling the app or clearing its data removes that local progress.
 
 The Parent Zone uses a basic arithmetic gate. It is a usability barrier for this prototype, **not strong authentication or a security boundary**. An adult must review and improve this before use with children or commercial distribution.
 
@@ -44,3 +45,13 @@ Do not sell this MVP as a finished, tested children's product. Before a public o
 - Add a support contact, clear licence/terms and a truthful privacy notice.
 
 No production signing key or passwords belong in this public repository.
+
+
+## App updates
+
+- The app checks the public GitHub Releases endpoint on startup and offers an update when a newer compatible release is available.
+- A parent can also use Parent Zone → Check for app updates / Install downloaded update.
+- Android always displays its own installation confirmation. KIDVERSE does not silently install APKs.
+- Update APKs must be signed with the same permanent release key as the installed app. Never lose this key.
+- To publish a signed update, create GitHub Actions repository secrets named `KIDVERSE_KEYSTORE_BASE64`, `KIDVERSE_KEYSTORE_PASSWORD`, `KIDVERSE_KEY_ALIAS` and `KIDVERSE_KEY_PASSWORD`, then push a version tag such as `v0.2.1`. Keep the keystore and passwords private and under adult/owner control.
+- Debug APKs are for testing and are not interchangeable with the stable signed release channel. A production installation should start from the first signed release APK.
