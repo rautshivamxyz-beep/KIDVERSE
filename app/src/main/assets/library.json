@@ -611,7 +611,112 @@
       "question": "Which tool helps show north, south, east and west on a map?",
       "questionHi": "मानचित्र पर उत्तर, दक्षिण, पूर्व और पश्चिम दिखाने वाला संकेत क्या है?",
       "answer": "A compass rose",
-      "answerHi": "दिशा-सूचक"
+      "answerHi": "दिशा-सूचक",
+      "level": "Beginner · Level 3",
+      "minutes": 7,
+      "intro": "A map is a drawing of a place as seen from above. It helps us find places, plan journeys and understand how places are connected. Maps use symbols because drawing every real object would make a map too crowded.",
+      "introHi": "मानचित्र किसी स्थान का ऊपर से देखा गया चित्र है। इससे जगहें ढूँढ़ने, यात्रा की योजना बनाने और स्थानों के संबंध समझने में मदद मिलती है। मानचित्र में संकेत होते हैं क्योंकि हर असली वस्तु बनाने से नक्शा बहुत भरा हुआ हो जाएगा।",
+      "sections": [
+        {
+          "heading": "1. Symbols and the key",
+          "headingHi": "1. संकेत और संकेत-सूची",
+          "body": "A map symbol is a small picture or mark that stands for something real. A blue line may show a river; a small drawing may show a school. The map key, also called a legend, explains what each symbol means. Always check the key before interpreting symbols.",
+          "bodyHi": "मानचित्र संकेत छोटा चित्र या निशान है जो किसी वास्तविक चीज़ को दर्शाता है। नीली रेखा नदी दिखा सकती है; छोटा चित्र स्कूल। संकेत-सूची बताती है कि हर संकेत का क्या अर्थ है। संकेत समझने से पहले सूची देखो।",
+          "example": "If the key shows a tiny airplane for an airport, find that symbol to locate the airport.",
+          "exampleHi": "यदि संकेत-सूची में हवाई अड्डे के लिए छोटा विमान बना है, तो वही संकेत ढूँढ़कर हवाई अड्डा पता करो।"
+        },
+        {
+          "heading": "2. Directions and compass",
+          "headingHi": "2. दिशाएँ और दिशा-सूचक",
+          "body": "The four main compass directions are north, east, south and west. On many maps, north is at the top, but check the north arrow. East is to the right when north is at the top; south is below and west is to the left.",
+          "bodyHi": "दिशा-सूचक की चार मुख्य दिशाएँ उत्तर, पूर्व, दक्षिण और पश्चिम हैं। कई मानचित्रों में उत्तर ऊपर होता है, लेकिन उत्तर का तीर देखना चाहिए। उत्तर ऊपर हो तो पूर्व दाईं ओर, दक्षिण नीचे और पश्चिम बाईं ओर होता है।",
+          "example": "If the library is east of the park, it is to the right of the park on a map with north at the top.",
+          "exampleHi": "यदि पुस्तकालय पार्क के पूर्व में है, तो उत्तर ऊपर वाले मानचित्र पर वह पार्क के दाईं ओर होगा।"
+        },
+        {
+          "heading": "3. Scale and distance",
+          "headingHi": "3. पैमाना और दूरी",
+          "body": "A map is smaller than the real place. A scale tells how map distance compares with real distance. For example, 1 cm may represent 1 km. If two places are 3 cm apart on that map, their straight-line distance is 3 km. A road journey may be longer because roads bend.",
+          "bodyHi": "मानचित्र वास्तविक जगह से छोटा होता है। पैमाना बताता है कि नक्शे की दूरी वास्तविक दूरी से कैसे जुड़ी है। उदाहरण के लिए 1 सेमी = 1 किमी हो सकता है। ऐसे नक्शे पर दो स्थान 3 सेमी दूर हों तो सीधी दूरी 3 किमी होगी। सड़क से यात्रा लंबी हो सकती है क्योंकि सड़कें मुड़ती हैं।",
+          "example": "With a scale of 1 cm = 2 km, a 4 cm map distance represents 8 km.",
+          "exampleHi": "यदि पैमाना 1 सेमी = 2 किमी है, तो नक्शे पर 4 सेमी की दूरी वास्तविकता में 8 किमी है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Symbol",
+          "wordHi": "संकेत",
+          "meaning": "A mark that stands for a real feature or place.",
+          "meaningHi": "वास्तविक वस्तु या स्थान को दर्शाने वाला निशान।"
+        },
+        {
+          "word": "Key / legend",
+          "wordHi": "संकेत-सूची",
+          "meaning": "A guide that explains map symbols.",
+          "meaningHi": "मानचित्र के संकेतों का अर्थ बताने वाली सूची।"
+        },
+        {
+          "word": "Scale",
+          "wordHi": "पैमाना",
+          "meaning": "The relationship between map distance and real distance.",
+          "meaningHi": "मानचित्र की दूरी और वास्तविक दूरी का संबंध।"
+        }
+      ],
+      "activity": "Draw a simple map of your room or classroom. Add a north arrow, a key with at least three symbols and one measured distance.",
+      "activityHi": "अपने कमरे या कक्षा का सरल मानचित्र बनाओ। उत्तर का तीर, कम-से-कम तीन संकेतों की सूची और एक मापी हुई दूरी जोड़ो।",
+      "practice": [
+        {
+          "question": "What explains the symbols on a map?",
+          "questionHi": "मानचित्र के संकेतों का अर्थ कौन बताता है?",
+          "options": [
+            "The map key",
+            "The title only",
+            "The paper size"
+          ],
+          "optionsHi": [
+            "संकेत-सूची",
+            "केवल शीर्षक",
+            "कागज़ का आकार"
+          ],
+          "correct": 0,
+          "explanation": "The key or legend tells what each symbol represents.",
+          "explanationHi": "संकेत-सूची बताती है कि हर संकेत किस चीज़ को दर्शाता है।"
+        },
+        {
+          "question": "If north is at the top, which direction is on the right?",
+          "questionHi": "यदि उत्तर ऊपर है, तो दाईं ओर कौन-सी दिशा होगी?",
+          "options": [
+            "West",
+            "East",
+            "South"
+          ],
+          "optionsHi": [
+            "पश्चिम",
+            "पूर्व",
+            "दक्षिण"
+          ],
+          "correct": 1,
+          "explanation": "East is to the right when a map is oriented with north at the top.",
+          "explanationHi": "उत्तर ऊपर होने पर पूर्व दाईं ओर होता है।"
+        },
+        {
+          "question": "A map scale says 1 cm = 2 km. What does 3 cm represent?",
+          "questionHi": "मानचित्र का पैमाना 1 सेमी = 2 किमी है। 3 सेमी कितना होगा?",
+          "options": [
+            "3 km",
+            "5 km",
+            "6 km"
+          ],
+          "optionsHi": [
+            "3 किमी",
+            "5 किमी",
+            "6 किमी"
+          ],
+          "correct": 2,
+          "explanation": "Each centimetre stands for 2 km, so 3 × 2 = 6 km.",
+          "explanationHi": "हर सेंटीमीटर 2 किमी दर्शाता है, इसलिए 3 × 2 = 6 किमी।"
+        }
+      ]
     },
     {
       "id": "earth_india",
@@ -625,7 +730,118 @@
       "question": "Which major mountain range lies in northern India?",
       "questionHi": "उत्तरी भारत में कौन-सी बड़ी पर्वत-श्रृंखला है?",
       "answer": "The Himalaya",
-      "answerHi": "हिमालय"
+      "answerHi": "हिमालय",
+      "level": "Explorer · Level 4",
+      "minutes": 9,
+      "intro": "India is a large country with many kinds of landscapes. It has very high mountains, broad river plains, dry deserts, old plateaus, long coastlines and islands. These landscapes affect where people live, what they grow and how they travel.",
+      "introHi": "भारत एक बड़ा देश है जहाँ कई तरह के भू-दृश्य हैं। यहाँ ऊँचे पहाड़, चौड़े नदी मैदान, सूखे रेगिस्तान, पुराने पठार, लंबे समुद्र-तट और द्वीप हैं। ये भू-दृश्य लोगों के रहने, खेती और यात्रा के तरीकों को प्रभावित करते हैं।",
+      "sections": [
+        {
+          "heading": "1. The Himalaya and Northern Plains",
+          "headingHi": "1. हिमालय और उत्तरी मैदान",
+          "body": "The Himalaya stretches across northern India and includes some of the world's highest mountains. Snow and glaciers store water that feeds many rivers. South of the Himalaya are the Northern Plains, built over time by sediments carried by the Indus, Ganga and Brahmaputra river systems. Much of the soil is fertile and supports farming.",
+          "bodyHi": "हिमालय उत्तरी भारत में फैला है और इसमें दुनिया के कुछ सबसे ऊँचे पहाड़ हैं। बर्फ़ और हिमनद पानी जमा रखते हैं जो कई नदियों को जल देते हैं। हिमालय के दक्षिण में उत्तरी मैदान हैं जिन्हें सिंधु, गंगा और ब्रह्मपुत्र नदी प्रणालियों द्वारा लाई गई मिट्टी ने समय के साथ बनाया। यहाँ की बहुत-सी मिट्टी उपजाऊ है और खेती में मदद करती है。",
+          "example": "The Ganga flows across the Northern Plains and supports towns, farms and ecosystems along its basin.",
+          "exampleHi": "गंगा उत्तरी मैदानों से होकर बहती है और अपने बेसिन में शहरों, खेतों तथा पारिस्थितिकी तंत्रों को सहारा देती है।"
+        },
+        {
+          "heading": "2. The Peninsular Plateau and Thar Desert",
+          "headingHi": "2. प्रायद्वीपीय पठार और थार रेगिस्तान",
+          "body": "The Peninsular Plateau is an old region of hard rocks covering much of southern India. It includes the Deccan Plateau. The Thar Desert lies mainly in western Rajasthan. It receives little rainfall, so plants and animals there have adaptations for dry conditions. Desert does not mean lifeless: people, plants and wildlife live there.",
+          "bodyHi": "प्रायद्वीपीय पठार पुरानी कठोर चट्टानों वाला क्षेत्र है जो दक्षिण भारत के बड़े भाग में फैला है। इसमें दक्कन का पठार शामिल है। थार रेगिस्तान मुख्यतः पश्चिमी राजस्थान में है। यहाँ कम वर्षा होती है, इसलिए पौधों और जानवरों में सूखे वातावरण के अनुकूल विशेषताएँ होती हैं। रेगिस्तान का अर्थ निर्जीव स्थान नहीं है।",
+          "example": "Some desert plants have small leaves or spines that help reduce water loss.",
+          "exampleHi": "रेगिस्तान के कुछ पौधों की पत्तियाँ छोटी या काँटों जैसी होती हैं, जो पानी की हानि कम करती हैं।"
+        },
+        {
+          "heading": "3. Coasts, islands and rivers",
+          "headingHi": "3. समुद्र-तट, द्वीप और नदियाँ",
+          "body": "India has a long coastline beside the Arabian Sea, the Indian Ocean and the Bay of Bengal. The Andaman and Nicobar Islands lie in the Bay of Bengal; Lakshadweep lies in the Arabian Sea. Rivers provide water and habitats, but pollution and overuse can harm them. Saving water and keeping waste out of drains helps protect river systems.",
+          "bodyHi": "भारत की लंबी तटरेखा अरब सागर, हिंद महासागर और बंगाल की खाड़ी के किनारे है। अंडमान और निकोबार द्वीप बंगाल की खाड़ी में तथा लक्षद्वीप अरब सागर में हैं। नदियाँ पानी और आवास देती हैं, लेकिन प्रदूषण और अत्यधिक उपयोग उन्हें नुकसान पहुँचा सकते हैं। पानी बचाना और कचरे को नालियों से दूर रखना नदी प्रणालियों की रक्षा करता है।",
+          "example": "A river basin is the land area from which water drains into a river and its tributaries.",
+          "exampleHi": "नदी बेसिन वह भूमि क्षेत्र है जहाँ का पानी नदी और उसकी सहायक नदियों में बहकर पहुँचता है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Mountain range",
+          "wordHi": "पर्वत-श्रृंखला",
+          "meaning": "A connected group of mountains.",
+          "meaningHi": "आपस में जुड़े पहाड़ों का समूह।"
+        },
+        {
+          "word": "Plain",
+          "wordHi": "मैदान",
+          "meaning": "A broad area of mostly level land.",
+          "meaningHi": "अधिकतर समतल भूमि का बड़ा क्षेत्र।"
+        },
+        {
+          "word": "Plateau",
+          "wordHi": "पठार",
+          "meaning": "An area of high land with a relatively level top.",
+          "meaningHi": "ऊँची भूमि जिसका ऊपरी भाग अपेक्षाकृत समतल होता है।"
+        },
+        {
+          "word": "River basin",
+          "wordHi": "नदी बेसिन",
+          "meaning": "The land drained by a river and its tributaries.",
+          "meaningHi": "वह भूमि जहाँ का पानी नदी और उसकी सहायक नदियों में जाता है।"
+        }
+      ],
+      "activity": "On a blank outline map of India, mark the Himalaya in the north, the Thar Desert in the west, the Deccan Plateau in the south and one island group.",
+      "activityHi": "भारत के खाली मानचित्र पर उत्तर में हिमालय, पश्चिम में थार रेगिस्तान, दक्षिण में दक्कन का पठार और एक द्वीप समूह दिखाओ।",
+      "practice": [
+        {
+          "question": "Which major mountain range lies in northern India?",
+          "questionHi": "उत्तरी भारत में कौन-सी बड़ी पर्वत-श्रृंखला है?",
+          "options": [
+            "Himalaya",
+            "Aravalli only",
+            "Western Ghats only"
+          ],
+          "optionsHi": [
+            "हिमालय",
+            "केवल अरावली",
+            "केवल पश्चिमी घाट"
+          ],
+          "correct": 0,
+          "explanation": "The Himalaya stretches along the northern part of India.",
+          "explanationHi": "हिमालय भारत के उत्तरी भाग में फैला है।"
+        },
+        {
+          "question": "Where is the Thar Desert mainly located?",
+          "questionHi": "थार रेगिस्तान मुख्यतः कहाँ है?",
+          "options": [
+            "Eastern Assam",
+            "Western Rajasthan",
+            "Kerala coast"
+          ],
+          "optionsHi": [
+            "पूर्वी असम",
+            "पश्चिमी राजस्थान",
+            "केरल का तट"
+          ],
+          "correct": 1,
+          "explanation": "The Thar Desert lies mainly in western Rajasthan.",
+          "explanationHi": "थार रेगिस्तान मुख्यतः पश्चिमी राजस्थान में स्थित है।"
+        },
+        {
+          "question": "Which island group is in the Arabian Sea?",
+          "questionHi": "अरब सागर में कौन-सा द्वीप समूह है?",
+          "options": [
+            "Andaman and Nicobar",
+            "Lakshadweep",
+            "Sundarbans"
+          ],
+          "optionsHi": [
+            "अंडमान और निकोबार",
+            "लक्षद्वीप",
+            "सुंदरबन"
+          ],
+          "correct": 1,
+          "explanation": "Lakshadweep lies in the Arabian Sea.",
+          "explanationHi": "लक्षद्वीप अरब सागर में स्थित है।"
+        }
+      ]
     },
     {
       "id": "coding_algorithm",
@@ -639,7 +855,118 @@
       "question": "What do we call a clear sequence of steps to solve a problem?",
       "questionHi": "समस्या हल करने के स्पष्ट चरणों के क्रम को क्या कहते हैं?",
       "answer": "An algorithm",
-      "answerHi": "एल्गोरिदम"
+      "answerHi": "एल्गोरिदम",
+      "level": "Beginner · Level 4",
+      "minutes": 7,
+      "intro": "An algorithm is a clear, ordered set of instructions for completing a task or solving a problem. A recipe, directions to a friend's house and steps for sorting books can all be algorithms. Computers need instructions that are precise enough to follow.",
+      "introHi": "एल्गोरिदम किसी काम को पूरा करने या समस्या हल करने के स्पष्ट और क्रमबद्ध निर्देश हैं। पकाने की विधि, मित्र के घर जाने का रास्ता और किताबें जमाने के चरण एल्गोरिदम हो सकते हैं। कंप्यूटर को ऐसे निर्देश चाहिए जिन्हें वह बिना भ्रम के पूरा कर सके।",
+      "sections": [
+        {
+          "heading": "1. Instructions must be precise",
+          "headingHi": "1. निर्देश स्पष्ट होने चाहिए",
+          "body": "A good algorithm avoids vague words such as 'do it nicely'. It says exactly what to do and in what order. If two people follow the same clear steps, they should get the same expected result, assuming they start with the same information.",
+          "bodyHi": "अच्छा एल्गोरिदम 'अच्छे से कर लो' जैसे अस्पष्ट शब्दों से बचता है। वह ठीक-ठीक बताता है कि क्या करना है और किस क्रम में। यदि दो लोग समान जानकारी से समान स्पष्ट चरण अपनाएँ, तो उन्हें अपेक्षित समान परिणाम मिलना चाहिए।",
+          "example": "'Walk forward three steps, then turn left' is clearer than 'go near the door'.",
+          "exampleHi": "'तीन कदम आगे चलो, फिर बाएँ मुड़ो' कहना 'दरवाज़े के पास जाओ' से अधिक स्पष्ट है।"
+        },
+        {
+          "heading": "2. Sequence and decisions",
+          "headingHi": "2. क्रम और निर्णय",
+          "body": "Sequence means the order of instructions. Some algorithms also use a decision: IF it is raining, THEN take an umbrella; OTHERWISE wear a hat for the sun. The condition chooses which path to follow.",
+          "bodyHi": "क्रम का अर्थ निर्देशों का सही क्रम है। कुछ एल्गोरिदम में निर्णय भी होता है: यदि बारिश हो रही है, तो छाता लो; अन्यथा धूप के लिए टोपी पहनो। शर्त तय करती है कि कौन-सा रास्ता अपनाना है।",
+          "example": "To brush teeth: pick up the toothbrush, add toothpaste, brush all sides, rinse and put the brush away.",
+          "exampleHi": "दाँत साफ़ करने के लिए: ब्रश उठाओ, टूथपेस्ट लगाओ, सभी सतहें साफ़ करो, कुल्ला करो और ब्रश रख दो।"
+        },
+        {
+          "heading": "3. Repetition and testing",
+          "headingHi": "3. दोहराव और जाँच",
+          "body": "A loop repeats steps, such as clap five times. Testing means trying the instructions and checking the result. If the steps fail, find where the problem happened and improve the algorithm. This is called debugging when working with programs.",
+          "bodyHi": "लूप चरणों को दोहराता है, जैसे पाँच बार ताली बजाना। परीक्षण का अर्थ निर्देश आज़माकर परिणाम जाँचना है। चरण असफल हों तो समस्या ढूँढ़कर एल्गोरिदम सुधारो। प्रोग्राम में इसे डिबगिंग कहते हैं।",
+          "example": "A robot that must move four squares can use: REPEAT 4 TIMES → move forward one square.",
+          "exampleHi": "चार खाने चलने वाले रोबोट को यह निर्देश दिया जा सकता है: 4 बार दोहराओ → एक खाना आगे बढ़ो।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Algorithm",
+          "wordHi": "एल्गोरिदम",
+          "meaning": "A precise sequence of steps for a task.",
+          "meaningHi": "किसी काम के लिए स्पष्ट चरणों का क्रम।"
+        },
+        {
+          "word": "Sequence",
+          "wordHi": "क्रम",
+          "meaning": "The order in which steps happen.",
+          "meaningHi": "जिस क्रम में चरण होते हैं।"
+        },
+        {
+          "word": "Condition",
+          "wordHi": "शर्त",
+          "meaning": "A test that decides which action happens.",
+          "meaningHi": "वह जाँच जो तय करती है कि कौन-सी क्रिया होगी।"
+        },
+        {
+          "word": "Debugging",
+          "wordHi": "डिबगिंग",
+          "meaning": "Finding and fixing mistakes in instructions or code.",
+          "meaningHi": "निर्देशों या कोड की गलतियाँ ढूँढ़कर ठीक करना।"
+        }
+      ],
+      "activity": "Write an algorithm for packing a school bag. Ask someone to follow your steps exactly and note any step that is confusing.",
+      "activityHi": "स्कूल बैग पैक करने का एल्गोरिदम लिखो। किसी से तुम्हारे चरण ठीक वैसे ही करने को कहो और अस्पष्ट चरणों को पहचानो।",
+      "practice": [
+        {
+          "question": "What is an algorithm?",
+          "questionHi": "एल्गोरिदम क्या है?",
+          "options": [
+            "A random collection of words",
+            "A clear ordered set of steps",
+            "Only a computer screen"
+          ],
+          "optionsHi": [
+            "शब्दों का बेतरतीब समूह",
+            "स्पष्ट क्रमबद्ध चरण",
+            "केवल कंप्यूटर स्क्रीन"
+          ],
+          "correct": 1,
+          "explanation": "An algorithm is a precise sequence of instructions for a task or problem.",
+          "explanationHi": "एल्गोरिदम किसी काम या समस्या के लिए निर्देशों का स्पष्ट क्रम है।"
+        },
+        {
+          "question": "Which instruction is clearest?",
+          "questionHi": "कौन-सा निर्देश सबसे स्पष्ट है?",
+          "options": [
+            "Move somewhere",
+            "Go nicely",
+            "Move forward two squares"
+          ],
+          "optionsHi": [
+            "कहीं चले जाओ",
+            "अच्छे से जाओ",
+            "दो खाने आगे बढ़ो"
+          ],
+          "correct": 2,
+          "explanation": "It gives a specific action and an exact amount.",
+          "explanationHi": "यह स्पष्ट क्रिया और निश्चित दूरी बताता है।"
+        },
+        {
+          "question": "What does debugging mean?",
+          "questionHi": "डिबगिंग का क्या अर्थ है?",
+          "options": [
+            "Adding music",
+            "Finding and fixing mistakes",
+            "Turning off the screen"
+          ],
+          "optionsHi": [
+            "संगीत जोड़ना",
+            "गलतियाँ ढूँढ़कर ठीक करना",
+            "स्क्रीन बंद करना"
+          ],
+          "correct": 1,
+          "explanation": "Debugging is the process of locating and correcting errors.",
+          "explanationHi": "डिबगिंग गलतियाँ ढूँढ़ने और सुधारने की प्रक्रिया है।"
+        }
+      ]
     },
     {
       "id": "history_sources",
@@ -653,7 +980,118 @@
       "question": "What is a source created during the time being studied called?",
       "questionHi": "अध्ययन किए जा रहे समय में बना स्रोत क्या कहलाता है?",
       "answer": "A primary source",
-      "answerHi": "प्राथमिक स्रोत"
+      "answerHi": "प्राथमिक स्रोत",
+      "level": "Explorer · Level 4",
+      "minutes": 8,
+      "intro": "History is the study of people and events in the past. Historians cannot travel back in time, so they study evidence left behind. They ask questions, compare different sources and explain what the evidence supports.",
+      "introHi": "इतिहास अतीत के लोगों और घटनाओं का अध्ययन है। इतिहासकार समय में पीछे नहीं जा सकते, इसलिए वे पुराने समय के बचे हुए प्रमाणों का अध्ययन करते हैं। वे प्रश्न पूछते हैं, अलग-अलग स्रोतों की तुलना करते हैं और बताते हैं कि प्रमाण क्या सिद्ध करते हैं।",
+      "sections": [
+        {
+          "heading": "1. Evidence is all around us",
+          "headingHi": "1. प्रमाण हमारे आसपास हैं",
+          "body": "Evidence can include tools, pottery, coins, buildings, bones, letters, maps, photographs, inscriptions and oral accounts. Each source can answer some questions but may leave others unanswered. An old coin may tell us about a ruler or trade, but not everything about ordinary family life.",
+          "bodyHi": "प्रमाणों में औज़ार, मिट्टी के बर्तन, सिक्के, इमारतें, हड्डियाँ, पत्र, मानचित्र, तस्वीरें, शिलालेख और मौखिक विवरण हो सकते हैं। हर स्रोत कुछ प्रश्नों के उत्तर देता है, लेकिन कुछ बातें अनुत्तरित रह सकती हैं। पुराना सिक्का शासक या व्यापार के बारे में बता सकता है, लेकिन सामान्य परिवारों के जीवन के बारे में सब कुछ नहीं।",
+          "example": "A broken cooking pot can tell archaeologists about materials, food habits and craft skills.",
+          "exampleHi": "टूटा हुआ खाना पकाने का बर्तन पुरातत्वविदों को सामग्री, भोजन की आदतों और कारीगरी के बारे में बता सकता है।"
+        },
+        {
+          "heading": "2. Primary and secondary sources",
+          "headingHi": "2. प्राथमिक और द्वितीयक स्रोत",
+          "body": "A primary source was created during the time being studied or by someone who directly experienced it. Examples include a diary, an old photograph or a tool from that time. A secondary source is created later using evidence, such as a textbook or a historian's explanation.",
+          "bodyHi": "प्राथमिक स्रोत उसी समय बनाए गए थे जिसका अध्ययन हो रहा है या उस व्यक्ति ने बनाए जिसने घटना का अनुभव किया। जैसे डायरी, पुरानी तस्वीर या उस समय का औज़ार। द्वितीयक स्रोत बाद में प्रमाणों के आधार पर बनते हैं, जैसे पाठ्यपुस्तक या इतिहासकार की व्याख्या।",
+          "example": "A soldier's letter written during a war is a primary source. A modern chapter about that war is a secondary source.",
+          "exampleHi": "युद्ध के समय सैनिक द्वारा लिखा पत्र प्राथमिक स्रोत है। उस युद्ध पर आज लिखा अध्याय द्वितीयक स्रोत है।"
+        },
+        {
+          "heading": "3. Compare sources and ask who made them",
+          "headingHi": "3. स्रोतों की तुलना करो और पूछो किसने बनाए",
+          "body": "Historians ask who created a source, when, why and for whom. A source may show only one person's point of view. Comparing independent sources can reveal agreement, disagreement or missing information. Good history separates evidence from guesses.",
+          "bodyHi": "इतिहासकार पूछते हैं कि स्रोत किसने, कब, क्यों और किसके लिए बनाया। कोई स्रोत केवल एक व्यक्ति का दृष्टिकोण दिखा सकता है। स्वतंत्र स्रोतों की तुलना से समान बातें, मतभेद या छूटी हुई जानकारी मिल सकती है। अच्छा इतिहास प्रमाण और अनुमान में अंतर रखता है।",
+          "example": "Compare two accounts of the same event. Check what both agree on and what only one account mentions.",
+          "exampleHi": "एक ही घटना के दो विवरणों की तुलना करो। देखो दोनों किन बातों पर सहमत हैं और कौन-सी बात केवल एक में है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Evidence",
+          "wordHi": "प्रमाण",
+          "meaning": "Information or objects used to support a claim about the past.",
+          "meaningHi": "अतीत के बारे में किसी दावे का समर्थन करने वाली जानकारी या वस्तु।"
+        },
+        {
+          "word": "Primary source",
+          "wordHi": "प्राथमिक स्रोत",
+          "meaning": "A source from the time or a direct participant's account.",
+          "meaningHi": "उसी समय का स्रोत या प्रत्यक्ष अनुभव करने वाले का विवरण।"
+        },
+        {
+          "word": "Secondary source",
+          "wordHi": "द्वितीयक स्रोत",
+          "meaning": "A later account that interprets or explains evidence.",
+          "meaningHi": "बाद में प्रमाणों की व्याख्या करके बनाया गया विवरण।"
+        },
+        {
+          "word": "Archaeologist",
+          "wordHi": "पुरातत्वविद्",
+          "meaning": "A researcher who studies past people through material remains.",
+          "meaningHi": "वह शोधकर्ता जो पुरानी वस्तुओं और अवशेषों से अतीत का अध्ययन करता है।"
+        }
+      ],
+      "activity": "Choose an old object at home (with permission). Write what it is made of, what it may have been used for and what you still cannot know from the object alone.",
+      "activityHi": "घर की कोई पुरानी वस्तु (अनुमति लेकर) चुनो। लिखो कि वह किससे बनी है, किस काम आई होगी और केवल उस वस्तु से कौन-सी बातें पता नहीं चल सकतीं।",
+      "practice": [
+        {
+          "question": "Which is most likely a primary source?",
+          "questionHi": "इनमें से प्राथमिक स्रोत कौन-सा है?",
+          "options": [
+            "A diary written during the event",
+            "A new textbook chapter",
+            "A modern summary video"
+          ],
+          "optionsHi": [
+            "घटना के समय लिखी डायरी",
+            "नई पाठ्यपुस्तक का अध्याय",
+            "आज का सारांश वीडियो"
+          ],
+          "correct": 0,
+          "explanation": "The diary was written at the time and can give a direct account.",
+          "explanationHi": "डायरी उसी समय लिखी गई थी और प्रत्यक्ष विवरण दे सकती है।"
+        },
+        {
+          "question": "Why compare different sources?",
+          "questionHi": "अलग-अलग स्रोतों की तुलना क्यों करते हैं?",
+          "options": [
+            "To make the story longer",
+            "To check claims and notice different viewpoints",
+            "To avoid reading"
+          ],
+          "optionsHi": [
+            "कहानी लंबी करने के लिए",
+            "दावों की जाँच और अलग दृष्टिकोण समझने के लिए",
+            "पढ़ने से बचने के लिए"
+          ],
+          "correct": 1,
+          "explanation": "Sources may be incomplete or biased; comparison helps check what is supported.",
+          "explanationHi": "स्रोत अधूरे या पक्षपाती हो सकते हैं; तुलना से पता चलता है कि किस बात को प्रमाण समर्थन देते हैं।"
+        },
+        {
+          "question": "What should a historian separate?",
+          "questionHi": "इतिहासकार को किन बातों में अंतर रखना चाहिए?",
+          "options": [
+            "Evidence and guesses",
+            "Books and paper",
+            "Old and new words"
+          ],
+          "optionsHi": [
+            "प्रमाण और अनुमान",
+            "किताब और कागज़",
+            "पुराने और नए शब्द"
+          ],
+          "correct": 0,
+          "explanation": "Conclusions should be based on evidence, while guesses must be identified as guesses.",
+          "explanationHi": "निष्कर्ष प्रमाण पर आधारित होने चाहिए और अनुमानों को अनुमान के रूप में पहचानना चाहिए।"
+        }
+      ]
     }
   ]
 }
