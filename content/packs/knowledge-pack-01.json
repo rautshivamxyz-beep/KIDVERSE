@@ -381,7 +381,112 @@
       "question": "What comes next: 4, 7, 10, 13, ...?",
       "questionHi": "अगली संख्या क्या होगी: 4, 7, 10, 13, ...?",
       "answer": "16",
-      "answerHi": "16"
+      "answerHi": "16",
+      "level": "Beginner · Level 3",
+      "minutes": 7,
+      "intro": "A pattern is a sequence that follows a rule. When you discover the rule, you can predict what comes next and find a missing number. Patterns appear in number sequences, shapes, music and nature.",
+      "introHi": "पैटर्न ऐसा क्रम है जो किसी नियम का पालन करता है। नियम समझने पर अगली या छूटी हुई संख्या पता कर सकते हैं। पैटर्न संख्याओं, आकृतियों, संगीत और प्रकृति में दिखते हैं।",
+      "sections": [
+        {
+          "heading": "1. Find what changes",
+          "headingHi": "1. बदलाव पहचानो",
+          "body": "Look at the difference between neighbouring numbers. In 4, 7, 10, 13, each number increases by 3. The rule is 'add 3'. In 20, 18, 16, 14, the rule is 'subtract 2'.",
+          "bodyHi": "पास-पास की संख्याओं के बीच अंतर देखो। 4, 7, 10, 13 में हर बार 3 बढ़ता है। नियम है '3 जोड़ो'। 20, 18, 16, 14 में हर बार 2 घटता है।",
+          "example": "Continue 6, 11, 16, 21: add 5 each time, so the next number is 26.",
+          "exampleHi": "6, 11, 16, 21 में हर बार 5 जोड़ो, इसलिए अगली संख्या 26 है।"
+        },
+        {
+          "heading": "2. Patterns can alternate",
+          "headingHi": "2. पैटर्न बारी-बारी बदल सकते हैं",
+          "body": "Some patterns alternate between two actions. In 2, 5, 3, 6, 4, 7, add 3, then subtract 2, and repeat. Shape patterns can alternate too: circle, square, circle, square.",
+          "bodyHi": "कुछ पैटर्न दो क्रियाओं के बीच बदलते हैं। 2, 5, 3, 6, 4, 7 में पहले 3 जोड़ते हैं, फिर 2 घटाते हैं और यह दोहरता है। आकृतियों में गोला, वर्ग, गोला, वर्ग हो सकता है।",
+          "example": "Red, blue, red, blue, red… The next colour is blue.",
+          "exampleHi": "लाल, नीला, लाल, नीला, लाल… अगला रंग नीला होगा।"
+        },
+        {
+          "heading": "3. Explain the rule",
+          "headingHi": "3. नियम को शब्दों में बताओ",
+          "body": "Do not only guess the next number. Explain how you know. A clear rule helps someone else check your answer. If more than one rule could fit a short sequence, look for the simplest rule that matches all the terms.",
+          "bodyHi": "केवल अगली संख्या का अनुमान मत लगाओ। बताओ कि तुम्हें कैसे पता चला। स्पष्ट नियम से दूसरा व्यक्ति उत्तर जाँच सकता है। छोटी श्रृंखला में कई नियम संभव हों तो ऐसा सरल नियम खोजो जो सभी पदों से मेल खाए।",
+          "example": "For 3, 6, 9, 12, say 'start at 3 and add 3 each time'.",
+          "exampleHi": "3, 6, 9, 12 के लिए कहो: '3 से शुरू करो और हर बार 3 जोड़ो'।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Sequence",
+          "wordHi": "क्रम",
+          "meaning": "A list of numbers or objects in a particular order.",
+          "meaningHi": "एक निश्चित क्रम में रखी संख्याओं या वस्तुओं की सूची।"
+        },
+        {
+          "word": "Rule",
+          "wordHi": "नियम",
+          "meaning": "The instruction that explains how a pattern changes.",
+          "meaningHi": "वह निर्देश जो बताता है कि पैटर्न कैसे बदलता है।"
+        },
+        {
+          "word": "Alternate",
+          "wordHi": "बारी-बारी",
+          "meaning": "To take turns between two or more things.",
+          "meaningHi": "दो या अधिक चीज़ों का एक के बाद एक आना।"
+        }
+      ],
+      "activity": "Create a sequence with at least 8 terms. Write its rule, cover the last two terms and ask someone to find them.",
+      "activityHi": "कम-से-कम 8 पदों का क्रम बनाओ। उसका नियम लिखो, आखिरी दो पद छिपाओ और किसी से उन्हें खोजने को कहो।",
+      "practice": [
+        {
+          "question": "What comes next: 4, 7, 10, 13, ...?",
+          "questionHi": "अगली संख्या क्या होगी: 4, 7, 10, 13, ...?",
+          "options": [
+            "14",
+            "16",
+            "17"
+          ],
+          "optionsHi": [
+            "14",
+            "16",
+            "17"
+          ],
+          "correct": 1,
+          "explanation": "The rule is add 3 each time, so 13 + 3 = 16.",
+          "explanationHi": "नियम हर बार 3 जोड़ना है, इसलिए 13 + 3 = 16।"
+        },
+        {
+          "question": "What is the rule in 20, 18, 16, 14?",
+          "questionHi": "20, 18, 16, 14 में नियम क्या है?",
+          "options": [
+            "Add 2",
+            "Subtract 2",
+            "Multiply by 2"
+          ],
+          "optionsHi": [
+            "2 जोड़ो",
+            "2 घटाओ",
+            "2 से गुणा करो"
+          ],
+          "correct": 1,
+          "explanation": "Each term is 2 less than the one before it.",
+          "explanationHi": "हर अगला पद पिछले पद से 2 कम है。"
+        },
+        {
+          "question": "What comes next: red, blue, red, blue, red, ...?",
+          "questionHi": "अगला रंग क्या होगा: लाल, नीला, लाल, नीला, लाल, ...?",
+          "options": [
+            "Red",
+            "Blue",
+            "Green"
+          ],
+          "optionsHi": [
+            "लाल",
+            "नीला",
+            "हरा"
+          ],
+          "correct": 1,
+          "explanation": "The two colours alternate, so blue comes next.",
+          "explanationHi": "दो रंग बारी-बारी आते हैं, इसलिए अगला नीला होगा।"
+        }
+      ]
     },
     {
       "id": "earth_climate",
