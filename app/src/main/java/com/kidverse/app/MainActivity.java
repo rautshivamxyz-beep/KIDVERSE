@@ -708,7 +708,7 @@ public class MainActivity extends Activity {
         intro("Parent dashboard", "A quick look at learning on this device.");
         statRow();
         space(12);
-        infoCard("Privacy", "KIDVERSE stores progress and drawings locally on this device. This MVP does not request internet, location, account or advertising permissions.", 0xFFE2F2E9);
+        infoCard("Privacy", "KIDVERSE stores progress and drawings locally on this device. Internet is used only to check app releases or download a learning pack. The app does not use accounts, location tracking, advertising or analytics.", 0xFFE2F2E9);
         infoCard("Completed activities", String.valueOf(prefs.getInt("completed", 0)) + " reward milestones recorded.", WHITE);
         button("Check for app updates", false, () -> UpdateManager.checkForUpdate(this, true));
         button("Install downloaded update", false, () -> UpdateManager.installPending(this));
