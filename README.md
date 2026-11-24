@@ -1,20 +1,44 @@
-# KIDVERSE Android MVP
+# KIDVERSE
 
-Offline-first Android learning app MVP for ages 6–10. Package: `com.kidverse.app`. Minimum Android: 6.0 (API 23), designed to run on Android 11 and later.
+**Learn · Play · Create · Discover**
 
-## Included features
-- Local star/progress persistence
-- Maths multiple-choice game
-- Science learning cards and quick question
-- Two original short stories
-- Robot sequencing activity
-- Explorer Earth learning cards
-- Touch drawing pad with clear button
-- Island unlock milestones
-- Parent-gated progress screen and local reset
-- No network permission, ads, analytics, accounts or location collection
+KIDVERSE is an offline-first Android learning playground designed for children around ages 6–10. This repository currently contains an early MVP, not a finished commercial release.
 
-## Build APK
-Open **Actions → Build KIDVERSE APK → Run workflow**, then download the `KIDVERSE-debug-apk` artifact from the completed run.
+## What's in this build
 
-For a commercial release, create a signed release APK with a private keystore. Never publish the debug APK as the paid production build. This MVP is not yet a complete commercial release: have a qualified adult review child privacy, safety, content, accessibility, licensing, tax and Indian legal requirements before selling it. The parent gate is a basic MVP gate, not a strong security boundary.
+- A redesigned home dashboard with learning-world cards and a local star counter
+- Math Kingdom: five multiple-choice arithmetic puzzles with explanations
+- Science Galaxy: short learning cards and a knowledge check
+- Story Forest: two original short stories
+- Robot City: a simple sequencing activity
+- Explorer Earth: short nature and environment lessons
+- Creator Studio: finger drawing, colour selection and save-to-device
+- Build-a-World: star milestones and unlock progress
+- Parent dashboard: local progress view and reset control
+
+## Privacy and storage
+
+The app has no internet permission, account system, advertising SDK, analytics SDK, location collection or public chat. Stars, activity completion and saved drawings remain in the app's private local storage on the device. Uninstalling the app or clearing its data removes that local progress.
+
+The Parent Zone uses a basic arithmetic gate. It is a usability barrier for this prototype, **not strong authentication or a security boundary**. An adult must review and improve this before use with children or commercial distribution.
+
+## Build a test APK
+
+1. Open **Actions → Build KIDVERSE APK**.
+2. Choose **Run workflow** or open the latest push-triggered run.
+3. Wait for the build and APK verification steps to finish.
+4. Download the `KIDVERSE-debug-apk` artifact from that run.
+
+The debug APK is intended for installation testing. It is not a signed production release.
+
+## Before selling or distributing
+
+Do not sell this MVP as a finished, tested children's product. Before a public or paid release:
+- Have the app tested on multiple Android versions and screen sizes.
+- Commission an age-appropriate educational and accessibility review.
+- Replace the arithmetic Parent Zone gate with a properly designed adult-controlled area.
+- Have a qualified adult review child privacy, consent, security, consumer protection, tax and applicable Indian legal requirements.
+- Prepare a secure release keystore, sign the release build, protect the keystore and verify update/install behaviour.
+- Add a support contact, clear licence/terms and a truthful privacy notice.
+
+No production signing key or passwords belong in this public repository.
