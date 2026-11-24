@@ -95,6 +95,7 @@ public class LibraryActivity extends Activity {
     }
 
     private void loadTopics() {
+        topics.clear();
         try (InputStream in = getAssets().open("library.json")) { readPack(in); } catch (Exception ignored) {}
         File pack = new File(getFilesDir(), "knowledge-pack-01.json");
         if (pack.exists()) try (InputStream in = new FileInputStream(pack)) { readPack(in); } catch (Exception ignored) {}
@@ -513,26 +514,101 @@ public class LibraryActivity extends Activity {
         button.setEnabled(false);
         new Thread(() -> {
             File temp = new File(getFilesDir(), "knowledge-pack-01.tmp");
+            HttpURLConnection connection = null;
             try {
                 URL url = new URL("https://raw.githubusercontent.com/rautshivamxyz-beep/KIDVERSE/main/content/packs/knowledge-pack-01.json");
-                HttpURLConnection c = (HttpURLConnection) url.openConnection();
-                c.setConnectTimeout(10000); c.setReadTimeout(15000); c.setRequestProperty("User-Agent", "KIDVERSE-Android");
-                if (c.getResponseCode() != 200) throw new IOException("Download failed");
-                try (InputStream in = c.getInputStream(); FileOutputStream out = new FileOutputStream(temp)) {
-                    byte[] b = new byte[4096]; int n; while ((n = in.read(b)) > 0) out.write(b, 0, n);
-                } finally { c.disconnect(); }
+                connection = (HttpURLConnection) url.openConnection();
+                connection.setConnectTimeout(10000);
+                connection.setReadTimeout(15000);
+                connection.setInstanceFollowRedirects(true);
+                connection.setRequestProperty("User-Agent", "KIDVERSE-Android");
+                if (connection.getResponseCode() != 200) throw new IOException("Download failed");
+                long declaredLength = connection.getContentLengthLong();
+                if (declaredLength > 2_000_000L) throw new IOException("Pack is too large");
+                long total = 0L;
+                try (InputStream in = connection.getInputStream(); FileOutputStream out = new FileOutputStream(temp)) {
+                    byte[] buffer = new byte[4096];
+                    int n;
+                    while ((n = in.read(buffer)) != -1) {
+                        total += n;
+                        if (total > 2_000_000L) throw new IOException("Pack is too large");
+                        out.write(buffer, 0, n);
+                    }
+                }
                 try (InputStream verify = new FileInputStream(temp)) {
                     JSONObject json = new JSONObject(new String(readAll(verify), "UTF-8"));
-                    if (json.optJSONArray("topics") == null) throw new IOException("Invalid pack");
+                    validateDownloadedPack(json);
                 }
                 File target = new File(getFilesDir(), "knowledge-pack-01.json");
                 if (!temp.renameTo(target)) throw new IOException("Could not save pack");
-                runOnUiThread(() -> { loadTopics(); render(search.getText().toString()); button.setEnabled(true); Toast.makeText(this, "Knowledge pack saved for offline learning.", Toast.LENGTH_LONG).show(); });
+                runOnUiThread(() -> {
+                    loadTopics();
+                    render(search.getText().toString());
+                    button.setEnabled(true);
+                    Toast.makeText(this, "Knowledge pack saved for offline learning.", Toast.LENGTH_LONG).show();
+                });
             } catch (Exception e) {
                 temp.delete();
-                runOnUiThread(() -> { button.setEnabled(true); Toast.makeText(this, "Could not download pack. Try again when online.", Toast.LENGTH_LONG).show(); });
+                runOnUiThread(() -> {
+                    button.setEnabled(true);
+                    Toast.makeText(this, "Could not download pack. Try again when online.", Toast.LENGTH_LONG).show();
+                });
+            } finally {
+                if (connection != null) connection.disconnect();
             }
         }).start();
+    }
+
+    private void validateDownloadedPack(JSONObject json) throws IOException {
+        JSONArray items = json.optJSONArray("topics");
+        if (items == null || items.length() == 0 || items.length() > 100) {
+            throw new IOException("Invalid topic list");
+        }
+        HashSet<String> ids = new HashSet<>();
+        for (int i = 0; i < items.length(); i++) {
+            JSONObject topic = items.optJSONObject(i);
+            if (topic == null) throw new IOException("Invalid topic");
+            String id = topic.optString("id", "").trim();
+            String title = topic.optString("title", "").trim();
+            String titleHi = topic.optString("titleHi", "").trim();
+            int grade = topic.optInt("class", -1);
+            if (id.isEmpty() || !ids.add(id) || title.isEmpty() || titleHi.isEmpty() || grade < 1 || grade > 5) {
+                throw new IOException("Invalid topic metadata");
+            }
+            JSONArray sections = topic.optJSONArray("sections");
+            boolean hasCoreText = !topic.optString("simple", "").trim().isEmpty()
+                || !topic.optString("intro", "").trim().isEmpty()
+                || (sections != null && sections.length() > 0);
+            if (!hasCoreText) throw new IOException("Topic has no lesson text");
+            if (sections != null) {
+                for (int j = 0; j < sections.length(); j++) {
+                    JSONObject section = sections.optJSONObject(j);
+                    if (section == null || section.optString("heading", "").trim().isEmpty()
+                        || section.optString("headingHi", "").trim().isEmpty()
+                        || section.optString("body", "").trim().isEmpty()
+                        || section.optString("bodyHi", "").trim().isEmpty()) {
+                        throw new IOException("Invalid lesson section");
+                    }
+                }
+            }
+            JSONArray questions = topic.optJSONArray("practice");
+            if (questions != null) {
+                for (int j = 0; j < questions.length(); j++) {
+                    JSONObject question = questions.optJSONObject(j);
+                    if (question == null) throw new IOException("Invalid practice question");
+                    JSONArray options = question.optJSONArray("options");
+                    JSONArray optionsHi = question.optJSONArray("optionsHi");
+                    int correct = question.optInt("correct", -1);
+                    if (question.optString("question", "").trim().isEmpty()
+                        || question.optString("questionHi", "").trim().isEmpty()
+                        || options == null || options.length() < 2 || options.length() > 6
+                        || optionsHi == null || optionsHi.length() != options.length()
+                        || correct < 0 || correct >= options.length()) {
+                        throw new IOException("Invalid practice answer");
+                    }
+                }
+            }
+        }
     }
 
     private byte[] readAll(InputStream in) throws IOException {
