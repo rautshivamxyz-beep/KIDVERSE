@@ -106,7 +106,7 @@ public class LibraryActivity extends Activity {
         for (JSONObject item : topics) {
             String title = item.optString(hindi ? "titleHi" : "title", item.optString("title"));
             String subject = item.optString("subject");
-            String hay = (item.optString("title") + " " + item.optString("titleHi") + " " + subject + " " + item.optString("simple")).toLowerCase(Locale.ROOT);
+            String hay = item.toString().toLowerCase(Locale.ROOT);
             if (!hay.contains(q)) continue;
             LinearLayout card = new LinearLayout(this);
             card.setOrientation(1); card.setPadding(15, 13, 15, 13); card.setBackground(bg(Color.WHITE));
@@ -114,7 +114,17 @@ public class LibraryActivity extends Activity {
             list.addView(card, p);
             card.addView(text(subject.toUpperCase(Locale.ROOT), 10, purple, true));
             TextView name = text(title, 17, ink, true); name.setPadding(0, 4, 0, 3); card.addView(name);
-            card.addView(text(hindi ? "पढ़ने के लिए खोलें  →" : "Open lesson  →", 12, muted, false));
+            String teaser = localized(item, "intro", "introHi");
+            if (teaser.isEmpty()) teaser = localized(item, "simple", "simpleHi");
+            TextView preview = text(teaser, 13, 0xFF5F5B75, false);
+            preview.setMaxLines(3);
+            preview.setEllipsize(android.text.TextUtils.TruncateAt.END);
+            preview.setPadding(0, 5, 0, 6);
+            card.addView(preview);
+            String meta = item.optString("level", hindi ? "ज्ञान पाठ" : "Knowledge lesson") +
+                "  ·  " + item.optString("minutes", "5") + (hindi ? " मिनट" : " min");
+            card.addView(text(meta, 11, muted, false));
+            card.addView(text(hindi ? "पूरा पाठ खोलें  →" : "Open full lesson  →", 12, purple, true));
             card.setOnClickListener(v -> openTopic(item));
             shown++;
         }
