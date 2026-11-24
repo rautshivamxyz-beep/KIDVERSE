@@ -353,7 +353,10 @@ public class MainActivity extends Activity {
         heroButton.setOnClickListener(v -> showLearn());
 
         statRow();
-        space(18);
+        space(14);
+        action("Real-World Skills", "Build everyday independence, communication, money sense and safe decision-making", "🧠", 0xFFE8F4DE,
+            "Practise life skills", () -> startActivity(new android.content.Intent(this, SkillActivity.class)));
+        space(8);
         smallHeading("Pick your next adventure");
         action("Math Kingdom", "Number puzzles and brain boosts", "🔢", 0xFFFFEBCB,
             "Play maths", this::showMath);
@@ -374,6 +377,8 @@ public class MainActivity extends Activity {
     private void showLearn() {
         screen("Learn");
         intro("Learning worlds", "Choose a world. Try a mission. Earn stars.");
+        action("Real-World Skills", "Practise useful skills for everyday life with guided offline missions", "🧠", 0xFFE8F4DE,
+            "Build life skills", () -> startActivity(new android.content.Intent(this, SkillActivity.class)));
         action("Knowledge Library", "Search topics, read deeper explanations and practise", "📖", 0xFFECE9FF, "Open library", () -> startActivity(new android.content.Intent(this, LibraryActivity.class)));
         action("Math Kingdom", "Addition, subtraction, multiplication and fractions", "🔢", 0xFFFFEBCB, "Start learning", this::showMath);
         action("Science Galaxy", "Plants, space, weather and our amazing planet", "🔬", 0xFFDFF3FF, "Explore science", this::showScience);
@@ -710,6 +715,11 @@ public class MainActivity extends Activity {
         space(12);
         infoCard("Privacy", "KIDVERSE stores progress and drawings locally on this device. Internet is used only to check app releases or download a learning pack. The app does not use accounts, location tracking, advertising or analytics.", 0xFFE2F2E9);
         infoCard("Completed activities", String.valueOf(prefs.getInt("completed", 0)) + " reward milestones recorded.", WHITE);
+        SharedPreferences skillPrefs = getSharedPreferences("kidverse_skills", MODE_PRIVATE);
+        String[] skillIds = {"daily", "communication", "problem", "money", "digital", "nature", "creative", "feelings"};
+        int skillsPractised = 0;
+        for (String skillId : skillIds) if (skillPrefs.getBoolean("done_" + skillId, false)) skillsPractised++;
+        infoCard("Real-world skills", skillsPractised + " of " + skillIds.length + " practice paths marked as practised on this device.", 0xFFE8F4DE);
         button("Check for app updates", false, () -> UpdateManager.checkForUpdate(this, true));
         button("Install downloaded update", false, () -> UpdateManager.installPending(this));
         button("Reset all progress", false, () -> new AlertDialog.Builder(this)
