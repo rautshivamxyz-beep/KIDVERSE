@@ -66,3 +66,19 @@ The Knowledge Library is organised by Classes 1–5, with class filters and subj
 ## Offline Smart Tutor (no API)
 
 The tutor runs locally and retrieves explanations, examples and vocabulary from the installed lesson library. It does not call an AI API, require an account, or need internet access for answers. It is a lightweight keyword/retrieval-based study helper, not a generative large-language model; it may not understand every question and should not be presented as a general-purpose AI chatbot. Downloading new lesson packs still requires internet access.
+
+## Real-World Skills
+
+The app includes eight offline practice paths for children around ages 6–10:
+- Daily independence and organisation
+- Communication, listening and kindness
+- Step-by-step problem-solving
+- Money basics: needs, wants and simple saving choices
+- Digital safety and privacy
+- Nature, waste awareness and citizenship
+- Creative making, testing and improving
+- Naming feelings and asking for support
+
+Each path includes a short decision scenario, a practical mission, small practice steps, a reflection prompt and safety guidance. Children mark steps after trying them; this is a self-reported practice record, not an assessment or proof of mastery. Skill completion is stored locally on the device and shown as a simple count in the Parent dashboard. The activities are supplementary and do not replace school teaching, adult guidance or professional support. Some activities explicitly require an adult.
+
+The skills area supports English and Hindi and works offline. It does not collect a child's name, location, chat messages or other personal information.
