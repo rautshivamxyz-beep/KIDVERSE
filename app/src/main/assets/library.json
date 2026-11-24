@@ -1092,6 +1092,351 @@
           "explanationHi": "निष्कर्ष प्रमाण पर आधारित होने चाहिए और अनुमानों को अनुमान के रूप में पहचानना चाहिए।"
         }
       ]
+    },
+    {
+      "id": "space_solar_builtin",
+      "subject": "Space",
+      "title": "Our Solar System",
+      "titleHi": "हमारा सौर मंडल",
+      "level": "Explorer · Level 4",
+      "minutes": 9,
+      "intro": "Our Solar System is a family of objects held by the Sun's gravity. It includes the Sun, eight planets, their moons, dwarf planets, asteroids, comets, dust and gas. Earth is one planet in this much larger system.",
+      "introHi": "हमारा सौर मंडल सूर्य के गुरुत्वाकर्षण से बँधी वस्तुओं का परिवार है। इसमें सूर्य, आठ ग्रह, उनके चंद्रमा, बौने ग्रह, क्षुद्रग्रह, धूमकेतु, धूल और गैस शामिल हैं। पृथ्वी इस बड़े तंत्र का एक ग्रह है।",
+      "sections": [
+        {
+          "heading": "1. The Sun is a star",
+          "headingHi": "1. सूर्य एक तारा है",
+          "body": "The Sun is a star at the centre of our Solar System. It releases light and heat. The planets do not make their own visible light like the Sun; we see them because they reflect sunlight. Gravity keeps planets moving in paths called orbits around the Sun.",
+          "bodyHi": "सूर्य हमारे सौर मंडल के केंद्र में स्थित तारा है। यह प्रकाश और ऊष्मा देता है। ग्रह सूर्य की तरह अपना दृश्य प्रकाश नहीं बनाते; हम उन्हें इसलिए देखते हैं क्योंकि वे सूर्य का प्रकाश परावर्तित करते हैं। गुरुत्वाकर्षण ग्रहों को सूर्य के चारों ओर कक्षा में रखता है।",
+          "example": "Earth takes about one year to complete one orbit around the Sun.",
+          "exampleHi": "पृथ्वी को सूर्य की एक परिक्रमा पूरी करने में लगभग एक वर्ष लगता है।"
+        },
+        {
+          "heading": "2. Eight planets in order",
+          "headingHi": "2. क्रम से आठ ग्रह",
+          "body": "Starting closest to the Sun, the planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The four inner planets are relatively small and rocky. Jupiter and Saturn are gas giants; Uranus and Neptune are ice giants. Pluto is classified as a dwarf planet, not one of the eight planets.",
+          "bodyHi": "सूर्य से दूरी के क्रम में ग्रह हैं: बुध, शुक्र, पृथ्वी, मंगल, बृहस्पति, शनि, अरुण और वरुण। चार भीतरी ग्रह छोटे और चट्टानी हैं। बृहस्पति और शनि गैस दानव हैं; अरुण और वरुण हिम दानव हैं। प्लूटो को आठ ग्रहों में नहीं, बौने ग्रह के रूप में वर्गीकृत किया जाता है।",
+          "example": "A memory sentence can help remember the order: My Very Eager Mother Just Served Us Noodles.",
+          "exampleHi": "ग्रहों का क्रम याद रखने के लिए उनके नामों के पहले अक्षर वाला अपना वाक्य बनाओ।"
+        },
+        {
+          "heading": "3. Rotation and revolution",
+          "headingHi": "3. घूर्णन और परिक्रमा",
+          "body": "A planet rotates by spinning around its own axis. Earth takes about 24 hours to rotate once, causing the cycle of day and night. A planet revolves when it travels around the Sun. Earth's revolution takes about 365 and one-quarter days; this is why our calendar uses leap years.",
+          "bodyHi": "ग्रह अपने अक्ष पर घूमता है तो उसे घूर्णन कहते हैं। पृथ्वी को एक घूर्णन में लगभग 24 घंटे लगते हैं, जिससे दिन और रात होते हैं। सूर्य के चारों ओर घूमना परिक्रमा है। पृथ्वी की परिक्रमा में लगभग 365 और एक चौथाई दिन लगते हैं; इसी कारण कैलेंडर में लीप वर्ष होता है।",
+          "example": "The side of Earth facing the Sun has daytime while the opposite side has night.",
+          "exampleHi": "पृथ्वी का सूर्य की ओर वाला भाग दिन में और विपरीत भाग रात में होता है。"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Orbit",
+          "wordHi": "कक्षा",
+          "meaning": "The path an object follows around another object.",
+          "meaningHi": "एक वस्तु के चारों ओर दूसरी वस्तु का घूमने वाला रास्ता।"
+        },
+        {
+          "word": "Rotation",
+          "wordHi": "घूर्णन",
+          "meaning": "A body's spin around its own axis.",
+          "meaningHi": "किसी पिंड का अपने अक्ष पर घूमना।"
+        },
+        {
+          "word": "Revolution",
+          "wordHi": "परिक्रमा",
+          "meaning": "Movement around another object.",
+          "meaningHi": "किसी दूसरे पिंड के चारों ओर घूमना।"
+        },
+        {
+          "word": "Dwarf planet",
+          "wordHi": "बौना ग्रह",
+          "meaning": "A round object orbiting the Sun that has not cleared its orbital neighbourhood.",
+          "meaningHi": "सूर्य की परिक्रमा करने वाला गोल पिंड जिसने अपनी कक्षा के आसपास का क्षेत्र साफ़ नहीं किया है。"
+        }
+      ],
+      "activity": "Make a planet-order strip with eight circles. Label each planet in order from the Sun. Use different patterns to mark the four rocky inner planets and four outer giant planets.",
+      "activityHi": "आठ गोलों वाली ग्रह-क्रम पट्टी बनाओ। सूर्य से दूरी के क्रम में ग्रहों के नाम लिखो। चार भीतरी चट्टानी ग्रहों और चार बाहरी विशाल ग्रहों को अलग-अलग निशान से दिखाओ。",
+      "practice": [
+        {
+          "question": "How many planets are in our Solar System?",
+          "questionHi": "हमारे सौर मंडल में कितने ग्रह हैं?",
+          "options": [
+            "Seven",
+            "Eight",
+            "Nine"
+          ],
+          "optionsHi": [
+            "सात",
+            "आठ",
+            "नौ"
+          ],
+          "correct": 1,
+          "explanation": "There are eight recognised planets. Pluto is classified as a dwarf planet.",
+          "explanationHi": "मान्यता प्राप्त ग्रह आठ हैं। प्लूटो बौना ग्रह है।"
+        },
+        {
+          "question": "What causes day and night on Earth?",
+          "questionHi": "पृथ्वी पर दिन और रात किससे होते हैं?",
+          "options": [
+            "Earth's rotation",
+            "The Moon's phases",
+            "Clouds moving"
+          ],
+          "optionsHi": [
+            "पृथ्वी का घूर्णन",
+            "चंद्रमा की कलाएँ",
+            "बादलों का चलना"
+          ],
+          "correct": 0,
+          "explanation": "Earth's rotation turns different places toward and away from the Sun.",
+          "explanationHi": "पृथ्वी का घूर्णन अलग-अलग स्थानों को सूर्य की ओर और उससे दूर घुमाता है।"
+        },
+        {
+          "question": "Which planet is closest to the Sun?",
+          "questionHi": "सूर्य के सबसे पास कौन-सा ग्रह है?",
+          "options": [
+            "Venus",
+            "Mercury",
+            "Earth"
+          ],
+          "optionsHi": [
+            "शुक्र",
+            "बुध",
+            "पृथ्वी"
+          ],
+          "correct": 1,
+          "explanation": "Mercury is the closest planet to the Sun.",
+          "explanationHi": "बुध सूर्य के सबसे पास का ग्रह है।"
+        }
+      ]
+    },
+    {
+      "id": "water_cycle_builtin",
+      "subject": "Earth Science",
+      "title": "The water cycle",
+      "titleHi": "जल चक्र",
+      "level": "Beginner · Level 4",
+      "minutes": 8,
+      "intro": "Water is always moving between the land, oceans, rivers, living things and the air. The water cycle describes this movement. The same water can be used again and again as it changes place and sometimes changes state.",
+      "introHi": "पानी भूमि, महासागर, नदियों, जीवों और हवा के बीच लगातार घूमता रहता है। जल चक्र इस गति का वर्णन करता है। वही पानी बार-बार उपयोग हो सकता है क्योंकि वह स्थान और कभी-कभी अवस्था बदलता है।",
+      "sections": [
+        {
+          "heading": "1. Evaporation and transpiration",
+          "headingHi": "1. वाष्पीकरण और वाष्पोत्सर्जन",
+          "body": "The Sun warms water in oceans, lakes and puddles. Some liquid water evaporates and becomes water vapour, an invisible gas. Plants also release water vapour from their leaves; this is called transpiration. Together these processes move water into the air.",
+          "bodyHi": "सूर्य महासागरों, झीलों और पानी के गड्ढों को गर्म करता है। कुछ द्रव पानी वाष्पित होकर अदृश्य गैस जलवाष्प बन जाता है। पौधे भी पत्तियों से जलवाष्प छोड़ते हैं; इसे वाष्पोत्सर्जन कहते हैं। ये प्रक्रियाएँ पानी को हवा में पहुँचाती हैं।",
+          "example": "Wet clothes dry because liquid water evaporates from their fabric.",
+          "exampleHi": "गीले कपड़े इसलिए सूखते हैं क्योंकि उनका पानी कपड़े से वाष्पित होता है।"
+        },
+        {
+          "heading": "2. Condensation and clouds",
+          "headingHi": "2. संघनन और बादल",
+          "body": "As moist air rises, it often cools. Water vapour can condense onto tiny particles in the air to form small liquid droplets or ice crystals. Many droplets or crystals together form a cloud. Clouds are made of tiny water droplets, ice crystals or both, not simply water vapour.",
+          "bodyHi": "नम हवा ऊपर उठने पर अक्सर ठंडी होती है। जलवाष्प हवा के सूक्ष्म कणों पर संघनित होकर छोटी पानी की बूंदें या बर्फ़ के क्रिस्टल बना सकती है। बहुत-सी बूंदें या क्रिस्टल मिलकर बादल बनाते हैं। बादल सूक्ष्म बूंदों, बर्फ़ के क्रिस्टलों या दोनों से बने होते हैं, केवल जलवाष्प से नहीं।",
+          "example": "A cold glass may collect water droplets on the outside because water vapour in the air condenses on its cool surface.",
+          "exampleHi": "ठंडे गिलास के बाहर पानी की बूंदें जम सकती हैं क्योंकि हवा की जलवाष्प ठंडी सतह पर संघनित होती है।"
+        },
+        {
+          "heading": "3. Precipitation, collection and storage",
+          "headingHi": "3. वर्षण, संग्रह और भंडारण",
+          "body": "When droplets or ice crystals grow large enough, water may fall as rain, snow or hail. This is precipitation. Water can flow into streams and rivers, soak into soil as groundwater, or collect in lakes and oceans. The cycle continues, powered mainly by energy from the Sun and gravity.",
+          "bodyHi": "जब बूंदें या बर्फ़ के क्रिस्टल बड़े हो जाते हैं, तो पानी बारिश, बर्फ़ या ओलों के रूप में गिर सकता है। इसे वर्षण कहते हैं। पानी नालों और नदियों में बह सकता है, मिट्टी में रिसकर भूजल बन सकता है या झीलों और महासागरों में जमा हो सकता है। सूर्य की ऊर्जा और गुरुत्वाकर्षण से चक्र चलता रहता है।",
+          "example": "After rain, some water runs into a drain, some soaks into the ground and some evaporates later.",
+          "exampleHi": "बारिश के बाद कुछ पानी नाली में बहता है, कुछ जमीन में रिसता है और कुछ बाद में वाष्पित होता है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Evaporation",
+          "wordHi": "वाष्पीकरण",
+          "meaning": "Liquid changing into gas at a surface.",
+          "meaningHi": "द्रव का सतह से गैस में बदलना।"
+        },
+        {
+          "word": "Condensation",
+          "wordHi": "संघनन",
+          "meaning": "Water vapour changing into liquid droplets.",
+          "meaningHi": "जलवाष्प का द्रव बूंदों में बदलना।"
+        },
+        {
+          "word": "Precipitation",
+          "wordHi": "वर्षण",
+          "meaning": "Water falling from clouds as rain, snow or hail.",
+          "meaningHi": "बादलों से बारिश, बर्फ़ या ओलों के रूप में पानी गिरना।"
+        },
+        {
+          "word": "Groundwater",
+          "wordHi": "भूजल",
+          "meaning": "Water stored beneath Earth's surface.",
+          "meaningHi": "पृथ्वी की सतह के नीचे जमा पानी।"
+        }
+      ],
+      "activity": "Draw the water cycle with arrows. Include evaporation, condensation, precipitation, collection and water soaking into the ground. Label where the Sun supplies energy.",
+      "activityHi": "तीरों के साथ जल चक्र बनाओ। वाष्पीकरण, संघनन, वर्षण, संग्रह और जमीन में पानी के रिसने को दिखाओ। जहाँ सूर्य ऊर्जा देता है, वहाँ निशान लगाओ।",
+      "practice": [
+        {
+          "question": "Which process changes liquid water into water vapour?",
+          "questionHi": "कौन-सी प्रक्रिया द्रव पानी को जलवाष्प बनाती है?",
+          "options": [
+            "Freezing",
+            "Evaporation",
+            "Condensation"
+          ],
+          "optionsHi": [
+            "जमना",
+            "वाष्पीकरण",
+            "संघनन"
+          ],
+          "correct": 1,
+          "explanation": "Evaporation changes liquid water into water vapour.",
+          "explanationHi": "वाष्पीकरण द्रव पानी को जलवाष्प में बदलता है।"
+        },
+        {
+          "question": "What are clouds mainly made of?",
+          "questionHi": "बादल मुख्यतः किससे बने होते हैं?",
+          "options": [
+            "Tiny water droplets or ice crystals",
+            "Only invisible water vapour",
+            "Smoke"
+          ],
+          "optionsHi": [
+            "पानी की सूक्ष्म बूंदें या बर्फ़ के क्रिस्टल",
+            "केवल अदृश्य जलवाष्प",
+            "धुआँ"
+          ],
+          "correct": 0,
+          "explanation": "Clouds contain tiny liquid droplets, ice crystals or both.",
+          "explanationHi": "बादलों में पानी की छोटी बूंदें, बर्फ़ के क्रिस्टल या दोनों होते हैं।"
+        },
+        {
+          "question": "What is rain, snow and hail falling from clouds called?",
+          "questionHi": "बादलों से बारिश, बर्फ़ और ओले गिरने को क्या कहते हैं?",
+          "options": [
+            "Evaporation",
+            "Precipitation",
+            "Rotation"
+          ],
+          "optionsHi": [
+            "वाष्पीकरण",
+            "वर्षण",
+            "घूर्णन"
+          ],
+          "correct": 1,
+          "explanation": "Rain, snow and hail are forms of precipitation.",
+          "explanationHi": "बारिश, बर्फ़ और ओले वर्षण के रूप हैं।"
+        }
+      ]
+    },
+    {
+      "id": "english_grammar_builtin",
+      "subject": "English",
+      "title": "Building clear sentences",
+      "titleHi": "साफ़ वाक्य बनाना",
+      "level": "Beginner · Level 3",
+      "minutes": 8,
+      "intro": "A sentence is a group of words that expresses a complete thought. Good sentences help readers understand who or what we are talking about and what happens. Learning about nouns, verbs and adjectives helps us build clearer sentences.",
+      "introHi": "वाक्य शब्दों का ऐसा समूह है जो पूरा विचार बताता है। अच्छे वाक्य से पाठक समझते हैं कि किसके बारे में बात हो रही है और क्या हो रहा है। संज्ञा, क्रिया और विशेषण समझने से अच्छे वाक्य बनते हैं।",
+      "sections": [
+        {
+          "heading": "1. Nouns name people, places and things",
+          "headingHi": "1. संज्ञा व्यक्ति, स्थान और वस्तु के नाम बताती है",
+          "body": "A noun names a person, place, animal, thing or idea. Examples include child, Bokaro, tiger, pencil and kindness. A proper noun names a particular person or place and begins with a capital letter in English, such as India or Asha.",
+          "bodyHi": "संज्ञा व्यक्ति, स्थान, जानवर, वस्तु या विचार का नाम बताती है। उदाहरण: बच्चा, बोकारो, बाघ, पेंसिल और दया। विशेष नाम किसी खास व्यक्ति या स्थान का नाम बताते हैं और अंग्रेज़ी में बड़े अक्षर से शुरू होते हैं, जैसे India या Asha।",
+          "example": "In 'The bird sings', bird is a noun because it names an animal.",
+          "exampleHi": "'The bird sings' में bird संज्ञा है क्योंकि यह जानवर का नाम है。"
+        },
+        {
+          "heading": "2. Verbs show actions or states",
+          "headingHi": "2. क्रिया काम या अवस्था बताती है",
+          "body": "A verb tells what someone or something does or is. Action verbs include run, read, think and grow. Being verbs include is, am and are. Most complete sentences need a verb to tell what happens or what the subject is like.",
+          "bodyHi": "क्रिया बताती है कि कोई क्या करता है या उसकी स्थिति क्या है। काम बताने वाली क्रियाएँ run, read, think और grow हैं। अवस्था बताने वाली क्रियाएँ is, am और are हैं। अधिकतर पूरे वाक्यों में यह बताने के लिए क्रिया चाहिए कि क्या होता है या विषय कैसा है।",
+          "example": "In 'Mina reads a book', reads is the verb because it tells the action.",
+          "exampleHi": "'Mina reads a book' में reads क्रिया है क्योंकि यह काम बताती है。"
+        },
+        {
+          "heading": "3. Adjectives add detail",
+          "headingHi": "3. विशेषण जानकारी जोड़ता है",
+          "body": "An adjective describes a noun. It can tell what kind, which one or how many. Adjectives make writing more precise, but too many can make a sentence hard to read. Choose details that help the reader imagine the scene.",
+          "bodyHi": "विशेषण संज्ञा का वर्णन करता है। यह बताता है कि कैसी, कौन-सी या कितनी। विशेषण लेखन को स्पष्ट बनाते हैं, लेकिन बहुत अधिक विशेषण वाक्य को कठिन कर सकते हैं। वही विवरण चुनो जो पाठक को दृश्य समझने में मदद करें。",
+          "example": "'The small brown dog barked' uses small and brown to describe the noun dog.",
+          "exampleHi": "'The small brown dog barked' में small और brown, dog संज्ञा का वर्णन करते हैं।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Noun",
+          "wordHi": "संज्ञा",
+          "meaning": "A word that names a person, place, thing, animal or idea.",
+          "meaningHi": "व्यक्ति, स्थान, वस्तु, जानवर या विचार का नाम बताने वाला शब्द।"
+        },
+        {
+          "word": "Verb",
+          "wordHi": "क्रिया",
+          "meaning": "A word that shows an action or state.",
+          "meaningHi": "काम या अवस्था बताने वाला शब्द।"
+        },
+        {
+          "word": "Adjective",
+          "wordHi": "विशेषण",
+          "meaning": "A word that describes a noun.",
+          "meaningHi": "संज्ञा का वर्णन करने वाला शब्द।"
+        }
+      ],
+      "activity": "Write three sentences about an animal. Underline the nouns once, circle the verbs and put a box around the adjectives.",
+      "activityHi": "किसी जानवर के बारे में तीन वाक्य लिखो। संज्ञा के नीचे एक रेखा, क्रिया के चारों ओर घेरा और विशेषण के चारों ओर बॉक्स बनाओ।",
+      "practice": [
+        {
+          "question": "Which word is a noun in 'The puppy sleeps'?",
+          "questionHi": "'The puppy sleeps' में कौन-सा शब्द संज्ञा है?",
+          "options": [
+            "The",
+            "puppy",
+            "sleeps"
+          ],
+          "optionsHi": [
+            "The",
+            "puppy",
+            "sleeps"
+          ],
+          "correct": 1,
+          "explanation": "Puppy names an animal, so it is a noun.",
+          "explanationHi": "Puppy एक जानवर का नाम है, इसलिए यह संज्ञा है。"
+        },
+        {
+          "question": "Which word is the verb in 'Ravi jumps high'?",
+          "questionHi": "'Ravi jumps high' में क्रिया कौन-सी है?",
+          "options": [
+            "Ravi",
+            "jumps",
+            "high"
+          ],
+          "optionsHi": [
+            "Ravi",
+            "jumps",
+            "high"
+          ],
+          "correct": 1,
+          "explanation": "Jumps tells the action, so it is the verb.",
+          "explanationHi": "Jumps काम बताता है, इसलिए यह क्रिया है。"
+        },
+        {
+          "question": "Which word describes the noun in 'a bright star'?",
+          "questionHi": "'a bright star' में कौन-सा शब्द संज्ञा का वर्णन करता है?",
+          "options": [
+            "a",
+            "bright",
+            "star"
+          ],
+          "optionsHi": [
+            "a",
+            "bright",
+            "star"
+          ],
+          "correct": 1,
+          "explanation": "Bright describes the star, so it is an adjective.",
+          "explanationHi": "Bright तारे का वर्णन करता है, इसलिए यह विशेषण है。"
+        }
+      ]
     }
   ]
 }
