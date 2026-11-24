@@ -262,7 +262,112 @@
       "question": "In 3.47, what does the digit 7 represent?",
       "questionHi": "3.47 में 7 किस स्थान पर है?",
       "answer": "Hundredths",
-      "answerHi": "सौवाँ स्थान"
+      "answerHi": "सौवाँ स्थान",
+      "level": "Beginner · Level 4",
+      "minutes": 7,
+      "intro": "Decimals are another way to write parts of a whole. Money, measurements and scores often use decimals. The decimal point separates whole numbers from parts smaller than one.",
+      "introHi": "दशमलव पूरी चीज़ के छोटे हिस्से लिखने का एक तरीका है। पैसे, माप और अंकों में दशमलव उपयोग होते हैं। दशमलव बिंदु पूरी संख्या और एक से छोटे हिस्सों को अलग करता है।",
+      "sections": [
+        {
+          "heading": "1. Place value after the decimal point",
+          "headingHi": "1. दशमलव बिंदु के बाद का स्थानमान",
+          "body": "The first place to the right is tenths, the next is hundredths, and the third is thousandths. In 4.27, 4 means four ones, 2 means two tenths and 7 means seven hundredths.",
+          "bodyHi": "दशमलव बिंदु के दाईं ओर पहला स्थान दसवाँ, दूसरा सौवाँ और तीसरा हज़ारवाँ होता है। 4.27 में 4 का अर्थ चार इकाई, 2 का अर्थ दो दसवाँ और 7 का अर्थ सात सौवाँ है।",
+          "example": "0.5 means five tenths. 0.05 means five hundredths. They are different amounts.",
+          "exampleHi": "0.5 का अर्थ पाँच दसवाँ है। 0.05 का अर्थ पाँच सौवाँ है। दोनों अलग मात्राएँ हैं।"
+        },
+        {
+          "heading": "2. Compare decimals",
+          "headingHi": "2. दशमलव की तुलना",
+          "body": "Compare whole-number parts first. If they match, compare tenths, then hundredths. You may add zeroes at the end without changing a decimal's value: 0.6 = 0.60.",
+          "bodyHi": "पहले पूरी संख्या वाले भाग की तुलना करो। वे समान हों तो दसवाँ, फिर सौवाँ स्थान देखो। अंत में शून्य जोड़ने से मान नहीं बदलता: 0.6 = 0.60।",
+          "example": "0.47 is less than 0.5 because 0.5 is the same as 0.50, and 47 hundredths is less than 50 hundredths.",
+          "exampleHi": "0.47, 0.5 से छोटा है क्योंकि 0.5 = 0.50 और 47 सौवाँ, 50 सौवें से कम है।"
+        },
+        {
+          "heading": "3. Add decimals",
+          "headingHi": "3. दशमलव जोड़ो",
+          "body": "Line up decimal points so tenths are under tenths and hundredths are under hundredths. Add each column as you do with whole numbers. Put the decimal point in the answer directly below the others.",
+          "bodyHi": "दशमलव बिंदुओं को एक सीध में रखो ताकि दसवाँ दसवें के नीचे और सौवाँ सौवें के नीचे आए। सामान्य संख्याओं की तरह जोड़ो। उत्तर में दशमलव बिंदु भी उसी सीध में रखो।",
+          "example": "2.35 + 1.20 = 3.55. The zero in 1.20 helps line up the columns.",
+          "exampleHi": "2.35 + 1.20 = 3.55। 1.20 में शून्य स्थानों को सीध में रखने में मदद करता है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Decimal point",
+          "wordHi": "दशमलव बिंदु",
+          "meaning": "The mark separating whole-number and fractional parts.",
+          "meaningHi": "पूरी संख्या और छोटे हिस्सों को अलग करने वाला चिह्न।"
+        },
+        {
+          "word": "Tenths",
+          "wordHi": "दसवाँ",
+          "meaning": "One of ten equal parts; the first place after the decimal point.",
+          "meaningHi": "दस बराबर हिस्सों में से एक; दशमलव के बाद पहला स्थान।"
+        },
+        {
+          "word": "Hundredths",
+          "wordHi": "सौवाँ",
+          "meaning": "One of one hundred equal parts; the second place after the point.",
+          "meaningHi": "सौ बराबर हिस्सों में से एक; दशमलव के बाद दूसरा स्थान।"
+        }
+      ],
+      "activity": "Write 0.4, 0.04 and 0.40. Draw a 10-by-10 grid and shade each amount. Explain which two numbers are equal.",
+      "activityHi": "0.4, 0.04 और 0.40 लिखो। 10 × 10 का वर्ग-जाल बनाकर हर मात्रा रंगो। बताओ किन दो संख्याओं का मान समान है।",
+      "practice": [
+        {
+          "question": "In 3.47, what does the 7 represent?",
+          "questionHi": "3.47 में 7 किस स्थान को दिखाता है?",
+          "options": [
+            "Tenths",
+            "Hundredths",
+            "Ones"
+          ],
+          "optionsHi": [
+            "दसवाँ",
+            "सौवाँ",
+            "इकाई"
+          ],
+          "correct": 1,
+          "explanation": "The second digit after the decimal point is in the hundredths place.",
+          "explanationHi": "दशमलव के बाद दूसरा अंक सौवें स्थान पर होता है।"
+        },
+        {
+          "question": "Which has the same value as 0.6?",
+          "questionHi": "0.6 के बराबर कौन-सी संख्या है?",
+          "options": [
+            "0.06",
+            "0.60",
+            "0.006"
+          ],
+          "optionsHi": [
+            "0.06",
+            "0.60",
+            "0.006"
+          ],
+          "correct": 1,
+          "explanation": "A zero at the end does not change the value: 0.6 = 0.60.",
+          "explanationHi": "अंत में शून्य जोड़ने से मान नहीं बदलता: 0.6 = 0.60।"
+        },
+        {
+          "question": "What is 1.25 + 0.50?",
+          "questionHi": "1.25 + 0.50 कितना है?",
+          "options": [
+            "1.30",
+            "1.75",
+            "2.25"
+          ],
+          "optionsHi": [
+            "1.30",
+            "1.75",
+            "2.25"
+          ],
+          "correct": 1,
+          "explanation": "Line up the points: 1.25 + 0.50 = 1.75.",
+          "explanationHi": "दशमलव बिंदु सीध में रखो: 1.25 + 0.50 = 1.75।"
+        }
+      ]
     },
     {
       "id": "math_patterns",
