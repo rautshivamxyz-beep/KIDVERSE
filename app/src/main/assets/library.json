@@ -12,7 +12,111 @@
       "question": "Which fraction is equal to one half?",
       "questionHi": "कौन-सा भिन्न आधे के बराबर है?",
       "answer": "2/4",
-      "answerHi": "2/4"
+      "answerHi": "2/4",
+      "level": "Beginner · Level 3",
+      "minutes": 8,
+      "intro": "Imagine sharing one pizza equally with four friends. Each person gets one of four equal pieces: one quarter, written 1/4. A fraction describes equal parts of one whole or a group.",
+      "sections": [
+        {
+          "heading": "1. Meet the numerator and denominator",
+          "body": "In 3/4, the bottom number 4 is the denominator. It tells how many equal parts make the whole. The top number 3 is the numerator. It tells how many of those parts we are counting. The parts must be equal; four unequal pieces are not fourths.",
+          "example": "A chocolate bar is split into 8 equal squares. You eat 3. You ate 3/8 and 5/8 remain.",
+          "headingHi": "1. अंश और हर को समझो",
+          "bodyHi": "3/4 में नीचे की संख्या 4 हर है। यह बताती है कि पूरी चीज़ कितने बराबर हिस्सों में बँटी है। ऊपर की संख्या 3 अंश है। यह बताती है कि ऐसे कितने हिस्से लिए गए हैं। हिस्से बराबर होने चाहिए।",
+          "exampleHi": "एक चॉकलेट 8 बराबर टुकड़ों में है। तुम 3 खाते हो। तुमने 3/8 खाया और 5/8 बचा।"
+        },
+        {
+          "heading": "2. Fractions on a number line",
+          "body": "Fractions are numbers too. Divide the distance from 0 to 1 into equal steps. If you divide it into 4 steps, the marks are 0, 1/4, 2/4, 3/4 and 4/4. Notice that 4/4 is exactly one whole.",
+          "example": "2/4 is halfway between 0 and 1. It has the same value as 1/2.",
+          "headingHi": "2. संख्या रेखा पर भिन्न",
+          "bodyHi": "भिन्न भी संख्याएँ हैं। 0 और 1 के बीच की दूरी को बराबर भागों में बाँटो। चार भाग करने पर निशान 0, 1/4, 2/4, 3/4 और 4/4 होंगे। 4/4 ठीक 1 के बराबर है।",
+          "exampleHi": "2/4, 0 और 1 के ठीक बीच में है। इसका मान 1/2 के बराबर है।"
+        },
+        {
+          "heading": "3. Equivalent fractions",
+          "body": "Equivalent fractions look different but name the same amount. Multiply the numerator and denominator by the same number to make an equivalent fraction. For example, 1/2 = 2/4 = 4/8. You divide the same whole into more pieces and take the matching number of pieces.",
+          "example": "Half of a paper strip is the same length as two quarters of that same strip.",
+          "headingHi": "3. समतुल्य भिन्न",
+          "bodyHi": "समतुल्य भिन्न दिखने में अलग होते हैं लेकिन एक ही मात्रा बताते हैं। अंश और हर दोनों को एक ही संख्या से गुणा करने पर मान वही रहता है। जैसे 1/2 = 2/4 = 4/8।",
+          "exampleHi": "कागज़ की पट्टी का आधा हिस्सा उसी पट्टी के दो चौथाई हिस्सों जितना ही लंबा है。"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Numerator",
+          "meaning": "The number of equal parts being counted.",
+          "wordHi": "अंश",
+          "meaningHi": "गिने जा रहे बराबर हिस्सों की संख्या।"
+        },
+        {
+          "word": "Denominator",
+          "meaning": "The number of equal parts in one whole.",
+          "wordHi": "हर",
+          "meaningHi": "एक पूरी चीज़ के कुल बराबर हिस्सों की संख्या।"
+        },
+        {
+          "word": "Equivalent fractions",
+          "meaning": "Fractions with different forms but the same value.",
+          "wordHi": "समतुल्य भिन्न",
+          "meaningHi": "अलग रूप वाले ऐसे भिन्न जिनका मान समान हो।"
+        }
+      ],
+      "activity": "Draw a rectangle. Divide it into 4 equal boxes and shade 3. Write the fraction. Then split each box in half: how many of the 8 small boxes are shaded?",
+      "activityHi": "एक आयत बनाओ। उसे 4 बराबर खानों में बाँटकर 3 में रंग भरो और भिन्न लिखो। फिर हर खाने को आधा करो। 8 छोटे खानों में कितने रंगे हैं?",
+      "practice": [
+        {
+          "question": "In 5/8, what does 8 tell us?",
+          "options": [
+            "How many parts we count",
+            "How many equal parts make the whole",
+            "How many wholes there are"
+          ],
+          "correct": 1,
+          "explanation": "The denominator is the bottom number. It tells the number of equal parts in one whole.",
+          "questionHi": "5/8 में 8 क्या बताता है?",
+          "optionsHi": [
+            "कितने हिस्से गिने गए",
+            "पूरी चीज़ के कुल बराबर हिस्से",
+            "पूरी चीज़ों की संख्या"
+          ],
+          "explanationHi": "हर नीचे की संख्या होती है। यह एक पूरी चीज़ के बराबर हिस्सों की संख्या बताती है।"
+        },
+        {
+          "question": "Which fraction is equal to 1/2?",
+          "options": [
+            "2/4",
+            "1/4",
+            "3/4"
+          ],
+          "correct": 0,
+          "explanation": "Two out of four equal parts make one half: 2/4 = 1/2.",
+          "questionHi": "कौन-सा भिन्न 1/2 के बराबर है?",
+          "optionsHi": [
+            "2/4",
+            "1/4",
+            "3/4"
+          ],
+          "explanationHi": "चार बराबर हिस्सों में से दो हिस्से आधे के बराबर हैं: 2/4 = 1/2।"
+        },
+        {
+          "question": "A cake is cut into 6 equal slices. 2 are eaten. What fraction remains?",
+          "options": [
+            "2/6",
+            "4/6",
+            "6/4"
+          ],
+          "correct": 1,
+          "explanation": "Four slices remain out of six equal slices, so 4/6 remains.",
+          "questionHi": "केक के 6 बराबर टुकड़े हैं। 2 खा लिए गए। कितना हिस्सा बचा?",
+          "optionsHi": [
+            "2/6",
+            "4/6",
+            "6/4"
+          ],
+          "explanationHi": "छह बराबर टुकड़ों में से चार बचे हैं, इसलिए 4/6 बचा।"
+        }
+      ]
     },
     {
       "id": "math_area",
@@ -26,7 +130,111 @@
       "question": "A rectangle is 5 cm long and 3 cm wide. What is its area?",
       "questionHi": "एक आयत 5 सेमी लंबा और 3 सेमी चौड़ा है। उसका क्षेत्रफल कितना है?",
       "answer": "15 square centimetres",
-      "answerHi": "15 वर्ग सेंटीमीटर"
+      "answerHi": "15 वर्ग सेंटीमीटर",
+      "level": "Beginner · Level 4",
+      "minutes": 8,
+      "intro": "Imagine putting a fence around a garden and laying grass inside it. The fence follows the boundary: that is perimeter. The grass covers the inside: that is area. They describe two different measurements.",
+      "sections": [
+        {
+          "heading": "1. Perimeter: distance around",
+          "body": "Perimeter is the total length of a shape's outside boundary. Add the lengths of every side. A rectangle has two long sides and two short sides, so perimeter = length + width + length + width = 2 × (length + width).",
+          "example": "A rectangle is 5 cm long and 3 cm wide. Perimeter = 5 + 3 + 5 + 3 = 16 cm.",
+          "headingHi": "1. परिमाप: चारों ओर की दूरी",
+          "bodyHi": "परिमाप किसी आकृति की बाहरी सीमा की कुल लंबाई है। हर भुजा की लंबाई जोड़ो। आयत का परिमाप = लंबाई + चौड़ाई + लंबाई + चौड़ाई = 2 × (लंबाई + चौड़ाई)।",
+          "exampleHi": "एक आयत 5 सेमी लंबा और 3 सेमी चौड़ा है। परिमाप = 5 + 3 + 5 + 3 = 16 सेमी।"
+        },
+        {
+          "heading": "2. Area: space inside",
+          "body": "Area measures how much flat surface is covered. For a rectangle, count unit squares or multiply length by width. Area is written in square units, such as cm² or m², because it covers two dimensions.",
+          "example": "The same rectangle has area = 5 × 3 = 15 cm². Do not write 15 cm: area needs square units.",
+          "headingHi": "2. क्षेत्रफल: अंदर की जगह",
+          "bodyHi": "क्षेत्रफल बताता है कि सपाट सतह पर कितना स्थान ढका है। आयत के लिए इकाई वर्ग गिनो या लंबाई को चौड़ाई से गुणा करो। क्षेत्रफल वर्ग इकाइयों जैसे सेमी² या मी² में लिखा जाता है।",
+          "exampleHi": "उसी आयत का क्षेत्रफल = 5 × 3 = 15 सेमी² है। इसे 15 सेमी नहीं लिखेंगे; क्षेत्रफल में वर्ग इकाई चाहिए।"
+        },
+        {
+          "heading": "3. Choose the right measurement",
+          "body": "Use perimeter when you need a border, ribbon around a picture or fencing around a field. Use area when you need paint for a wall, carpet for a floor or tiles to cover a surface. Do not mix the two measurements.",
+          "example": "A 4 m × 2 m floor needs 8 square metres of covering. Its border is 12 metres long.",
+          "headingHi": "3. सही माप चुनो",
+          "bodyHi": "सीमा, तस्वीर के चारों ओर फीता या खेत के चारों ओर बाड़ चाहिए तो परिमाप उपयोग करो। दीवार पर रंग, फर्श पर कालीन या सतह पर टाइलें चाहिए तो क्षेत्रफल उपयोग करो। दोनों मापों को मिलाओ मत।",
+          "exampleHi": "4 मीटर × 2 मीटर के फर्श को ढकने के लिए 8 वर्ग मीटर सामग्री चाहिए। उसके चारों ओर की सीमा 12 मीटर है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Perimeter",
+          "meaning": "The total distance around a shape.",
+          "wordHi": "परिमाप",
+          "meaningHi": "आकृति के चारों ओर की कुल दूरी।"
+        },
+        {
+          "word": "Area",
+          "meaning": "The amount of flat surface inside a boundary.",
+          "wordHi": "क्षेत्रफल",
+          "meaningHi": "सीमा के अंदर की सपाट जगह का माप।"
+        },
+        {
+          "word": "Square unit",
+          "meaning": "A unit used to measure area.",
+          "wordHi": "वर्ग इकाई",
+          "meaningHi": "क्षेत्रफल मापने की इकाई।"
+        }
+      ],
+      "activity": "Draw a rectangle 6 grid squares long and 2 squares wide. Count its perimeter in side units and its area in square units.",
+      "activityHi": "6 खाने लंबा और 2 खाने चौड़ा आयत बनाओ। भुजाओं की कुल लंबाई परिमाप और अंदर के खानों की संख्या क्षेत्रफल है।",
+      "practice": [
+        {
+          "question": "A 5 cm by 3 cm rectangle has what perimeter?",
+          "options": [
+            "8 cm",
+            "15 cm",
+            "16 cm"
+          ],
+          "correct": 2,
+          "explanation": "Add all four sides: 5 + 3 + 5 + 3 = 16 cm.",
+          "questionHi": "5 सेमी × 3 सेमी आयत का परिमाप क्या है?",
+          "optionsHi": [
+            "8 सेमी",
+            "15 सेमी",
+            "16 सेमी"
+          ],
+          "explanationHi": "चारों भुजाएँ जोड़ो: 5 + 3 + 5 + 3 = 16 सेमी।"
+        },
+        {
+          "question": "What is the area of a 5 cm by 3 cm rectangle?",
+          "options": [
+            "8 cm²",
+            "15 cm²",
+            "16 cm²"
+          ],
+          "correct": 1,
+          "explanation": "Area = length × width = 5 × 3 = 15 cm².",
+          "questionHi": "5 सेमी × 3 सेमी आयत का क्षेत्रफल क्या है?",
+          "optionsHi": [
+            "8 सेमी²",
+            "15 सेमी²",
+            "16 सेमी²"
+          ],
+          "explanationHi": "क्षेत्रफल = लंबाई × चौड़ाई = 5 × 3 = 15 सेमी²।"
+        },
+        {
+          "question": "You are buying a fence for a garden. Which measurement matters?",
+          "options": [
+            "Area",
+            "Perimeter",
+            "Volume"
+          ],
+          "correct": 1,
+          "explanation": "A fence runs around the boundary, so you need the perimeter.",
+          "questionHi": "बगीचे के लिए बाड़ खरीदनी है। कौन-सा माप चाहिए?",
+          "optionsHi": [
+            "क्षेत्रफल",
+            "परिमाप",
+            "आयतन"
+          ],
+          "explanationHi": "बाड़ सीमा के चारों ओर लगती है, इसलिए परिमाप चाहिए।"
+        }
+      ]
     },
     {
       "id": "science_cells",
