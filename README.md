@@ -6,10 +6,12 @@ KIDVERSE is an offline-first Android learning playground designed for children a
 
 ## What's in this build
 
+The current content update expands the learning material and adds a repeatable science quiz. Content is designed as short, readable activities for children around ages 6–10; an educator/parent review is still needed before commercial release.
+
 - A redesigned home dashboard with learning-world cards and a local star counter
-- Math Kingdom: five multiple-choice arithmetic puzzles with explanations
-- Science Galaxy: short learning cards and a knowledge check
-- Story Forest: two original short stories
+- Math Kingdom: ten progressive arithmetic and fractions challenges with worked hints and one-time rewards
+- Science Galaxy: five topic lessons plus a five-question quiz covering plants, Earth, magnets, water and mammals
+- Story Forest: five original short stories with reading rewards
 - Robot City: a simple sequencing activity
 - Explorer Earth: short nature and environment lessons
 - Creator Studio: finger drawing, colour selection and save-to-device
