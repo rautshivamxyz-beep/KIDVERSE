@@ -41,28 +41,61 @@ public class MainActivity extends Activity {
     private int stars;
     private int mathIndex = 0;
     private int storyIndex = 0;
+    private int scienceIndex = 0;
     private String activeTab = "Home";
     private DrawingCanvas drawingCanvas;
 
     private final String[] mathQuestions = {
-        "7 + 5 = ?", "14 - 6 = ?", "3 × 4 = ?", "Half of 18 is?", "25 + 15 = ?"
+        "36 + 27 = ?", "82 - 45 = ?", "6 × 7 = ?", "Half of 54 is?",
+        "What is 3/4 of 20?", "125 + 75 = ?", "9 × 8 = ?", "100 - 38 = ?",
+        "A book has 64 pages. You read 28. How many remain?", "4 groups of 12 make?"
     };
     private final String[][] mathOptions = {
-        {"10", "12", "13"}, {"7", "8", "9"}, {"10", "12", "14"},
-        {"8", "9", "10"}, {"35", "40", "45"}
+        {"53", "63", "73"}, {"37", "47", "27"}, {"42", "48", "36"},
+        {"27", "24", "29"}, {"10", "15", "18"}, {"190", "200", "210"},
+        {"72", "81", "63"}, {"72", "62", "68"}, {"36", "38", "34"}, {"36", "48", "42"}
     };
-    private final int[] mathAnswers = {1, 1, 1, 1, 1};
+    private final int[] mathAnswers = {1, 0, 0, 0, 1, 1, 0, 1, 1, 1};
     private final String[] mathHints = {
-        "Count on from 7: 8, 9, 10, 11, 12.",
-        "Take 6 away from 14. You have 8 left.",
-        "3 groups of 4 make 12.",
-        "Half means split into two equal groups. 9 + 9 = 18.",
-        "25 + 15 = 25 + 10 + 5 = 40."
+        "Add tens and ones: 30 + 20 = 50, then 6 + 7 = 13. Total: 63.",
+        "82 − 40 = 42, then take away 5 more. The answer is 37.",
+        "Six groups of seven: 7 + 7 + 7 + 7 + 7 + 7 = 42.",
+        "Half means two equal groups. 27 + 27 = 54.",
+        "One quarter of 20 is 5. Three quarters is 5 + 5 + 5 = 15.",
+        "125 + 75 makes 200. You can bridge through 150.",
+        "Nine groups of eight make 72. Try 10 × 8 − 8.",
+        "100 − 30 = 70, then 70 − 8 = 62.",
+        "Subtract the pages read: 64 − 28 = 36 pages.",
+        "12 + 12 + 12 + 12 = 48."
     };
-    private final String[] storyTitles = {"Mira and the Moon Garden", "The Helpful Robot"};
+    private final String[] storyTitles = {
+        "Mira and the Moon Garden", "The Helpful Robot", "The River That Sang",
+        "Asha's Tiny Telescope", "The Mango Tree Promise"
+    };
     private final String[] storyTexts = {
         "Mira loved looking at the night sky. One evening, she planted tiny seeds beside her window. Every night she watered them and watched the moon. Soon, bright silver flowers opened. Mira learned that patience helps little things grow.",
-        "Robo was a small robot who lived in a sunny town. One day, he saw a bird with a tangled kite string. Robo gently helped the bird, then recycled the string. Everyone learned that being kind also means caring for nature."
+        "Robo was a small robot who lived in a sunny town. One day, he saw a bird with a tangled kite string. Robo gently helped the bird, then recycled the string. Everyone learned that being kind also means caring for nature.",
+        "A river near Tara's village used to sparkle. One morning she noticed wrappers caught between the stones. She invited her friends to make signs asking everyone to keep the river clean. They never entered the water; they worked safely with adults along the bank. Soon the river flowed freely again. Tara learned that small, safe actions can help a whole community.",
+        "Asha borrowed a tiny telescope from her grandfather. She looked at the Moon and drew its bright and dark patches. Grandfather explained that the Moon does not make its own light; it reflects sunlight. Asha made a notebook of questions and discovered that careful observation is the beginning of science.",
+        "Every summer, Kabir's family cared for the old mango tree. They watered its roots during dry weeks and left fallen leaves to become compost. One year the tree gave more fruit than ever. Kabir shared the mangoes with neighbours and learned that caring for nature is a promise we keep over time."
+    };
+    private final String[] scienceQuestions = {
+        "Which part of a plant takes in most water?", "What causes day and night on Earth?",
+        "Which material is attracted to a magnet?", "What do we call water vapour cooling into tiny drops?",
+        "Which animal is a mammal?"
+    };
+    private final String[][] scienceOptions = {
+        {"Flower", "Roots", "Fruit"}, {"Earth spinning on its axis", "The Moon moving", "Clouds moving"},
+        {"Wood", "Plastic", "Iron"}, {"Evaporation", "Condensation", "Melting"},
+        {"Frog", "Dolphin", "Butterfly"}
+    };
+    private final int[] scienceAnswers = {1, 0, 2, 1, 1};
+    private final String[] scienceHints = {
+        "Roots absorb water from the soil.",
+        "Earth rotates once about every 24 hours. The side facing the Sun has day.",
+        "Iron is a metal that magnets can attract.",
+        "Condensation happens when water vapour cools and forms tiny liquid drops.",
+        "Dolphins are mammals: they breathe air and feed their young milk."
     };
 
     @Override public void onCreate(Bundle state) {
@@ -397,26 +430,39 @@ public class MainActivity extends Activity {
 
     private void showScience() {
         screen("Learn");
-        intro("Science Galaxy 🔬", "Big discoveries begin with small questions.");
-        infoCard("🌱 Plants and sunlight", "Plants use sunlight, water and air to make their own food. This is called photosynthesis.", 0xFFDFF3FF);
-        infoCard("🪐 Our Solar System", "The Sun is a star. Earth is one of the planets that travels around it.", 0xFFECE9FF);
-        infoCard("💧 The water cycle", "Water evaporates, forms clouds and falls back to Earth as rain.", 0xFFE2F2E9);
-        infoCard("🦋 Living things", "Living things grow and need energy. Many plants and animals depend on each other.", 0xFFFFEBCB);
-        smallHeading("Quick science check");
-        infoCard("What do plants use from the Sun?", "Choose one answer.", WHITE);
-        button("Sunlight", false, () -> scienceAnswer(true));
-        button("Moonlight", false, () -> scienceAnswer(false));
-        button("Sand", false, () -> scienceAnswer(false));
+        intro("Science Galaxy 🔬", "Explore a topic, then test what you discovered.");
+        infoCard("🌱 Plant power", "Roots take in water. Leaves capture light. Plants use light energy to make food in a process called photosynthesis.", 0xFFDFF3FF);
+        infoCard("🌍 Earth in motion", "Earth spins on its axis once about every 24 hours. This rotation gives us day and night. Earth also travels around the Sun.", 0xFFECE9FF);
+        infoCard("🧲 Forces around us", "A magnet can attract some metals, such as iron. Magnets have two poles, called north and south.", 0xFFE2F2E9);
+        infoCard("💧 The water cycle", "Sunlight warms water and some evaporates into vapour. Cooling vapour condenses into droplets in clouds. Water returns as precipitation.", 0xFFFFEBCB);
+        infoCard("🐬 Animal families", "Mammals breathe air and feed their babies milk. Dolphins are mammals even though they live in water.", 0xFFFFE6F0);
+        smallHeading("Galaxy quiz · " + (scienceIndex + 1) + " of " + scienceQuestions.length);
+        infoCard(scienceQuestions[scienceIndex], "Choose the best answer. Read the explanation after you answer.", WHITE);
+        final int q = scienceIndex;
+        if (prefs.getBoolean("reward_science_" + q, false)) {
+            infoCard("Mission complete ✓", "You have already earned the reward for this question.", 0xFFE8F4DE);
+        } else {
+            for (int i = 0; i < 3; i++) {
+                final int pick = i;
+                button(scienceOptions[q][i], false, () -> scienceAnswer(pick == scienceAnswers[q], q));
+            }
+        }
+        button(q == scienceQuestions.length - 1 ? "Finish science quiz" : "Next question  →", true, () -> {
+            scienceIndex = (scienceIndex + 1) % scienceQuestions.length;
+            showScience();
+        });
     }
 
-    private void scienceAnswer(boolean correct) {
+    private void scienceAnswer(boolean correct, int question) {
         if (correct) {
-            rewardOnce("science_quiz", 10);
-            new AlertDialog.Builder(this).setTitle("That's correct! 🌟")
-                .setMessage("Plants use energy from sunlight to make food. You earned 10 stars.")
+            rewardOnce("science_" + question, 5);
+            new AlertDialog.Builder(this).setTitle("Science star earned! 🌟")
+                .setMessage("Correct! " + scienceHints[question] + "\n\nYou earned 5 stars.")
                 .setPositiveButton("Continue", (d, w) -> showScience()).show();
         } else {
-            Toast.makeText(this, "Not quite. Remember: plants need sunlight.", Toast.LENGTH_SHORT).show();
+            new AlertDialog.Builder(this).setTitle("Good experiment!")
+                .setMessage("Try once more. Hint: " + scienceHints[question])
+                .setPositiveButton("Try again", null).show();
         }
     }
 
