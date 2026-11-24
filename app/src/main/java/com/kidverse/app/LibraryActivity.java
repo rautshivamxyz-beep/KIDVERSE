@@ -294,8 +294,42 @@ public class LibraryActivity extends Activity {
     }
 
     private void practiceRandom() {
-        if (topics.isEmpty()) return;
-        practice(topics.get(new Random().nextInt(topics.size())));
+        ArrayList<JSONObject> questionPool = new ArrayList<>();
+        for (JSONObject topic : topics) {
+            JSONArray questions = topic.optJSONArray("practice");
+            if (questions == null) continue;
+            for (int i = 0; i < questions.length(); i++) {
+                JSONObject q = questions.optJSONObject(i);
+                if (q != null && q.optJSONArray("options") != null) questionPool.add(q);
+            }
+        }
+        if (questionPool.isEmpty()) {
+            if (!topics.isEmpty()) practice(topics.get(new Random().nextInt(topics.size())));
+            return;
+        }
+        JSONObject q = questionPool.get(new Random().nextInt(questionPool.size()));
+        String question = localized(q, "question", "questionHi");
+        JSONArray choices = q.optJSONArray(hindi ? "optionsHi" : "options");
+        if (choices == null) choices = q.optJSONArray("options");
+        int correct = q.optInt("correct", -1);
+        String[] labels = new String[choices == null ? 0 : choices.length()];
+        for (int i = 0; i < labels.length; i++) labels[i] = choices.optString(i);
+        new AlertDialog.Builder(this)
+            .setTitle(hindi ? "त्वरित अभ्यास" : "Quick practice")
+            .setMessage(question)
+            .setItems(labels, (dialog, selected) -> {
+                String answer = correct >= 0 && correct < labels.length ? labels[correct] : "";
+                String explanation = localized(q, "explanation", "explanationHi");
+                boolean right = selected == correct;
+                String message = (right ? (hindi ? "सही जवाब! 🌟" : "Correct! 🌟") :
+                    (hindi ? "सही उत्तर: " : "Correct answer: ") + answer) + "\\n\\n" + explanation;
+                new AlertDialog.Builder(this)
+                    .setTitle(right ? (hindi ? "शाबाश!" : "Well done!") : (hindi ? "फिर प्रयास करें" : "Try again"))
+                    .setMessage(message)
+                    .setPositiveButton("OK", null).show();
+            })
+            .setNegativeButton(hindi ? "बाद में" : "Later", null)
+            .show();
     }
 
     private void practice(JSONObject item) {
