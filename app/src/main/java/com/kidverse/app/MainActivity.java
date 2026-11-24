@@ -108,7 +108,6 @@ public class MainActivity extends Activity {
         window.setNavigationBarColor(WHITE);
         window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         showHome();
-        UpdateManager.checkForUpdate(this, false);
     }
 
     private int dp(float value) {
@@ -708,12 +707,30 @@ public class MainActivity extends Activity {
         });
     }
 
+    private void showPrivacyDetails() {
+        String details =
+            "ON-DEVICE STORAGE\n" +
+            "Stars, activity rewards, completed skill-practice marks, the selected skills language, saved drawings and downloaded lesson packs are stored in app-private storage on this device. KIDVERSE does not create a child account or ask for a child's name, address or school.\n\n" +
+            "NETWORK CONNECTIONS\n" +
+            "The app has no advertising or analytics SDK and does not request location, microphone, camera, contacts or phone permissions. Internet is used only when someone chooses to download a lesson pack or a parent checks for an app update. These requests go to GitHub; GitHub may process ordinary connection logs such as IP address.\n\n" +
+            "DELETION\n" +
+            "Reset learning progress removes stars, rewards and completed skill-practice marks. It keeps saved drawings and downloaded lessons. Clearing app data or uninstalling KIDVERSE removes the app's local files.\n\n" +
+            "SAFETY\n" +
+            "Do not type personal details into the offline tutor. The Parent Zone arithmetic check is a basic child-facing barrier, not strong authentication.";
+        new AlertDialog.Builder(this)
+            .setTitle("KIDVERSE privacy & data")
+            .setMessage(details)
+            .setPositiveButton("Close", null)
+            .show();
+    }
+
     private void showParent() {
         screen("Parent");
         intro("Parent dashboard", "A quick look at learning on this device.");
         statRow();
         space(12);
-        infoCard("Privacy", "KIDVERSE stores progress and drawings locally on this device. Internet is used only to check app releases or download a learning pack. The app does not use accounts, location tracking, advertising or analytics.", 0xFFE2F2E9);
+        infoCard("Privacy", "No child account, advertising SDK, analytics SDK, location tracking or public chat. Progress and drawings stay on this device. Lesson packs and app updates are fetched from GitHub only when a user starts the download or a parent checks for updates.", 0xFFE2F2E9);
+        button("Privacy & data details", false, this::showPrivacyDetails);
         infoCard("Completed activities", String.valueOf(prefs.getInt("completed", 0)) + " reward milestones recorded.", WHITE);
         SharedPreferences skillPrefs = getSharedPreferences("kidverse_skills", MODE_PRIVATE);
         String[] skillIds = {"daily", "communication", "problem", "money", "digital", "nature", "creative", "feelings"};
@@ -722,15 +739,23 @@ public class MainActivity extends Activity {
         infoCard("Real-world skills", skillsPractised + " of " + skillIds.length + " practice paths marked as practised on this device.", 0xFFE8F4DE);
         button("Check for app updates", false, () -> UpdateManager.checkForUpdate(this, true));
         button("Install downloaded update", false, () -> UpdateManager.installPending(this));
-        button("Reset all progress", false, () -> new AlertDialog.Builder(this)
-            .setTitle("Reset KIDVERSE progress?")
-            .setMessage("This removes stars and activity rewards from this device. This cannot be undone.")
+        button("Reset learning progress", false, () -> new AlertDialog.Builder(this)
+            .setTitle("Reset learning progress?")
+            .setMessage("This removes stars, activity rewards and completed skill-practice marks from this device. Saved drawings and downloaded lesson packs are kept. This cannot be undone.")
             .setNegativeButton("Cancel", null)
             .setPositiveButton("Reset", (d, w) -> {
                 prefs.edit().clear().apply();
+                SharedPreferences skillPrefs = getSharedPreferences("kidverse_skills", MODE_PRIVATE);
+                SharedPreferences.Editor skillsEditor = skillPrefs.edit();
+                for (String key : skillPrefs.getAll().keySet()) {
+                    if (key.startsWith("done_")) skillsEditor.remove(key);
+                }
+                skillsEditor.apply();
                 stars = 0;
                 mathIndex = 0;
                 storyIndex = 0;
+                scienceIndex = 0;
+                earthIndex = 0;
                 showParent();
             }).show());
         button("Back home", true, this::showHome);
