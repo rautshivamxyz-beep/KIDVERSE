@@ -3,6 +3,7 @@ plugins { id 'com.android.application' }
 android {
     namespace 'com.kidverse.app'
     compileSdk 35
+    buildFeatures { buildConfig true }
     defaultConfig {
         applicationId 'com.kidverse.app'
         minSdk 23
