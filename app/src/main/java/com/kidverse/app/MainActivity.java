@@ -108,6 +108,7 @@ public class MainActivity extends Activity {
         window.setNavigationBarColor(WHITE);
         window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         showHome();
+        UpdateManager.checkForUpdate(this, false);
     }
 
     private int dp(float value) {
@@ -708,6 +709,8 @@ public class MainActivity extends Activity {
         space(12);
         infoCard("Privacy", "KIDVERSE stores progress and drawings locally on this device. This MVP does not request internet, location, account or advertising permissions.", 0xFFE2F2E9);
         infoCard("Completed activities", String.valueOf(prefs.getInt("completed", 0)) + " reward milestones recorded.", WHITE);
+        button("Check for app updates", false, () -> UpdateManager.checkForUpdate(this, true));
+        button("Install downloaded update", false, () -> UpdateManager.installPending(this));
         button("Reset all progress", false, () -> new AlertDialog.Builder(this)
             .setTitle("Reset KIDVERSE progress?")
             .setMessage("This removes stars and activity rewards from this device. This cannot be undone.")
