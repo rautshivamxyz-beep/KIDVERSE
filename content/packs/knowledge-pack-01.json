@@ -513,7 +513,118 @@
       "question": "Where are most nutrients absorbed?",
       "questionHi": "अधिकांश पोषक तत्व कहाँ सोखे जाते हैं?",
       "answer": "Small intestine",
-      "answerHi": "छोटी आँत"
+      "answerHi": "छोटी आँत",
+      "level": "Explorer · Level 4",
+      "minutes": 9,
+      "intro": "Food gives the body materials and energy. But a bite of food is too large for the body to use directly. Digestion breaks food into smaller substances that can pass into the blood and be carried to cells.",
+      "introHi": "भोजन शरीर को पदार्थ और ऊर्जा देता है। लेकिन भोजन का एक निवाला शरीर सीधे उपयोग नहीं कर सकता। पाचन भोजन को छोटे पदार्थों में तोड़ता है ताकि वे रक्त में जाकर कोशिकाओं तक पहुँच सकें।",
+      "sections": [
+        {
+          "heading": "1. Digestion begins in the mouth",
+          "headingHi": "1. पाचन मुँह से शुरू होता है",
+          "body": "Teeth cut and grind food into smaller pieces. Saliva moistens food and contains an enzyme that begins breaking down starch. The tongue helps mix food and push it towards the oesophagus, the tube that carries food to the stomach.",
+          "bodyHi": "दाँत भोजन को छोटे टुकड़ों में काटते और पीसते हैं। लार भोजन को गीला करती है और उसमें एक एंज़ाइम होता है जो स्टार्च को तोड़ना शुरू करता है। जीभ भोजन मिलाने और उसे ग्रासनली तक पहुँचाने में मदद करती है; ग्रासनली भोजन को पेट तक ले जाती है।",
+          "example": "Chew a piece of bread slowly. It may begin to taste sweeter as saliva starts breaking down some starch.",
+          "exampleHi": "ब्रेड का टुकड़ा धीरे-धीरे चबाओ। लार के कारण उसमें मौजूद कुछ स्टार्च टूटता है और स्वाद मीठा लगने लग सकता है।"
+        },
+        {
+          "heading": "2. The stomach and small intestine",
+          "headingHi": "2. पेट और छोटी आँत",
+          "body": "The stomach churns food and mixes it with acidic digestive juice. This helps break food down and starts protein digestion. In the small intestine, digestive juices from the pancreas and liver help finish digestion. Tiny finger-like villi absorb most nutrients into the blood.",
+          "bodyHi": "पेट भोजन को मथता है और अम्लीय पाचक रस के साथ मिलाता है। इससे भोजन टूटता है और प्रोटीन का पाचन शुरू होता है। छोटी आँत में अग्न्याशय और यकृत के पाचक रस पाचन पूरा करने में मदद करते हैं। उँगली जैसी छोटी संरचनाएँ, जिन्हें विल्ली कहते हैं, अधिकांश पोषक तत्व रक्त में सोखती हैं।",
+          "example": "After digestion, nutrients such as glucose and amino acids can be absorbed and transported around the body.",
+          "exampleHi": "पाचन के बाद ग्लूकोज़ और अमीनो अम्ल जैसे पोषक तत्व सोखे जाकर शरीर में पहुँचाए जा सकते हैं।"
+        },
+        {
+          "heading": "3. Large intestine and waste",
+          "headingHi": "3. बड़ी आँत और अपशिष्ट",
+          "body": "The large intestine absorbs much of the remaining water and salts. The material that the body cannot digest becomes faeces and leaves the body through the rectum and anus. Water, fibre and a varied diet support normal digestion.",
+          "bodyHi": "बड़ी आँत बचा हुआ अधिकतर पानी और कुछ लवण सोखती है। जिसे शरीर पचा नहीं पाता, वह मल बनता है और मलाशय तथा गुदा से बाहर निकलता है। पानी, रेशेदार भोजन और विविध आहार सामान्य पाचन में मदद करते हैं।",
+          "example": "Vegetables, fruit, beans and whole grains contain fibre that helps food move through the digestive system.",
+          "exampleHi": "सब्ज़ियों, फलों, दालों और साबुत अनाज में रेशा होता है जो पाचन तंत्र में भोजन को आगे बढ़ने में मदद करता है।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Digestion",
+          "wordHi": "पाचन",
+          "meaning": "Breaking food into smaller substances the body can absorb.",
+          "meaningHi": "भोजन को छोटे पदार्थों में तोड़ना जिन्हें शरीर सोख सके।"
+        },
+        {
+          "word": "Enzyme",
+          "wordHi": "एंज़ाइम",
+          "meaning": "A substance that helps a chemical reaction happen faster.",
+          "meaningHi": "ऐसा पदार्थ जो रासायनिक क्रिया को तेज़ करने में मदद करता है।"
+        },
+        {
+          "word": "Villi",
+          "wordHi": "विल्ली",
+          "meaning": "Tiny projections in the small intestine that increase absorption area.",
+          "meaningHi": "छोटी आँत की सूक्ष्म उँगली जैसी संरचनाएँ जो अवशोषण का क्षेत्र बढ़ाती हैं।"
+        },
+        {
+          "word": "Nutrient",
+          "wordHi": "पोषक तत्व",
+          "meaning": "A useful substance in food needed by the body.",
+          "meaningHi": "भोजन का उपयोगी पदार्थ जिसकी शरीर को ज़रूरत होती है।"
+        }
+      ],
+      "activity": "Draw a simple path of food: mouth → oesophagus → stomach → small intestine → large intestine. Add one job for each part. Use a school diagram or ask an adult if you need help.",
+      "activityHi": "भोजन का सरल रास्ता बनाओ: मुँह → ग्रासनली → पेट → छोटी आँत → बड़ी आँत। हर भाग का एक काम लिखो। ज़रूरत हो तो स्कूल के चित्र या किसी बड़े की मदद लो।",
+      "practice": [
+        {
+          "question": "Where does digestion begin?",
+          "questionHi": "पाचन कहाँ शुरू होता है?",
+          "options": [
+            "Mouth",
+            "Large intestine",
+            "Lungs"
+          ],
+          "optionsHi": [
+            "मुँह",
+            "बड़ी आँत",
+            "फेफड़े"
+          ],
+          "correct": 0,
+          "explanation": "Chewing and saliva begin the digestion process in the mouth.",
+          "explanationHi": "मुँह में चबाने और लार से पाचन शुरू होता है।"
+        },
+        {
+          "question": "Where are most nutrients absorbed?",
+          "questionHi": "अधिकांश पोषक तत्व कहाँ सोखे जाते हैं?",
+          "options": [
+            "Stomach",
+            "Small intestine",
+            "Oesophagus"
+          ],
+          "optionsHi": [
+            "पेट",
+            "छोटी आँत",
+            "ग्रासनली"
+          ],
+          "correct": 1,
+          "explanation": "Villi in the small intestine absorb most nutrients into the blood.",
+          "explanationHi": "छोटी आँत की विल्ली अधिकांश पोषक तत्व रक्त में सोखती हैं।"
+        },
+        {
+          "question": "What is one important job of the large intestine?",
+          "questionHi": "बड़ी आँत का एक महत्वपूर्ण काम क्या है?",
+          "options": [
+            "Pump blood",
+            "Absorb much of the remaining water",
+            "Make oxygen"
+          ],
+          "optionsHi": [
+            "रक्त पंप करना",
+            "बचा हुआ अधिकतर पानी सोखना",
+            "ऑक्सीजन बनाना"
+          ],
+          "correct": 1,
+          "explanation": "The large intestine absorbs much of the water left in undigested material.",
+          "explanationHi": "बड़ी आँत अपचित पदार्थ में बचा हुआ अधिकतर पानी सोखती है।"
+        }
+      ]
     },
     {
       "id": "biology_habitats",
