@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
     private int mathIndex = 0;
     private int storyIndex = 0;
     private int scienceIndex = 0;
+    private int earthIndex = 0;
     private String activeTab = "Home";
     private DrawingCanvas drawingCanvas;
 
@@ -505,15 +506,57 @@ public class MainActivity extends Activity {
 
     private void showEarth() {
         screen("Learn");
-        intro("Explorer Earth 🌍", "Our planet is an amazing place. Let's look after it.");
-        infoCard("🌳 Forests", "Forests are homes for many plants and animals. Keeping forests healthy protects wildlife and helps our planet.", 0xFFE2F2E9);
-        infoCard("🌊 Oceans", "Oceans cover most of Earth. Sea animals need clean water and safe places to live.", 0xFFDFF3FF);
-        infoCard("♻️ Reduce and reuse", "Use only what you need, reuse things when you can, and put waste in the right bin.", 0xFFFFEBCB);
-        button("I explored Earth  ·  +5 stars", true, () -> {
-            rewardOnce("earth_visit", 5);
-            Toast.makeText(this, "Explorer star saved!", Toast.LENGTH_SHORT).show();
-            showLearn();
+        intro("Explorer Earth 🌍", "Discover habitats and practise caring for our shared home.");
+        infoCard("🌳 Forest habitats", "Forests provide food and shelter for countless living things. Trees also absorb carbon dioxide and release oxygen as they grow.", 0xFFE2F2E9);
+        infoCard("🌊 Ocean life", "Oceans are home to coral reefs, fish, whales and tiny plankton. Plastic litter can harm animals, so keeping waste out of drains and waterways matters.", 0xFFDFF3FF);
+        infoCard("♻️ The 3 Rs", "Reduce what you use, reuse items when safe, and recycle materials accepted by your local collection. Repairing and sharing can help too.", 0xFFFFEBCB);
+        infoCard("🐝 Pollinators", "Bees, butterflies and some birds move pollen between flowers. This helps many plants make seeds and fruit.", 0xFFFFE6F0);
+        String[] questions = {
+            "Which action helps keep a river clean?",
+            "What do bees help many flowers do?",
+            "Which is a good way to reduce waste?",
+            "Where do coral reefs grow?"
+        };
+        String[][] options = {
+            {"Throw litter in a bin", "Drop wrappers in a drain", "Pour paint into water"},
+            {"Make seeds by moving pollen", "Turn into leaves", "Make sunlight"},
+            {"Use a refillable bottle", "Take a new bottle every hour", "Throw away reusable bags"},
+            {"In warm, shallow ocean water", "On mountain peaks", "Deep inside deserts"}
+        };
+        int[] answers = {0, 0, 0, 0};
+        String[] explanations = {
+            "Litter belongs in a proper bin. Ask an adult about safe local clean-up activities.",
+            "Pollinators move pollen between flowers, helping many plants make seeds and fruit.",
+            "A refillable bottle can be used many times, so fewer single-use bottles are needed.",
+            "Many coral reefs grow in warm, shallow ocean water where sunlight reaches them."
+        };
+        int q = earthIndex % questions.length;
+        smallHeading("Planet protector quiz · " + (q + 1) + " of " + questions.length);
+        infoCard(questions[q], "Choose the kindest answer for our planet.", WHITE);
+        if (prefs.getBoolean("reward_earth_" + q, false)) {
+            infoCard("Question completed ✓", "You have already earned this planet-protector star.", 0xFFE8F4DE);
+        } else {
+            for (int i = 0; i < 3; i++) {
+                final int pick = i;
+                button(options[q][i], false, () -> {
+                    if (pick == answers[q]) {
+                        rewardOnce("earth_" + q, 5);
+                        new AlertDialog.Builder(this).setTitle("Planet protector! 🌍")
+                            .setMessage(explanations[q] + "\\n\\nYou earned 5 stars.")
+                            .setPositiveButton("Continue", (d, w) -> showEarth()).show();
+                    } else {
+                        new AlertDialog.Builder(this).setTitle("Try another idea")
+                            .setMessage("Think about what keeps habitats healthy.")
+                            .setPositiveButton("Try again", null).show();
+                    }
+                });
+            }
+        }
+        button("Next Earth question  →", true, () -> {
+            earthIndex = (earthIndex + 1) % questions.length;
+            showEarth();
         });
+        button("Back to learning worlds", false, this::showLearn);
     }
 
     private void showWorld() {
