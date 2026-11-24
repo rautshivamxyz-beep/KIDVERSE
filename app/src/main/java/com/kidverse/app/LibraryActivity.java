@@ -268,8 +268,10 @@ public class LibraryActivity extends Activity {
                         optionButton.setOnClickListener(v -> {
                             boolean right = selected == correct;
                             String explanation = localized(q, "explanation", "explanationHi");
+                            String correctAnswer = choices != null && correct >= 0 && correct < choices.length()
+                                ? choices.optString(correct) : "";
                             String message = (right ? (hindi ? "सही जवाब! 🌟\n\n" : "Correct! 🌟\n\n") :
-                                (hindi ? "अच्छी कोशिश। फिर समझें:\n\n" : "Good try. Review this idea:\n\n")) + explanation;
+                                (hindi ? "अच्छी कोशिश। सही उत्तर: " : "Good try. Correct answer: ") + correctAnswer + "\n\n") + explanation;
                             new AlertDialog.Builder(this)
                                 .setTitle(right ? (hindi ? "शाबाश!" : "Well done!") : (hindi ? "फिर प्रयास करें" : "Try again"))
                                 .setMessage(message)
