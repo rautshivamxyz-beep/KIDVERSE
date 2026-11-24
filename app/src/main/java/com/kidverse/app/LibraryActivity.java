@@ -92,9 +92,12 @@ public class LibraryActivity extends Activity {
         for (int i = 0; i < array.length(); i++) {
             JSONObject item = array.getJSONObject(i);
             String id = item.optString("id");
-            boolean exists = false;
-            for (JSONObject old : topics) if (id.equals(old.optString("id"))) { exists = true; break; }
-            if (!exists) topics.add(item);
+            int existingIndex = -1;
+            for (int j = 0; j < topics.size(); j++) {
+                if (id.equals(topics.get(j).optString("id"))) { existingIndex = j; break; }
+            }
+            if (existingIndex >= 0) topics.set(existingIndex, item);
+            else topics.add(item);
         }
     }
 
