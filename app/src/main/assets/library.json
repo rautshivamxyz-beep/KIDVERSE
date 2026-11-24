@@ -2,7 +2,7 @@
   "topics": [
     {
       "id": "math_fractions",
-      "subject": "Math",
+      "subject": "Mathematics",
       "title": "Fractions",
       "titleHi": "भिन्न",
       "simple": "A fraction shows equal parts of a whole. In 3/4, the 4 tells how many equal parts there are and the 3 tells how many parts we have.",
@@ -117,11 +117,16 @@
           "explanationHi": "छह बराबर टुकड़ों में से चार बचे हैं, इसलिए 4/6 बचा।"
         }
       ],
-      "introHi": "चार दोस्तों में एक पिज़्ज़ा बराबर बाँटने की कल्पना करो। हर व्यक्ति को चार बराबर टुकड़ों में से एक टुकड़ा मिलता है: एक चौथाई, जिसे 1/4 लिखते हैं। भिन्न किसी पूरी चीज़ या समूह के बराबर हिस्से दिखाता है।"
+      "introHi": "चार दोस्तों में एक पिज़्ज़ा बराबर बाँटने की कल्पना करो। हर व्यक्ति को चार बराबर टुकड़ों में से एक टुकड़ा मिलता है: एक चौथाई, जिसे 1/4 लिखते हैं। भिन्न किसी पूरी चीज़ या समूह के बराबर हिस्से दिखाता है।",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "math_area",
-      "subject": "Math",
+      "subject": "Mathematics",
       "title": "Area and perimeter",
       "titleHi": "क्षेत्रफल और परिमाप",
       "simple": "Area measures the space inside a flat shape. Perimeter measures the distance around its edge.",
@@ -236,11 +241,16 @@
           "explanationHi": "बाड़ सीमा के चारों ओर लगती है, इसलिए परिमाप चाहिए।"
         }
       ],
-      "introHi": "सोचो कि बगीचे के चारों ओर बाड़ लगानी है और अंदर घास बिछानी है। बाड़ की कुल लंबाई परिमाप है। अंदर घास से ढका स्थान क्षेत्रफल है। ये दो अलग माप हैं।"
+      "introHi": "सोचो कि बगीचे के चारों ओर बाड़ लगानी है और अंदर घास बिछानी है। बाड़ की कुल लंबाई परिमाप है। अंदर घास से ढका स्थान क्षेत्रफल है। ये दो अलग माप हैं।",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 2,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "science_cells",
-      "subject": "Science",
+      "subject": "EVS / Science",
       "title": "Cells: building blocks of life",
       "titleHi": "कोशिकाएँ: जीवन की इकाइयाँ",
       "simple": "All living things are made of tiny units called cells. Some living things have one cell; plants and animals have many.",
@@ -355,11 +365,16 @@
           "explanation": "Many bacteria and other organisms are single-celled.",
           "explanationHi": "कई बैक्टीरिया और अन्य जीव एक कोशिकीय होते हैं。"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "science_force",
-      "subject": "Science",
+      "subject": "EVS / Science",
       "title": "Forces and motion",
       "titleHi": "बल और गति",
       "simple": "A force is a push or a pull. Forces can start, stop, speed up, slow down or change the direction of movement.",
@@ -474,11 +489,16 @@
           "explanation": "Balanced forces do not change an object's motion. A still object stays still.",
           "explanationHi": "संतुलित बल वस्तु की गति नहीं बदलते। रुकी वस्तु रुकी रहती है।"
         }
-      ]
+      ],
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "science_light",
-      "subject": "Science",
+      "subject": "EVS / Science",
       "title": "Light and shadows",
       "titleHi": "प्रकाश और छायाएँ",
       "simple": "Light travels from a source. When an opaque object blocks light, a shadow forms behind it.",
@@ -599,11 +619,16 @@
           "explanation": "Reflection is the bouncing back of light from a surface.",
           "explanationHi": "परावर्तन किसी सतह से प्रकाश के लौटने को कहते हैं।"
         }
-      ]
+      ],
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 2,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "earth_map",
-      "subject": "Earth",
+      "subject": "EVS",
       "title": "Reading maps",
       "titleHi": "मानचित्र पढ़ना",
       "simple": "A map is a drawing of a place seen from above. Symbols, labels and a key help us understand it.",
@@ -718,11 +743,16 @@
           "explanation": "Each centimetre stands for 2 km, so 3 × 2 = 6 km.",
           "explanationHi": "हर सेंटीमीटर 2 किमी दर्शाता है, इसलिए 3 × 2 = 6 किमी।"
         }
-      ]
+      ],
+      "class": 3,
+      "classLabel": "Class 3",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "earth_india",
-      "subject": "Earth",
+      "subject": "EVS / Social Studies",
       "title": "India: land and rivers",
       "titleHi": "भारत: भूमि और नदियाँ",
       "simple": "India has mountains, plains, deserts, plateaus, coasts and islands. Rivers support farms, towns, wildlife and people.",
@@ -843,11 +873,16 @@
           "explanation": "Lakshadweep lies in the Arabian Sea.",
           "explanationHi": "लक्षद्वीप अरब सागर में स्थित है।"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 2,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "coding_algorithm",
-      "subject": "Coding",
+      "subject": "Computer Education",
       "title": "Algorithms",
       "titleHi": "कलन विधि",
       "simple": "An algorithm is a clear set of steps for completing a task, like a recipe or directions to a destination.",
@@ -968,11 +1003,16 @@
           "explanation": "Debugging is the process of locating and correcting errors.",
           "explanationHi": "डिबगिंग गलतियाँ ढूँढ़ने और सुधारने की प्रक्रिया है।"
         }
-      ]
+      ],
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "history_sources",
-      "subject": "History",
+      "subject": "Social Studies",
       "title": "How we learn about the past",
       "titleHi": "हम अतीत के बारे में कैसे जानते हैं",
       "simple": "Historians study evidence such as objects, buildings, letters, photographs, inscriptions and stories to learn about earlier times.",
@@ -1093,11 +1133,16 @@
           "explanation": "Conclusions should be based on evidence, while guesses must be identified as guesses.",
           "explanationHi": "निष्कर्ष प्रमाण पर आधारित होने चाहिए और अनुमानों को अनुमान के रूप में पहचानना चाहिए।"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "space_solar_builtin",
-      "subject": "Space",
+      "subject": "EVS / Science",
       "title": "Our Solar System",
       "titleHi": "हमारा सौर मंडल",
       "level": "Explorer · Level 4",
@@ -1210,11 +1255,16 @@
           "explanation": "Mercury is the closest planet to the Sun.",
           "explanationHi": "बुध सूर्य के सबसे पास का ग्रह है।"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 3,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "water_cycle_builtin",
-      "subject": "Earth Science",
+      "subject": "EVS / Science",
       "title": "The water cycle",
       "titleHi": "जल चक्र",
       "level": "Beginner · Level 4",
@@ -1327,7 +1377,12 @@
           "explanation": "Rain, snow and hail are forms of precipitation.",
           "explanationHi": "बारिश, बर्फ़ और ओले वर्षण के रूप हैं।"
         }
-      ]
+      ],
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 3,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "english_grammar_builtin",
@@ -1438,7 +1493,12 @@
           "explanation": "Bright describes the star, so it is an adjective.",
           "explanationHi": "Bright तारे का वर्णन करता है, इसलिए यह विशेषण है。"
         }
-      ]
+      ],
+      "class": 3,
+      "classLabel": "Class 3",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     }
   ]
 }
