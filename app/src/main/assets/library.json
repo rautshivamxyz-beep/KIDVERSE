@@ -1499,6 +1499,516 @@
       "chapterNo": 1,
       "curriculum": "India · NCERT/CBSE-aligned learning sequence",
       "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
+    },
+    {
+      "id": "class1_math_counting",
+      "subject": "Mathematics",
+      "title": "Counting to 20",
+      "titleHi": "20 तक गिनती",
+      "class": 1,
+      "classLabel": "Class 1",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Age-appropriate learning order; not an official textbook chapter number.",
+      "level": "Foundation · Level 1",
+      "minutes": 6,
+      "intro": "Numbers help us count people, toys, fruits and many other things. Count one object at a time and say the number names in order.",
+      "introHi": "संख्याएँ लोगों, खिलौनों, फलों और चीज़ों को गिनने में मदद करती हैं। एक बार में एक वस्तु गिनो और संख्या के नाम क्रम से बोलो।",
+      "sections": [
+        {
+          "heading": "1. Count objects one by one",
+          "headingHi": "1. चीज़ों को एक-एक करके गिनो",
+          "body": "Touch or point to each object once. Say 1, 2, 3 and continue. Each object gets one number name. The last number tells how many objects there are.",
+          "bodyHi": "हर वस्तु को एक बार छुओ या दिखाओ। 1, 2, 3 बोलते हुए आगे बढ़ो। हर वस्तु को एक संख्या मिलती है। आखिरी संख्या कुल वस्तुओं की संख्या बताती है।",
+          "example": "If you count 5 pencils, the last number is 5. There are five pencils.",
+          "exampleHi": "अगर तुम 5 पेंसिल गिनते हो, तो आखिरी संख्या 5 होगी। कुल पाँच पेंसिल हैं।"
+        },
+        {
+          "heading": "2. Numbers before and after",
+          "headingHi": "2. पहले और बाद की संख्या",
+          "body": "Numbers follow an order. One more than 7 is 8. One less than 7 is 6. A number line helps you see this order.",
+          "bodyHi": "संख्याएँ एक क्रम में आती हैं। 7 से एक अधिक 8 है। 7 से एक कम 6 है। संख्या रेखा यह क्रम समझने में मदद करती है।",
+          "example": "On a number line: 5, 6, 7, 8, 9.",
+          "exampleHi": "संख्या रेखा पर: 5, 6, 7, 8, 9।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Number",
+          "wordHi": "संख्या",
+          "meaning": "A symbol or name used to count or measure.",
+          "meaningHi": "गिनने या मापने के लिए उपयोग किया जाने वाला चिह्न या नाम।"
+        },
+        {
+          "word": "More",
+          "wordHi": "अधिक",
+          "meaning": "A greater amount.",
+          "meaningHi": "बड़ी मात्रा।"
+        }
+      ],
+      "activity": "Put 10 small objects in a row. Touch each one as you count. Then add one and count again.",
+      "activityHi": "10 छोटी वस्तुएँ एक पंक्ति में रखो। गिनते समय हर वस्तु छुओ। फिर एक और जोड़कर दोबारा गिनो।",
+      "practice": [
+        {
+          "question": "What number comes after 9?",
+          "questionHi": "9 के बाद कौन-सी संख्या आती है?",
+          "options": [
+            "8",
+            "10",
+            "11"
+          ],
+          "optionsHi": [
+            "8",
+            "10",
+            "11"
+          ],
+          "correct": 1,
+          "explanation": "Counting forward from 9 gives 10.",
+          "explanationHi": "9 के बाद गिनने पर 10 आता है।"
+        },
+        {
+          "question": "How many objects are there: ● ● ● ●?",
+          "questionHi": "● ● ● ● में कितनी वस्तुएँ हैं?",
+          "options": [
+            "3",
+            "4",
+            "5"
+          ],
+          "optionsHi": [
+            "3",
+            "4",
+            "5"
+          ],
+          "correct": 1,
+          "explanation": "Count each dot once: there are four.",
+          "explanationHi": "हर बिंदु को एक बार गिनो: कुल चार हैं।"
+        }
+      ]
+    },
+    {
+      "id": "class1_english_words",
+      "subject": "English",
+      "title": "Letters make words",
+      "titleHi": "अक्षरों से शब्द",
+      "class": 1,
+      "classLabel": "Class 1",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Age-appropriate learning order; not an official textbook chapter number.",
+      "level": "Foundation · Level 1",
+      "minutes": 6,
+      "intro": "English words are made from letters. Letters have names and sounds. When we put sounds together, we can read and write simple words.",
+      "introHi": "अंग्रेज़ी के शब्द अक्षरों से बनते हैं। अक्षरों के नाम और ध्वनियाँ होती हैं। ध्वनियों को जोड़कर हम सरल शब्द पढ़ और लिख सकते हैं।",
+      "sections": [
+        {
+          "heading": "1. Letters and sounds",
+          "headingHi": "1. अक्षर और ध्वनियाँ",
+          "body": "The English alphabet has 26 letters. Each letter has an uppercase and lowercase form, such as A and a. Letters can represent sounds in words.",
+          "bodyHi": "अंग्रेज़ी वर्णमाला में 26 अक्षर हैं। हर अक्षर का बड़ा और छोटा रूप होता है, जैसे A और a। अक्षर शब्दों में ध्वनियों को दिखाते हैं।",
+          "example": "B is the first letter in ball. Its common sound begins the word ball.",
+          "exampleHi": "Ball शब्द का पहला अक्षर B है। इसकी सामान्य ध्वनि से ball शुरू होता है।"
+        },
+        {
+          "heading": "2. Put sounds together",
+          "headingHi": "2. ध्वनियों को जोड़ो",
+          "body": "A short word can have sounds you say one after another. Blend the sounds slowly, then say the word smoothly.",
+          "bodyHi": "छोटे शब्द में ध्वनियाँ एक के बाद एक बोली जाती हैं। ध्वनियों को धीरे जोड़ो, फिर पूरा शब्द बोलो।",
+          "example": "c-a-t makes cat.",
+          "exampleHi": "c-a-t मिलकर cat बनाते हैं।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Letter",
+          "wordHi": "अक्षर",
+          "meaning": "A written symbol in an alphabet.",
+          "meaningHi": "वर्णमाला का लिखा हुआ चिह्न।"
+        },
+        {
+          "word": "Word",
+          "wordHi": "शब्द",
+          "meaning": "One or more letters used together with meaning.",
+          "meaningHi": "अर्थ बताने के लिए साथ रखे गए एक या अधिक अक्षर।"
+        }
+      ],
+      "activity": "Write A to E in uppercase and lowercase. Read these words aloud: cat, bat, mat.",
+      "activityHi": "A से E तक बड़े और छोटे अक्षर लिखो। ये शब्द ज़ोर से पढ़ो: cat, bat, mat।",
+      "practice": [
+        {
+          "question": "How many letters are in the English alphabet?",
+          "questionHi": "अंग्रेज़ी वर्णमाला में कितने अक्षर हैं?",
+          "options": [
+            "24",
+            "26",
+            "28"
+          ],
+          "optionsHi": [
+            "24",
+            "26",
+            "28"
+          ],
+          "correct": 1,
+          "explanation": "The English alphabet has 26 letters.",
+          "explanationHi": "अंग्रेज़ी वर्णमाला में 26 अक्षर हैं।"
+        },
+        {
+          "question": "Which word begins with B?",
+          "questionHi": "कौन-सा शब्द B से शुरू होता है?",
+          "options": [
+            "Apple",
+            "Ball",
+            "Cat"
+          ],
+          "optionsHi": [
+            "Apple",
+            "Ball",
+            "Cat"
+          ],
+          "correct": 1,
+          "explanation": "Ball begins with the letter B.",
+          "explanationHi": "Ball शब्द B अक्षर से शुरू होता है।"
+        }
+      ]
+    },
+    {
+      "id": "class1_evs_living",
+      "subject": "EVS",
+      "title": "Living and non-living things",
+      "titleHi": "सजीव और निर्जीव वस्तुएँ",
+      "class": 1,
+      "classLabel": "Class 1",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Age-appropriate learning order; not an official textbook chapter number.",
+      "level": "Foundation · Level 1",
+      "minutes": 6,
+      "intro": "We see many things around us. Some are living things, such as people, animals and plants. Others are non-living, such as rocks, chairs and pencils.",
+      "introHi": "हम अपने आसपास कई चीज़ें देखते हैं। कुछ सजीव हैं, जैसे लोग, जानवर और पौधे। कुछ निर्जीव हैं, जैसे पत्थर, कुर्सी और पेंसिल।",
+      "sections": [
+        {
+          "heading": "1. Living things",
+          "headingHi": "1. सजीव चीज़ें",
+          "body": "Living things need resources such as water and energy. They grow and carry out life processes. Animals can move from place to place. Plants usually stay rooted but grow and respond to their surroundings.",
+          "bodyHi": "सजीव चीज़ों को पानी और ऊर्जा जैसे संसाधनों की ज़रूरत होती है। वे बढ़ती हैं और जीवन की प्रक्रियाएँ करती हैं। जानवर एक जगह से दूसरी जगह जा सकते हैं। पौधे सामान्यतः जड़ से जुड़े रहते हैं, लेकिन बढ़ते हैं और आसपास के बदलावों पर प्रतिक्रिया देते हैं।",
+          "example": "A seed can grow into a plant when it gets suitable water, air and warmth.",
+          "exampleHi": "उचित पानी, हवा और गर्मी मिलने पर बीज पौधा बन सकता है।"
+        },
+        {
+          "heading": "2. Non-living things",
+          "headingHi": "2. निर्जीव चीज़ें",
+          "body": "Non-living things do not grow or carry out life processes by themselves. People can make objects such as tables, while natural non-living things include rocks and water.",
+          "bodyHi": "निर्जीव चीज़ें अपने आप नहीं बढ़तीं और न ही जीवन की प्रक्रियाएँ करती हैं। लोग मेज़ जैसी वस्तुएँ बनाते हैं, जबकि पत्थर और पानी प्राकृतिक निर्जीव चीज़ें हैं।",
+          "example": "A toy car moves when someone pushes it; it does not move by itself like an animal.",
+          "exampleHi": "खिलौना कार किसी के धक्का देने पर चलती है; वह जानवर की तरह अपने आप नहीं चलती।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Living",
+          "wordHi": "सजीव",
+          "meaning": "Having life and carrying out life processes.",
+          "meaningHi": "जिसमें जीवन हो और जो जीवन की प्रक्रियाएँ करे।"
+        },
+        {
+          "word": "Non-living",
+          "wordHi": "निर्जीव",
+          "meaning": "Not alive.",
+          "meaningHi": "जिसमें जीवन नहीं होता।"
+        }
+      ],
+      "activity": "Look around your room. Draw two columns and list five living and five non-living things.",
+      "activityHi": "अपने कमरे में देखो। दो कॉलम बनाकर पाँच सजीव और पाँच निर्जीव चीज़ें लिखो।",
+      "practice": [
+        {
+          "question": "Which one is living?",
+          "questionHi": "इनमें से कौन सजीव है?",
+          "options": [
+            "Rock",
+            "Tree",
+            "Chair"
+          ],
+          "optionsHi": [
+            "पत्थर",
+            "पेड़",
+            "कुर्सी"
+          ],
+          "correct": 1,
+          "explanation": "A tree grows and carries out life processes.",
+          "explanationHi": "पेड़ बढ़ता है और जीवन की प्रक्रियाएँ करता है।"
+        },
+        {
+          "question": "Which is non-living?",
+          "questionHi": "कौन निर्जीव है?",
+          "options": [
+            "Dog",
+            "Bird",
+            "Pencil"
+          ],
+          "optionsHi": [
+            "कुत्ता",
+            "पक्षी",
+            "पेंसिल"
+          ],
+          "correct": 2,
+          "explanation": "A pencil is an object and is not alive.",
+          "explanationHi": "पेंसिल एक वस्तु है और सजीव नहीं है।"
+        }
+      ]
+    },
+    {
+      "id": "class2_math_addition",
+      "subject": "Mathematics",
+      "title": "Addition and subtraction",
+      "titleHi": "जोड़ और घटाव",
+      "class": 2,
+      "classLabel": "Class 2",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Age-appropriate learning order; not an official textbook chapter number.",
+      "level": "Foundation · Level 2",
+      "minutes": 6,
+      "intro": "Addition joins amounts. Subtraction takes an amount away or finds the difference. We use both when counting toys, books, money and many everyday things.",
+      "introHi": "जोड़ मात्राओं को मिलाता है। घटाव किसी मात्रा को कम करता है या अंतर बताता है। खिलौने, किताबें, पैसे और रोज़मर्रा की चीज़ें गिनने में दोनों काम आते हैं।",
+      "sections": [
+        {
+          "heading": "1. Add by making a ten",
+          "headingHi": "1. दस बनाकर जोड़ो",
+          "body": "You can split a number to make the next ten. For 8 + 5, split 5 into 2 and 3. Add 8 + 2 = 10, then 10 + 3 = 13.",
+          "bodyHi": "अगला दस बनाने के लिए संख्या को बाँट सकते हो। 8 + 5 में 5 को 2 और 3 में बाँटो। 8 + 2 = 10, फिर 10 + 3 = 13।",
+          "example": "7 + 6 = 7 + 3 + 3 = 13.",
+          "exampleHi": "7 + 6 = 7 + 3 + 3 = 13।"
+        },
+        {
+          "heading": "2. Subtract to find what remains",
+          "headingHi": "2. बची हुई मात्रा जानने के लिए घटाओ",
+          "body": "Subtraction can show how many are left. Start with the larger amount and take away the smaller amount. You can count backwards or use objects.",
+          "bodyHi": "घटाव बताता है कि कितनी चीज़ें बचीं। बड़ी संख्या से छोटी संख्या घटाओ। पीछे गिन सकते हो या वस्तुओं का उपयोग कर सकते हो।",
+          "example": "If you have 14 mangoes and give away 5, then 14 − 5 = 9 remain.",
+          "exampleHi": "अगर 14 आम हैं और 5 दे दिए, तो 14 − 5 = 9 आम बचेंगे।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Addition",
+          "wordHi": "जोड़",
+          "meaning": "Combining amounts to find a total.",
+          "meaningHi": "कुल जानने के लिए मात्राओं को मिलाना।"
+        },
+        {
+          "word": "Subtraction",
+          "wordHi": "घटाव",
+          "meaning": "Taking away or finding the difference.",
+          "meaningHi": "मात्रा कम करना या अंतर निकालना।"
+        }
+      ],
+      "activity": "Use 15 beans or buttons. Make two groups, combine them, then take some away and write both number sentences.",
+      "activityHi": "15 दाने या बटन लो। दो समूह बनाकर उन्हें मिलाओ, फिर कुछ हटाओ और दोनों गणितीय वाक्य लिखो।",
+      "practice": [
+        {
+          "question": "What is 8 + 5?",
+          "questionHi": "8 + 5 कितना है?",
+          "options": [
+            "12",
+            "13",
+            "14"
+          ],
+          "optionsHi": [
+            "12",
+            "13",
+            "14"
+          ],
+          "correct": 1,
+          "explanation": "Make ten: 8 + 2 + 3 = 13.",
+          "explanationHi": "दस बनाओ: 8 + 2 + 3 = 13।"
+        },
+        {
+          "question": "What is 14 − 5?",
+          "questionHi": "14 − 5 कितना है?",
+          "options": [
+            "8",
+            "9",
+            "10"
+          ],
+          "optionsHi": [
+            "8",
+            "9",
+            "10"
+          ],
+          "correct": 1,
+          "explanation": "Take five away from fourteen. Nine remain.",
+          "explanationHi": "चौदह में से पाँच घटाने पर नौ बचते हैं।"
+        }
+      ]
+    },
+    {
+      "id": "class2_evs_plants",
+      "subject": "EVS",
+      "title": "Plants around us",
+      "titleHi": "हमारे आसपास के पौधे",
+      "class": 2,
+      "classLabel": "Class 2",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Age-appropriate learning order; not an official textbook chapter number.",
+      "level": "Foundation · Level 2",
+      "minutes": 6,
+      "intro": "Plants are living things. They grow in gardens, fields, forests and pots. We use plants for food, shade, materials and many other needs.",
+      "introHi": "पौधे सजीव होते हैं। वे बगीचों, खेतों, जंगलों और गमलों में उगते हैं। पौधे भोजन, छाया, सामग्री और कई ज़रूरतों के लिए उपयोगी हैं।",
+      "sections": [
+        {
+          "heading": "1. Parts of a plant",
+          "headingHi": "1. पौधे के भाग",
+          "body": "Roots usually hold a plant in the soil and absorb water. The stem supports the plant and moves water and food materials. Leaves help many plants make food using sunlight, air and water. Flowers can help a plant make seeds.",
+          "bodyHi": "जड़ें पौधे को मिट्टी में थामती हैं और पानी सोखती हैं। तना पौधे को सहारा देता है और पानी व भोजन पहुँचाता है। पत्तियाँ सूर्य के प्रकाश, हवा और पानी से भोजन बनाने में मदद करती हैं। फूल बीज बनने में मदद कर सकते हैं।",
+          "example": "A mango tree has roots, a trunk, branches, leaves, flowers and fruits.",
+          "exampleHi": "आम के पेड़ में जड़ें, तना, शाखाएँ, पत्तियाँ, फूल और फल होते हैं।"
+        },
+        {
+          "heading": "2. What plants need",
+          "headingHi": "2. पौधों को क्या चाहिए",
+          "body": "Most plants need light, water, air, nutrients and suitable space to grow. Different plants need different amounts. A cactus can live in dry places because it has special adaptations for saving water.",
+          "bodyHi": "अधिकांश पौधों को बढ़ने के लिए प्रकाश, पानी, हवा, पोषक तत्व और उचित जगह चाहिए। अलग-अलग पौधों की ज़रूरतें अलग हो सकती हैं। कैक्टस पानी बचाने के विशेष गुणों के कारण सूखे स्थानों में रह सकता है।",
+          "example": "A plant kept in darkness for a long time may become weak because it cannot get enough light.",
+          "exampleHi": "लंबे समय तक अँधेरे में रखा पौधा कमज़ोर हो सकता है क्योंकि उसे पर्याप्त प्रकाश नहीं मिलता।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Root",
+          "wordHi": "जड़",
+          "meaning": "The plant part that usually anchors it and absorbs water.",
+          "meaningHi": "पौधे का भाग जो उसे मिट्टी में थामता और पानी सोखता है।"
+        },
+        {
+          "word": "Stem",
+          "wordHi": "तना",
+          "meaning": "The part that supports the plant and transports materials.",
+          "meaningHi": "पौधे को सहारा देने और पदार्थ पहुँचाने वाला भाग।"
+        }
+      ],
+      "activity": "Observe a safe garden plant with an adult. Draw it and label its roots, stem, leaves and flower if present.",
+      "activityHi": "किसी बड़े के साथ सुरक्षित पौधे को देखो। उसका चित्र बनाकर जड़, तना, पत्तियाँ और फूल हों तो उनके नाम लिखो।",
+      "practice": [
+        {
+          "question": "Which part usually absorbs water from soil?",
+          "questionHi": "मिट्टी से पानी सामान्यतः कौन-सा भाग सोखता है?",
+          "options": [
+            "Roots",
+            "Flower",
+            "Fruit"
+          ],
+          "optionsHi": [
+            "जड़ें",
+            "फूल",
+            "फल"
+          ],
+          "correct": 0,
+          "explanation": "Roots absorb water and help hold the plant in the soil.",
+          "explanationHi": "जड़ें पानी सोखती हैं और पौधे को मिट्टी में थामती हैं।"
+        },
+        {
+          "question": "What do many plants use sunlight for?",
+          "questionHi": "अनेक पौधे सूर्य के प्रकाश का उपयोग किसलिए करते हैं?",
+          "options": [
+            "Making food",
+            "Making stones",
+            "Making soil"
+          ],
+          "optionsHi": [
+            "भोजन बनाने",
+            "पत्थर बनाने",
+            "मिट्टी बनाने"
+          ],
+          "correct": 0,
+          "explanation": "Leaves use light energy to help make food.",
+          "explanationHi": "पत्तियाँ प्रकाश ऊर्जा की मदद से भोजन बनाती हैं।"
+        }
+      ]
+    },
+    {
+      "id": "class2_english_nouns",
+      "subject": "English",
+      "title": "Naming words",
+      "titleHi": "नाम बताने वाले शब्द",
+      "class": 2,
+      "classLabel": "Class 2",
+      "chapterNo": 2,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Age-appropriate learning order; not an official textbook chapter number.",
+      "level": "Foundation · Level 2",
+      "minutes": 6,
+      "intro": "Naming words tell us about people, places, animals and things. In English grammar, these words are called nouns. They help us say clearly what we are talking about.",
+      "introHi": "नाम बताने वाले शब्द व्यक्ति, स्थान, जानवर और वस्तुओं के बारे में बताते हैं। अंग्रेज़ी व्याकरण में इन्हें noun यानी संज्ञा कहते हैं। ये बताते हैं कि हम किसके बारे में बात कर रहे हैं।",
+      "sections": [
+        {
+          "heading": "1. Find nouns around you",
+          "headingHi": "1. अपने आसपास संज्ञा खोजो",
+          "body": "A noun can name a person, place, animal or thing. Examples are teacher, school, cow, river, book and pencil.",
+          "bodyHi": "संज्ञा व्यक्ति, स्थान, जानवर या वस्तु का नाम हो सकती है। उदाहरण: teacher, school, cow, river, book और pencil।",
+          "example": "In 'The dog runs', dog is a noun.",
+          "exampleHi": "'The dog runs' में dog संज्ञा है।"
+        },
+        {
+          "heading": "2. Naming one or many",
+          "headingHi": "2. एक या अनेक के नाम",
+          "body": "A singular noun names one. A plural noun names more than one. Many English nouns add -s, such as book/books, but some change in other ways, such as child/children.",
+          "bodyHi": "एकवचन संज्ञा एक का नाम बताती है। बहुवचन एक से अधिक का। कई अंग्रेज़ी संज्ञाओं में -s जोड़ते हैं, जैसे book/books; कुछ बदलती हैं, जैसे child/children।",
+          "example": "One mango, two mangoes; one child, two children.",
+          "exampleHi": "एक mango, दो mangoes; एक child, दो children।"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Noun",
+          "wordHi": "संज्ञा",
+          "meaning": "A naming word for a person, place, animal or thing.",
+          "meaningHi": "व्यक्ति, स्थान, जानवर या वस्तु का नाम बताने वाला शब्द।"
+        },
+        {
+          "word": "Plural",
+          "wordHi": "बहुवचन",
+          "meaning": "A word form that names more than one.",
+          "meaningHi": "एक से अधिक का नाम बताने वाला शब्द रूप।"
+        }
+      ],
+      "activity": "Write five nouns you can see. Then change each one to plural if possible.",
+      "activityHi": "अपने आसपास दिखने वाली पाँच संज्ञाएँ लिखो। जहाँ संभव हो, उनका बहुवचन बनाओ।",
+      "practice": [
+        {
+          "question": "Which is a noun?",
+          "questionHi": "इनमें से कौन संज्ञा है?",
+          "options": [
+            "Quickly",
+            "School",
+            "Run"
+          ],
+          "optionsHi": [
+            "Quickly",
+            "School",
+            "Run"
+          ],
+          "correct": 1,
+          "explanation": "School names a place, so it is a noun.",
+          "explanationHi": "School एक स्थान का नाम है, इसलिए यह संज्ञा है।"
+        },
+        {
+          "question": "What is the plural of book?",
+          "questionHi": "Book का बहुवचन क्या है?",
+          "options": [
+            "Bookes",
+            "Books",
+            "Book"
+          ],
+          "optionsHi": [
+            "Bookes",
+            "Books",
+            "Book"
+          ],
+          "correct": 1,
+          "explanation": "Most nouns like book form the plural by adding -s.",
+          "explanationHi": "Book जैसी अधिकतर संज्ञाओं में बहुवचन बनाने के लिए -s जोड़ते हैं।"
+        }
+      ]
     }
   ]
 }
