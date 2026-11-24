@@ -12,7 +12,118 @@
       "question": "Which organisms break down dead plants and animals?",
       "questionHi": "मृत पौधों और जानवरों को कौन तोड़ता है?",
       "answer": "Decomposers",
-      "answerHi": "अपघटक"
+      "answerHi": "अपघटक",
+      "level": "Explorer · Level 4",
+      "minutes": 9,
+      "intro": "A forest, pond or garden is an ecosystem. It includes living organisms and non-living things such as air, water, soil, rocks and sunlight. The parts interact: a change to one part can affect many others.",
+      "introHi": "जंगल, तालाब या बगीचा एक पारिस्थितिकी तंत्र है। इसमें जीवों के साथ हवा, पानी, मिट्टी, चट्टानें और सूर्य का प्रकाश जैसे निर्जीव भाग भी होते हैं। ये भाग आपस में जुड़े हैं; एक भाग में बदलाव दूसरों को प्रभावित कर सकता है।",
+      "sections": [
+        {
+          "heading": "1. Producers capture energy",
+          "headingHi": "1. उत्पादक ऊर्जा ग्रहण करते हैं",
+          "body": "Plants and algae are producers. They use sunlight to make food through photosynthesis. This food stores energy that can pass to other organisms when they eat plants or plant-eaters. Most food chains begin with a producer.",
+          "bodyHi": "पौधे और शैवाल उत्पादक हैं। वे प्रकाश संश्लेषण द्वारा सूर्य के प्रकाश से भोजन बनाते हैं। इस भोजन में ऊर्जा जमा होती है जो पौधों या पौधे खाने वाले जीवों को खाने पर आगे जाती है। अधिकांश खाद्य श्रृंखलाएँ उत्पादक से शुरू होती हैं।",
+          "example": "Grass → grasshopper → frog → snake shows one possible path of energy through a food chain.",
+          "exampleHi": "घास → टिड्डा → मेंढक → साँप एक खाद्य श्रृंखला में ऊर्जा के जाने का एक रास्ता दिखाता है।"
+        },
+        {
+          "heading": "2. Consumers and decomposers",
+          "headingHi": "2. उपभोक्ता और अपघटक",
+          "body": "Consumers get energy by eating plants or other animals. Herbivores eat plants, carnivores eat animals, and omnivores eat both. Decomposers such as fungi and many bacteria break down dead organisms and waste. This returns nutrients to the environment.",
+          "bodyHi": "उपभोक्ता पौधे या दूसरे जानवर खाकर ऊर्जा लेते हैं। शाकाहारी पौधे, मांसाहारी जानवर और सर्वाहारी दोनों खाते हैं। कवक और कई बैक्टीरिया जैसे अपघटक मृत जीवों और कचरे को तोड़ते हैं। इससे पोषक तत्व वातावरण में वापस आते हैं।",
+          "example": "A mushroom growing on a fallen log helps break down dead wood and return nutrients to the soil.",
+          "exampleHi": "गिरे हुए तने पर उगने वाला मशरूम मृत लकड़ी को तोड़ने और पोषक तत्व मिट्टी में लौटाने में मदद करता है。"
+        },
+        {
+          "heading": "3. Food webs and balance",
+          "headingHi": "3. खाद्य जाल और संतुलन",
+          "body": "In nature, most organisms have more than one food source and more than one predator. Many connected food chains make a food web. If one species becomes much less common, animals that depend on it may struggle, while the organisms it used to eat may increase.",
+          "bodyHi": "प्रकृति में अधिकांश जीवों के भोजन के एक से अधिक स्रोत और एक से अधिक शिकारी होते हैं। कई जुड़ी खाद्य श्रृंखलाएँ खाद्य जाल बनाती हैं। यदि कोई प्रजाति बहुत कम हो जाए, तो उस पर निर्भर जीवों को कठिनाई हो सकती है और उसके द्वारा खाए जाने वाले जीव बढ़ सकते हैं।",
+          "example": "If a pond loses many insects, frogs may have less food, and animals that eat frogs may also be affected.",
+          "exampleHi": "यदि तालाब में कीड़े बहुत कम हो जाएँ, तो मेंढकों को भोजन कम मिलेगा और मेंढक खाने वाले जीव भी प्रभावित हो सकते हैं。"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Ecosystem",
+          "wordHi": "पारिस्थितिकी तंत्र",
+          "meaning": "Living organisms interacting with one another and their environment.",
+          "meaningHi": "आपस में और वातावरण के साथ क्रिया करते जीवों का तंत्र।"
+        },
+        {
+          "word": "Producer",
+          "wordHi": "उत्पादक",
+          "meaning": "An organism such as a plant that makes its own food.",
+          "meaningHi": "पौधे जैसा जीव जो अपना भोजन बनाता है।"
+        },
+        {
+          "word": "Consumer",
+          "wordHi": "उपभोक्ता",
+          "meaning": "An organism that gets energy by eating other organisms.",
+          "meaningHi": "दूसरे जीवों को खाकर ऊर्जा लेने वाला जीव।"
+        },
+        {
+          "word": "Decomposer",
+          "wordHi": "अपघटक",
+          "meaning": "An organism that breaks down dead matter and waste.",
+          "meaningHi": "मृत पदार्थ और कचरे को तोड़ने वाला जीव।"
+        }
+      ],
+      "activity": "Draw a food chain from a local habitat. Label the producer, consumers and arrows showing the direction energy moves. Do not collect or disturb animals.",
+      "activityHi": "अपने आसपास के किसी आवास की खाद्य श्रृंखला बनाओ। उत्पादक, उपभोक्ता और ऊर्जा की दिशा दिखाने वाले तीर लगाओ। जानवरों को पकड़ो या परेशान मत करो।",
+      "practice": [
+        {
+          "question": "Which organism is usually a producer?",
+          "questionHi": "कौन-सा जीव सामान्यतः उत्पादक होता है?",
+          "options": [
+            "Green plant",
+            "Tiger",
+            "Mushroom"
+          ],
+          "optionsHi": [
+            "हरा पौधा",
+            "बाघ",
+            "मशरूम"
+          ],
+          "correct": 0,
+          "explanation": "Green plants use sunlight to make food through photosynthesis.",
+          "explanationHi": "हरे पौधे प्रकाश संश्लेषण से सूर्य के प्रकाश का उपयोग करके भोजन बनाते हैं।"
+        },
+        {
+          "question": "What do decomposers do?",
+          "questionHi": "अपघटक क्या करते हैं?",
+          "options": [
+            "Make sunlight",
+            "Break down dead matter",
+            "Stop all food chains"
+          ],
+          "optionsHi": [
+            "सूर्य का प्रकाश बनाते हैं",
+            "मृत पदार्थ को तोड़ते हैं",
+            "सभी खाद्य श्रृंखलाएँ रोकते हैं"
+          ],
+          "correct": 1,
+          "explanation": "Decomposers break down dead organisms and waste and return nutrients.",
+          "explanationHi": "अपघटक मृत जीवों और कचरे को तोड़कर पोषक तत्व लौटाते हैं।"
+        },
+        {
+          "question": "What is a food web?",
+          "questionHi": "खाद्य जाल क्या है?",
+          "options": [
+            "One straight food chain only",
+            "Many connected food chains",
+            "A spider's home"
+          ],
+          "optionsHi": [
+            "केवल एक सीधी खाद्य श्रृंखला",
+            "कई जुड़ी हुई खाद्य श्रृंखलाएँ",
+            "मकड़ी का घर"
+          ],
+          "correct": 1,
+          "explanation": "A food web shows many feeding relationships connected in an ecosystem.",
+          "explanationHi": "खाद्य जाल पारिस्थितिकी तंत्र में भोजन के कई जुड़े संबंध दिखाता है।"
+        }
+      ]
     },
     {
       "id": "science_matter",
