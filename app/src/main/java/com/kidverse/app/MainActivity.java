@@ -374,6 +374,7 @@ public class MainActivity extends Activity {
     private void showLearn() {
         screen("Learn");
         intro("Learning worlds", "Choose a world. Try a mission. Earn stars.");
+        action("Knowledge Library", "Search topics, read deeper explanations and practise", "📖", 0xFFECE9FF, "Open library", () -> startActivity(new android.content.Intent(this, LibraryActivity.class)));
         action("Math Kingdom", "Addition, subtraction, multiplication and fractions", "🔢", 0xFFFFEBCB, "Start learning", this::showMath);
         action("Science Galaxy", "Plants, space, weather and our amazing planet", "🔬", 0xFFDFF3FF, "Explore science", this::showScience);
         action("Story Forest", "Original stories that grow reading confidence", "📚", 0xFFE8F4DE, "Open stories", this::showStory);
