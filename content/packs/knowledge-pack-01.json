@@ -2,7 +2,7 @@
   "topics": [
     {
       "id": "science_ecosystems",
-      "subject": "Biology",
+      "subject": "EVS / Science",
       "title": "Ecosystems and food webs",
       "titleHi": "पारिस्थितिकी तंत्र और खाद्य जाल",
       "simple": "An ecosystem includes living things and the non-living parts of their environment. Organisms depend on one another for food and shelter.",
@@ -123,11 +123,16 @@
           "explanation": "A food web shows many feeding relationships connected in an ecosystem.",
           "explanationHi": "खाद्य जाल पारिस्थितिकी तंत्र में भोजन के कई जुड़े संबंध दिखाता है।"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 4,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "science_matter",
-      "subject": "Chemistry",
+      "subject": "EVS / Science",
       "title": "States of matter",
       "titleHi": "पदार्थ की अवस्थाएँ",
       "simple": "Matter is anything that has mass and takes up space. Common states are solid, liquid and gas.",
@@ -248,11 +253,16 @@
           "explanation": "Evaporation can happen at many temperatures; boiling is a different process.",
           "explanationHi": "वाष्पीकरण कई तापमानों पर हो सकता है; उबालना अलग प्रक्रिया है।"
         }
-      ]
+      ],
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 4,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "math_decimals",
-      "subject": "Math",
+      "subject": "Mathematics",
       "title": "Decimal numbers",
       "titleHi": "दशमलव संख्याएँ",
       "simple": "A decimal uses a point to show parts smaller than one. In 2.5, the 5 means five tenths.",
@@ -367,11 +377,16 @@
           "explanation": "Line up the points: 1.25 + 0.50 = 1.75.",
           "explanationHi": "दशमलव बिंदु सीध में रखो: 1.25 + 0.50 = 1.75।"
         }
-      ]
+      ],
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "math_patterns",
-      "subject": "Math",
+      "subject": "Mathematics",
       "title": "Patterns and sequences",
       "titleHi": "पैटर्न और क्रम",
       "simple": "A pattern repeats or changes according to a rule. Finding the rule helps you predict what comes next.",
@@ -486,11 +501,16 @@
           "explanation": "The two colours alternate, so blue comes next.",
           "explanationHi": "दो रंग बारी-बारी आते हैं, इसलिए अगला नीला होगा।"
         }
-      ]
+      ],
+      "class": 3,
+      "classLabel": "Class 3",
+      "chapterNo": 1,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "earth_climate",
-      "subject": "Earth",
+      "subject": "EVS",
       "title": "Weather and climate",
       "titleHi": "मौसम और जलवायु",
       "simple": "Weather describes conditions now or soon, such as rain, wind and temperature. Climate describes usual patterns over many years.",
@@ -500,11 +520,16 @@
       "question": "Which describes typical patterns over many years?",
       "questionHi": "कई वर्षों के सामान्य पैटर्न को क्या कहते हैं?",
       "answer": "Climate",
-      "answerHi": "जलवायु"
+      "answerHi": "जलवायु",
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 5,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "coding_loops",
-      "subject": "Coding",
+      "subject": "Computer Education",
       "title": "Loops in programming",
       "titleHi": "प्रोग्रामिंग में लूप",
       "simple": "A loop repeats instructions. It saves time when the same action needs to happen many times.",
@@ -514,11 +539,16 @@
       "question": "What programming structure repeats instructions?",
       "questionHi": "कौन-सी प्रोग्रामिंग संरचना निर्देश दोहराती है?",
       "answer": "A loop",
-      "answerHi": "लूप"
+      "answerHi": "लूप",
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 2,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "english_parts",
-      "subject": "Language",
+      "subject": "English",
       "title": "Parts of speech",
       "titleHi": "शब्द-भेद",
       "simple": "Words have jobs in sentences. Nouns name people or things, verbs show actions or states, and adjectives describe nouns.",
@@ -528,11 +558,16 @@
       "question": "Which part of speech names a person, place or thing?",
       "questionHi": "व्यक्ति, स्थान या वस्तु का नाम बताने वाला शब्द-भेद कौन-सा है?",
       "answer": "Noun",
-      "answerHi": "संज्ञा"
+      "answerHi": "संज्ञा",
+      "class": 3,
+      "classLabel": "Class 3",
+      "chapterNo": 2,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "india_civics",
-      "subject": "Civics",
+      "subject": "Social Studies",
       "title": "Community rules and democracy",
       "titleHi": "समुदाय के नियम और लोकतंत्र",
       "simple": "Rules help people live and work together fairly and safely. In a democracy, people have ways to choose representatives and take part in decisions.",
@@ -542,11 +577,16 @@
       "question": "What do people choose in an election?",
       "questionHi": "चुनाव में लोग किसे चुनते हैं?",
       "answer": "Representatives",
-      "answerHi": "प्रतिनिधि"
+      "answerHi": "प्रतिनिधि",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 4,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "math_probability",
-      "subject": "Math",
+      "subject": "Mathematics",
       "title": "Chance and probability",
       "titleHi": "संभावना और प्रायिकता",
       "simple": "Probability describes how likely an event is. Impossible events have probability 0; certain events have probability 1.",
@@ -556,11 +596,16 @@
       "question": "What is the chance of heads on a fair coin?",
       "questionHi": "निष्पक्ष सिक्के पर चित आने की संभावना क्या है?",
       "answer": "1/2",
-      "answerHi": "1/2"
+      "answerHi": "1/2",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 5,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "math_angles",
-      "subject": "Math",
+      "subject": "Mathematics",
       "title": "Angles",
       "titleHi": "कोण",
       "simple": "An angle is formed when two rays meet at a point. Angles are measured in degrees.",
@@ -570,11 +615,16 @@
       "question": "How many degrees are in a right angle?",
       "questionHi": "समकोण में कितने डिग्री होते हैं?",
       "answer": "90 degrees",
-      "answerHi": "90 डिग्री"
+      "answerHi": "90 डिग्री",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 3,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "physics_sound",
-      "subject": "Physics",
+      "subject": "EVS / Science",
       "title": "Sound and vibrations",
       "titleHi": "ध्वनि और कंपन",
       "simple": "Sound is made by vibrations that travel through materials such as air, water or solids.",
@@ -584,11 +634,16 @@
       "question": "What produces sound?",
       "questionHi": "ध्वनि किससे बनती है?",
       "answer": "Vibrations",
-      "answerHi": "कंपन"
+      "answerHi": "कंपन",
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 6,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "physics_circuits",
-      "subject": "Physics",
+      "subject": "EVS / Science",
       "title": "Electric circuits",
       "titleHi": "विद्युत परिपथ",
       "simple": "A circuit is a complete path that allows electric current to flow from a power source.",
@@ -709,11 +764,16 @@
           "explanation": "Damaged wires can cause electric shock or fire. Keep away and tell an adult.",
           "explanationHi": "टूटे तार से बिजली का झटका या आग लग सकती है। दूर रहो और बड़े को बताओ।"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 5,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "biology_digest",
-      "subject": "Biology",
+      "subject": "EVS / Science",
       "title": "The digestive system",
       "titleHi": "पाचन तंत्र",
       "simple": "Digestion breaks food into smaller substances that the body can absorb and use.",
@@ -834,11 +894,16 @@
           "explanation": "The large intestine absorbs much of the water left in undigested material.",
           "explanationHi": "बड़ी आँत अपचित पदार्थ में बचा हुआ अधिकतर पानी सोखती है।"
         }
-      ]
+      ],
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 6,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "biology_habitats",
-      "subject": "Biology",
+      "subject": "EVS / Science",
       "title": "Habitats and adaptations",
       "titleHi": "आवास और अनुकूलन",
       "simple": "A habitat is an organism's natural home. Adaptations help living things survive in their habitat.",
@@ -848,11 +913,16 @@
       "question": "What is an organism's natural home called?",
       "questionHi": "जीव के प्राकृतिक घर को क्या कहते हैं?",
       "answer": "Habitat",
-      "answerHi": "आवास"
+      "answerHi": "आवास",
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 7,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "space_solar",
-      "subject": "Space",
+      "subject": "EVS / Science",
       "title": "The Solar System",
       "titleHi": "सौर मंडल",
       "simple": "The Solar System includes the Sun and the objects that orbit it, including eight planets.",
@@ -862,11 +932,16 @@
       "question": "How many planets are in our Solar System?",
       "questionHi": "हमारे सौर मंडल में कितने ग्रह हैं?",
       "answer": "Eight",
-      "answerHi": "आठ"
+      "answerHi": "आठ",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 7,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "earth_watercycle",
-      "subject": "Earth",
+      "subject": "EVS / Science",
       "title": "The water cycle",
       "titleHi": "जल चक्र",
       "simple": "Water evaporates, forms clouds by condensation and returns to Earth as precipitation.",
@@ -876,11 +951,16 @@
       "question": "What is water vapour cooling into droplets called?",
       "questionHi": "जलवाष्प के ठंडा होकर बूंदें बनने को क्या कहते हैं?",
       "answer": "Condensation",
-      "answerHi": "संघनन"
+      "answerHi": "संघनन",
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 8,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "history_harappa",
-      "subject": "History",
+      "subject": "Social Studies",
       "title": "Indus Valley Civilisation",
       "titleHi": "सिंधु घाटी सभ्यता",
       "simple": "The Indus or Harappan Civilisation grew in South Asia thousands of years ago. Harappa and Mohenjo-daro are famous sites.",
@@ -890,11 +970,16 @@
       "question": "Name one famous Harappan city.",
       "questionHi": "एक प्रसिद्ध हड़प्पाई नगर का नाम बताइए।",
       "answer": "Harappa or Mohenjo-daro",
-      "answerHi": "हड़प्पा या मोहनजोदड़ो"
+      "answerHi": "हड़प्पा या मोहनजोदड़ो",
+      "class": 5,
+      "classLabel": "Class 5",
+      "chapterNo": 5,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     },
     {
       "id": "digital_safety",
-      "subject": "Digital Skills",
+      "subject": "Computer Education",
       "title": "Staying safe online",
       "titleHi": "इंटरनेट पर सुरक्षित रहना",
       "simple": "Keep your address and passwords private. Ask a trusted adult before opening unknown links or sharing personal details.",
@@ -904,7 +989,12 @@
       "question": "Who should you tell about an uncomfortable online message?",
       "questionHi": "असहज ऑनलाइन संदेश के बारे में किसे बताना चाहिए?",
       "answer": "A trusted adult",
-      "answerHi": "भरोसेमंद बड़े को"
+      "answerHi": "भरोसेमंद बड़े को",
+      "class": 4,
+      "classLabel": "Class 4",
+      "chapterNo": 3,
+      "curriculum": "India · NCERT/CBSE-aligned learning sequence",
+      "sequenceNote": "Learning sequence is an age-appropriate guide, not an official textbook chapter number."
     }
   ]
 }
