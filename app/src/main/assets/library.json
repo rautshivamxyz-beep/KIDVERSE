@@ -367,7 +367,112 @@
       "question": "What force slows a sliding book on a table?",
       "questionHi": "मेज़ पर फिसलती किताब को कौन-सा बल धीमा करता है?",
       "answer": "Friction",
-      "answerHi": "घर्षण"
+      "answerHi": "घर्षण",
+      "level": "Explorer · Level 4",
+      "minutes": 8,
+      "intro": "Why does a football move when you kick it? Why does a rolling ball eventually stop? Pushes and pulls help explain both events. In science, a push or a pull is called a force.",
+      "introHi": "जब तुम फुटबॉल को लात मारते हो तो वह क्यों चलती है? लुढ़कती गेंद आखिर रुक क्यों जाती है? धक्का और खिंचाव इन घटनाओं को समझाते हैं। विज्ञान में धक्का या खिंचाव को बल कहते हैं।",
+      "sections": [
+        {
+          "heading": "1. A force can change motion",
+          "headingHi": "1. बल गति बदल सकता है",
+          "body": "A force can make a still object start moving, make a moving object stop, change its speed or change its direction. A stronger push can cause a bigger change, but the result also depends on the object's mass and other forces.",
+          "bodyHi": "बल रुकी वस्तु को चला सकता है, चलती वस्तु को रोक सकता है, उसकी गति या दिशा बदल सकता है। अधिक जोर से बड़ा बदलाव हो सकता है, लेकिन परिणाम वस्तु के द्रव्यमान और दूसरे बलों पर भी निर्भर करता है।",
+          "example": "Push an empty shopping cart and then a heavily loaded one. The loaded cart usually needs a larger push to speed up.",
+          "exampleHi": "पहले खाली और फिर सामान से भरी ट्रॉली को धक्का दो। भरी ट्रॉली की गति बढ़ाने के लिए आमतौर पर अधिक बल चाहिए।"
+        },
+        {
+          "heading": "2. Balanced and unbalanced forces",
+          "headingHi": "2. संतुलित और असंतुलित बल",
+          "body": "When forces on an object balance, their overall effect is zero. The object's motion does not change: it may stay still or keep moving at a steady speed in a straight line. When forces do not balance, the object accelerates: its speed or direction changes.",
+          "bodyHi": "जब किसी वस्तु पर लगे बल संतुलित होते हैं, तो उनका कुल प्रभाव शून्य होता है। वस्तु की गति नहीं बदलती: वह रुकी रह सकती है या सीधी रेखा में समान गति से चल सकती है। असंतुलित बल वस्तु में त्वरण पैदा करते हैं, यानी गति या दिशा बदलती है।",
+          "example": "Two people push a box equally in opposite directions. If their pushes are equal, the box may not move.",
+          "exampleHi": "दो लोग डिब्बे को विपरीत दिशाओं में बराबर धक्का देते हैं। यदि बल बराबर हों, तो डिब्बा नहीं चलेगा।"
+        },
+        {
+          "heading": "3. Friction and gravity",
+          "headingHi": "3. घर्षण और गुरुत्वाकर्षण",
+          "body": "Friction acts between surfaces that touch and resists sliding. It helps your shoes grip the ground, but it also slows a rolling ball. Gravity is an attractive force between masses. Earth's gravity pulls objects towards its centre and gives objects weight.",
+          "bodyHi": "घर्षण संपर्क में आई सतहों के बीच लगता है और फिसलने का विरोध करता है। यह जूतों को जमीन पर पकड़ देता है, लेकिन लुढ़कती गेंद को धीमा भी करता है। गुरुत्वाकर्षण द्रव्यमान वाली वस्तुओं के बीच आकर्षण बल है। पृथ्वी का गुरुत्व वस्तुओं को अपने केंद्र की ओर खींचता है और उनका भार पैदा करता है।",
+          "example": "A ball rolls farther on a smooth floor than on thick carpet because carpet usually creates more friction.",
+          "exampleHi": "गेंद चिकने फर्श पर मोटे कालीन की तुलना में अधिक दूर लुढ़कती है क्योंकि कालीन आमतौर पर अधिक घर्षण पैदा करता है。"
+        }
+      ],
+      "terms": [
+        {
+          "word": "Force",
+          "wordHi": "बल",
+          "meaning": "A push or pull that can change motion.",
+          "meaningHi": "धक्का या खिंचाव जो गति बदल सकता है।"
+        },
+        {
+          "word": "Friction",
+          "wordHi": "घर्षण",
+          "meaning": "A force that resists sliding between touching surfaces.",
+          "meaningHi": "संपर्क में आई सतहों के बीच फिसलने का विरोध करने वाला बल।"
+        },
+        {
+          "word": "Gravity",
+          "wordHi": "गुरुत्वाकर्षण",
+          "meaning": "An attractive force between objects that have mass.",
+          "meaningHi": "द्रव्यमान वाली वस्तुओं के बीच आकर्षण बल।"
+        }
+      ],
+      "activity": "Slide the same toy car over a smooth table and a folded towel. Observe where it travels farther. Ask an adult to help keep the test fair.",
+      "activityHi": "एक ही खिलौना कार को चिकनी मेज और मोड़े हुए तौलिये पर चलाओ। देखो वह कहाँ अधिक दूर जाती है। प्रयोग को निष्पक्ष रखने के लिए किसी बड़े की मदद लो।",
+      "practice": [
+        {
+          "question": "What is a force?",
+          "questionHi": "बल क्या है?",
+          "options": [
+            "A push or pull",
+            "A type of light",
+            "A kind of sound"
+          ],
+          "optionsHi": [
+            "धक्का या खिंचाव",
+            "प्रकाश का प्रकार",
+            "ध्वनि का प्रकार"
+          ],
+          "correct": 0,
+          "explanation": "A force is a push or pull that can change an object's motion.",
+          "explanationHi": "बल धक्का या खिंचाव है जो वस्तु की गति बदल सकता है।"
+        },
+        {
+          "question": "Which force usually slows a ball rolling across carpet?",
+          "questionHi": "कालीन पर लुढ़कती गेंद को कौन-सा बल धीमा करता है?",
+          "options": [
+            "Magnetism",
+            "Friction",
+            "Sunlight"
+          ],
+          "optionsHi": [
+            "चुंबकत्व",
+            "घर्षण",
+            "सूर्य का प्रकाश"
+          ],
+          "correct": 1,
+          "explanation": "Friction acts between the ball and carpet and resists motion.",
+          "explanationHi": "गेंद और कालीन के बीच घर्षण लगता है और गति का विरोध करता है。"
+        },
+        {
+          "question": "If balanced forces act on a still box, what happens?",
+          "questionHi": "रुके हुए डिब्बे पर संतुलित बल लगें तो क्या होगा?",
+          "options": [
+            "It must speed up",
+            "It stays still",
+            "It must turn"
+          ],
+          "optionsHi": [
+            "यह ज़रूर तेज़ होगा",
+            "यह रुका रहेगा",
+            "यह ज़रूर मुड़ेगा"
+          ],
+          "correct": 1,
+          "explanation": "Balanced forces do not change an object's motion. A still object stays still.",
+          "explanationHi": "संतुलित बल वस्तु की गति नहीं बदलते। रुकी वस्तु रुकी रहती है।"
+        }
+      ]
     },
     {
       "id": "science_light",
